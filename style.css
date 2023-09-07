@@ -12,6 +12,7 @@ body {
 .gridcontainer {
   display: grid;
   width: 100%;
+  max-width: 100svw;
 }
 
 .item-1 {
@@ -22,6 +23,7 @@ body {
   background-size: cover;
   background-position: center center;
   font-size: 3em;
+  padding-left: 85px;
 }
 
 .item-2 {
