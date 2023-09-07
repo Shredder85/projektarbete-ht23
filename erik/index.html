@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <meta
+         name="viewport"
+         content="width=device-width, initial-scale=1" />
+      <link
+         rel="stylesheet"
+         href="router.css" />
+      <link
+         rel="stylesheet"
+         href="content.css" />
+
+      <title>CSS-based routing</title>
+   </head>
+
+   <body>
+      <header>
+         <h1>
+            CSS-based routing in a static HTML-based
+            <abbr title="Single Page Applicaton">SPA</abbr>
+         </h1>
+      </header>
+      <div class="layout">
+         <nav>
+            <h3>Navigation</h3>
+            <ul>
+               <li>
+                  <label
+                     class="link"
+                     for="router_startpage"
+                     tabindex="0"
+                     >Startpage</label
+                  >
+               </li>
+               <li>
+                  <label
+                     class="link"
+                     for="router_transitions"
+                     tabindex="0"
+                     >Transitions</label
+                  >
+               </li>
+               <li>
+                  <label
+                     class="link"
+                     for="router_limits"
+                     tabindex="0"
+                     >Limitations</label
+                  >
+               </li>
+               <li>
+                  <label
+                     class="link"
+                     for="router_duck"
+                     tabindex="0"
+                     >Extensive content</label
+                  >
+               </li>
+            </ul>
+         </nav>
+         <main>
+            <input
+               type="radio"
+               name="app"
+               id="router_startpage"
+               checked />
+            <div class="page">
+               <h2>Welcome!</h2>
+               <p>
+                  This is a demonstration of how to implement a simple CSS-based
+                  router for a static Single Page Application (SPA).
+               </p>
+            </div>
+            <input
+               type="radio"
+               name="app"
+               id="router_transitions" />
+            <div class="page">
+               <h2>Page transitions</h2>
+               <p>
+                  To make the page transitions less choppy, a slight fade-in
+                  transition is used.
+               </p>
+            </div>
+            <input
+               type="radio"
+               name="app"
+               id="router_limits" />
+            <div class="page">
+               <h2>Router limits</h2>
+               <p>
+                  Since this method of using only CSS requires all content to be
+                  placed in one file, it is only suitable for very small
+                  projects that do not require many pages.
+               </p>
+            </div>
+            <input
+               type="radio"
+               name="app"
+               id="router_duck" />
+            <div class="page">
+               <article style="max-width: 40rem">
+                  <h2>Duck Takes Ball to the Face</h2>
+
+                  <p>
+                     A duck was left stunned after it failed to duck a ball and
+                     was hit in the face. The incident occurred at a local park,
+                     where the duck was waddling along the edge of the pond. A
+                     group of children were playing nearby, and one of them
+                     threw a ball at the duck. The duck was not expecting the
+                     ball and did not have time to react. The ball hit the duck
+                     in the face, knocking it to the ground.
+                  </p>
+
+                  <p>
+                     The duck was uninjured, but it was shaken up by the
+                     experience. It quickly recovered and waddled away, quacking
+                     angrily. The children who threw the ball were laughing, but
+                     they quickly realized that they had hurt the duck. They
+                     apologized to the duck and promised to be more careful in
+                     the future.
+                  </p>
+
+                  <p>
+                     The incident has sparked a debate about the ethics of
+                     throwing balls at ducks. Some people believe that it is
+                     cruel to do so, while others believe that it is simply a
+                     harmless prank. The duck in this story was not seriously
+                     injured, but it is important to remember that ducks are
+                     living creatures and should be treated with respect.
+                  </p>
+
+                  <p>
+                     If you are ever tempted to throw a ball at a duck, please
+                     think twice. It is not worth the risk of hurting the duck,
+                     even if it is just a small prank. There are many other ways
+                     to enjoy playing with ducks without putting them at risk.
+                  </p>
+
+                  <p style="font-size: 75%">
+                     Content generated by
+                     <a
+                        href="https://bard.google.com"
+                        target="_blank"
+                        >Bard</a
+                     >
+                  </p>
+               </article>
+            </div>
+         </main>
+      </div>
+      <footer>
+         Idea spawned by the "Mega Brain Trio". Created by Shredder85 @ GitHub.
+      </footer>
+      <script src="keyup.js"></script>
+   </body>
+</html>
