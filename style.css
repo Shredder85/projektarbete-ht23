@@ -16,12 +16,10 @@ body {
   padding: 250px;
   color: white;
   text-align: center;
+  background-image: url("images/spectrum-gradient.svg"); /* Ändra 'path_to_image1.jpg' till sökvägen för din bild */
+  background-size: 100vw 100vh;
 }
-.img-1 {
-  opacity: 0.7;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+
 .item-2 {
   background-color: #666;
   padding: 250px;
