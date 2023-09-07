@@ -18,7 +18,7 @@ body {
   padding: 250px;
   color: white;
   text-align: center;
-  background-image: url("images/spectrum-gradient.svg"); /* Ändra 'path_to_image1.jpg' till sökvägen för din bild */
+  background-image: url("images/item1bild.webp"); /* Ändra 'path_to_image1.jpg' till sökvägen för din bild */
   background-size: cover;
   background-position: center center;
   font-size: 3em;
