@@ -17,7 +17,8 @@ body {
   color: white;
   text-align: center;
   background-image: url("images/spectrum-gradient.svg"); /* Ändra 'path_to_image1.jpg' till sökvägen för din bild */
-  background-size: 100vw 100vh;
+  background-size: cover;
+  background-position: center center;
 }
 
 .item-2 {
