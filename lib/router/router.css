@@ -1,0 +1,21 @@
+/*
+* De radio-inputs som vi använder för att aktivera sidorna ska vara gömda.
+*/
+
+input[name='app'] { display: none; }
+
+/*
+* Det här är kontrollerna som styr routern genom att gömma eller visa våra `div.page`
+* beroende på om den radio-input som ligger närmast före är vald eller inte. För att få
+* till en fade-transition så gömmer vi inaktiva sidor genom att göra de så små som möjligt,
+* fysiskt osynliga och förflyttade till `absolute`-lagret på sidan.
+*/
+
+input[name=app]:not(:checked) + div.page {
+   position: absolute; overflow: hidden; 
+   width: 0; height: 0; margin: 0; padding: 0; opacity: 0;
+}
+
+input[name='app']:checked + div.page {
+   opacity: 1; transition: opacity 250ms ease-out;
+}
