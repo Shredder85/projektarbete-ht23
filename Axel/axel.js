@@ -3,7 +3,7 @@ const popup = () => {
     for (let i = 0; i < popups.length; i++) {
     const windowHeight = window.innerHeight;
     const elementTop = popups[i].getBoundingClientRect().top;
-    const elementVisible = 100; 
+    const elementVisible = 150; 
     if (elementTop < windowHeight - elementVisible) {
     popups[i].classList.add("active");
     } 
