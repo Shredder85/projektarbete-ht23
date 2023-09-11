@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700&display=swap%27");
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700&display=swap%27");
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Lexend+Zetta:wght@100&family=Open+Sans:wght@300&display=swap');
 
 html * {
     margin: 0;
@@ -14,6 +16,7 @@ body {
     display: grid;
     /*Inget behövs för header eftersom den är fixed, 1fr = main tar upp all plats som blir över, auto = footer*/
     grid-template-rows: 1fr auto;
+    background-color: #D0D0D0;
 }
 header {
     top: 0px;
@@ -23,12 +26,21 @@ header {
     background-color: white;
     display: flex;
     justify-content: space-between;
+    font-family: "Nunito", sans-serif;
+    z-index: 100;
+    border-bottom: 7px solid white;
+    box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.2);
 }
 main {
     /* Padding-top på lika hög högt som headern gör att main-innehållet inte hamnar under/bakom headern*/
     padding-top: 5rem;
 }
 header div.logo {
+    padding-left: 1em;
+    padding-top: 1.2em;
+    font-family: "Lexend Zetta", sans-serif;
+    font-size: 2em;
+    font-weight: bold;
 } 
 nav {
 }
@@ -84,13 +96,13 @@ nav {
 
 /*Anställdasidan*/
 #employees_item1 {
-    background-image: url(/images/meeting.webp);
-    background-size: 350px;
+    background-image: url(/images/meeting.jpg);
+    background-size: 420px;
     background-position: center;
     color: white;
     font-family: "roboto", sans-serif;
-    padding: 6em;
-    font-size: .7em;
+    padding: 4em;
+    font-size: 0.9em;
     text-align: center;
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6);
 }
@@ -104,12 +116,14 @@ nav {
     text-align: center;
     color: #777777;
     text-shadow: .5px .5px 1px rgba(85, 85, 85, 0.2);
+    padding-bottom: 2em;
 }
-.employees {
+   .employees {
     padding-top: 4em;
     padding-bottom: -4em;
-    color: #333333;
-}
+    color: #333333; 
+    } 
+
 .employees_image { 
     box-shadow: 0 0 3px rgba(85, 85, 85, 0.5); 
     border: 2px solid #333333; /* Kant runt bilden */
@@ -129,10 +143,169 @@ nav {
     width: 100%; 
     position: relative;
     transform: translateY(100px);
-    opacity: 0; 
+    opacity: 0;
     transition: 1.5s ease-out;
 }
 .active { 
     transform: translateY(0);
     opacity: 1; 
    } 
+
+   /**Charles saker**/
+   header {
+
+    top: 0;
+    position: fixed;
+    height: 8rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(-90deg, #F74F18 0%, #FEDF16 100%);
+    background-size: 200% 200%;
+    animation: ani_gradient 12s ease infinite; 
+    color: white;
+    text-shadow: 1px 1px 3px rgba(74, 66, 66, 0.6);
+    
+}
+
+@keyframes ani_gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.link {
+
+    margin-right: .5em;
+    padding: 3px;
+
+}
+
+.link:hover {
+
+    
+    color: rgb(0, 0, 0);
+    
+
+}
+
+/* MENU STYLES STARTS HERE */
+
+#menu-toggle:not(:checked)+.menu {
+
+    display: none;
+
+}
+
+#menu-toggle:checked +.menu {
+
+    display: block;
+
+}
+
+#menu-toggle {
+
+    display:none;
+
+}
+
+
+.menu {
+
+    /* background-color:rgb(160, 160, 169); */
+    margin-right: .4em;
+    margin-top: .4em;
+}
+
+#menu-button {
+
+    margin-right: 10px;
+    
+
+}
+
+
+
+/* MENU STYLES STOPS HERE */
+
+
+/* nav {
+
+    background-color: rgb(160, 160, 169);
+} */
+
+header ul {
+
+    list-style: none;
+}
+
+
+main {
+
+    padding-top: 7rem;    
+
+}
+
+footer {
+
+    padding: 1rem;
+
+}
+
+/* STYLES FÖR CONTENT-START */
+
+#start_item1 {
+    background-image: url(/images/item1bild.webp);
+    height: 250px;
+    background-position: 50%;
+    text-align: center;
+    padding: 5em;
+    color: aliceblue;
+}
+
+#start_item2 {
+
+    /* background-color: lightslategray; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+@media only screen and (min-width: 1280px) {
+    .menu {
+      display: block;
+    }
+  
+    .menu li {
+      display: inline;
+    }
+  
+    #menu-toggle:not(:checked) + .menu {
+      display: flex;
+    }
+    
+    #menu-button {display: none;}
+
+
+    /*Anställdasidan, är nu grid-items istället för flex*/
+    #employees_item1 {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 6em;
+    font-size: 1.2em;
+    }
+    #employees_item2{
+    display: grid;
+    background-color: #D0D0D0;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 110px;
+    margin-right: 70px;
+    }
+}
