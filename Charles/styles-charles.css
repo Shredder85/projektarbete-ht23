@@ -27,10 +27,26 @@ header {
     position: fixed;
     height: 8rem;
     width: 100%;
-    background-color: rgb(160, 160, 169);
     display: flex;
     justify-content: space-between;
+    background: linear-gradient(-90deg, #F74F18 0%, #FEDF16 100%);
+    background-size: 200% 200%;
+    animation: ani_gradient 12s ease infinite; 
+    color: white;
+    text-shadow: 1px 1px 3px rgba(74, 66, 66, 0.6);
     
+}
+
+@keyframes ani_gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
 }
 
 .link {
@@ -42,8 +58,8 @@ header {
 
 .link:hover {
 
-    background-color: rgb(74, 66, 66);
-    color: white;
+    
+    color: rgb(0, 0, 0);
     
 
 }
@@ -68,16 +84,12 @@ header {
 
 }
 
-header {
-
-    align-content: center;
-
-}
 
 .menu {
 
-    background-color:rgb(160, 160, 169);
-    margin-right: 2em;
+    /* background-color:rgb(160, 160, 169); */
+    margin-right: .4em;
+    margin-top: .4em;
 }
 
 #menu-button {
@@ -91,19 +103,11 @@ header {
 
 /* MENU STYLES STOPS HERE */
 
- header div.logo {
 
-    background-color: rgb(29, 29, 31);
-    color:azure;
-    
-
-
- }
-
-nav {
+/* nav {
 
     background-color: rgb(160, 160, 169);
-}
+} */
 
 header ul {
 
@@ -138,7 +142,7 @@ footer {
 
 #start_item2 {
 
-    background-color: lightslategray;
+    /* background-color: lightslategray; */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
