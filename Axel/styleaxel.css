@@ -66,6 +66,7 @@ h1 {
 .row p {
   color: rgb(0, 0, 0);
   border-bottom: 3px solid rgb(68, 170, 85);
+ 
   padding-bottom: 50px;
   
  
@@ -170,3 +171,15 @@ h1 {
 
 #content-kontakt p {
 }
+
+.popup { 
+  /*width: 100%; */
+  position: relative;
+  transform: translateY(100px);
+  opacity: 0; 
+  transition: 1.5s ease-out;
+}
+.active { 
+  transform: translateY(0);
+  opacity: 1; 
+ }
