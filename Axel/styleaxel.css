@@ -1,8 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700&display=swap%27");
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700&display=swap%27");
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Lexend+Zetta:wght@100&family=Open+Sans:wght@300&display=swap');
+
 html * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+ 
 }
 
 html,
@@ -20,21 +25,28 @@ body {
 }
 
 header {
-
-  top: 0;
-  position: fixed;
-  height: 8rem;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  background: linear-gradient(-90deg, #F74F18 0%, #FEDF16 100%);
-  background-size: 200% 200%;
-  animation: ani_gradient 12s ease infinite; 
-  color: white;
-  text-shadow: 1px 1px 3px rgba(74, 66, 66, 0.6);
-  z-index: 100;
-  
+    top: 0;
+    position: fixed;
+    height: 8rem;
+    width: 100%;
+    /*background-color: white; */
+    display: flex;
+    justify-content: space-between;
+    font-family: "Nunito", sans-serif;
+    z-index: 100;
+    border-bottom: 7px solid white;
+    box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(-90deg, #F74F18 0%, #FEDF16 100%);
+    background-size: 200% 200%;
+    animation: ani_gradient 12s ease infinite;
+    color:white;
 }
+
+header ul{
+  list-style: none;
+}
+  
+
 
 /*header div.logo {
   background-color: yellow;
@@ -99,7 +111,10 @@ h1 {
   padding: 100px;
   padding-top: 15px;
   border-radius: 15px;
+  margin-right: -10px;
   box-shadow: 5.1px 10.2px 10.2px hsl(0deg 0% 0% / 0.34);
+  margin-bottom: 15px;
+
 }
 
 .bild-2 {
@@ -111,7 +126,9 @@ h1 {
   padding: 100px;
   padding-top: 15px;
   border-radius: 15px;
+  margin-right: -10px;
   box-shadow: 5.1px 10.2px 10.2px hsl(0deg 0% 0% / 0.34);
+  margin-bottom: 15px;
 }
 
 .bild-3 {
@@ -123,7 +140,9 @@ h1 {
   padding: 100px;
   padding-top: 15px;
   border-radius: 15px;
+  margin-right: -10px;
   box-shadow: 5.1px 10.2px 10.2px hsl(0deg 0% 0% / 0.34);
+  margin-bottom: 15px;
 }
 
 .bild-4 {
@@ -135,7 +154,9 @@ h1 {
   padding: 100px;
   padding-top: 15px;
   border-radius: 15px;
+  margin-right: -10px;
   box-shadow: 5.1px 10.2px 10.2px hsl(0deg 0% 0% / 0.34);
+  margin-bottom: 35px;
 }
 
 .picture-1 {
@@ -190,3 +211,109 @@ h1 {
   transform: translateY(0);
   opacity: 1; 
  }
+
+ @keyframes ani_gradient {
+  0% {
+      background-position: 0% 0%;
+  }
+  50% {
+      background-position: 100% 100%;
+  }
+  100% {
+      background-position: 0% 0%;
+  }
+}
+
+.link {
+
+  margin-right: .5em;
+  padding: 3px;
+
+}
+
+.link:hover {
+
+  
+  color: rgb(0, 0, 0);
+  
+
+}
+
+/* MENU STYLES STARTS HERE */
+
+#menu-toggle:not(:checked)+.menu {
+
+  display: none;
+
+}
+
+#menu-toggle:checked +.menu {
+
+  display: block;
+
+}
+
+#menu-toggle {
+
+  display:none;
+
+}
+
+
+.menu {
+
+  /* background-color:rgb(160, 160, 169); */
+  margin-right: .4em;
+  margin-top: .4em;
+}
+
+#menu-button {
+
+  margin-right: 10px;
+  
+
+}
+
+@media only screen and (min-width: 1280px) {
+  .menu {
+    display: block;
+  }
+
+  .menu li {
+    display: inline;
+  }
+
+  #menu-toggle:not(:checked) + .menu {
+    display: flex;
+  }
+  
+  #menu-button {display: none;}
+}
+
+/* STYLES FÖR CONTENT-START */
+
+#start_item1 {
+  background-image: url(/images/item1bild.webp);
+  height: 250px;
+  background-position: 50%;
+  text-align: center;
+  padding: 5em;
+  color: aliceblue;
+}
+
+#start_item2 {
+
+  /* background-color: lightslategray; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+header div.logo {
+  padding-left: 1em;
+  padding-top: 1.2em;
+  font-family: 'Lexend Zetta', sans-serif;
+  font-size: 2em;
+  font-weight: bold;
+} 
