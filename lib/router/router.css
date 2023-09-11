@@ -1,21 +1,40 @@
+/**
+ * HTML- och CSS-baserad router for Single Page Application
+ *
+ * Vi valde att göra detta med endast HTML och CSS för enkelhetens skull och för att göra sidan tillgänglig även
+ * om användaren har valt att inte aktivera JavaScript i sin webbläsare.
+ */
+
 /*
 * De radio-inputs som vi använder för att aktivera sidorna ska vara gömda.
 */
 
-input[name='app'] { display: none; }
-
-/*
-* Det här är kontrollerna som styr routern genom att gömma eller visa våra `div.page`
-* beroende på om den radio-input som ligger närmast före är vald eller inte. För att få
-* till en fade-transition så gömmer vi inaktiva sidor genom att göra de så små som möjligt,
-* fysiskt osynliga och förflyttade till `absolute`-lagret på sidan.
-*/
-
-input[name=app]:not(:checked) + div.page {
-   position: absolute; overflow: hidden; 
-   width: 0; height: 0; margin: 0; padding: 0; opacity: 0;
+input[name='app'] {
+   display: none;
 }
 
-input[name='app']:checked + div.page {
-   opacity: 1; transition: opacity 250ms ease-out;
+/*
+* Det här är kontrollerna som styr routern genom att gömma eller visa våra sidor (`div.page`)
+* beroende på om den radio-input som ligger närmast före är vald eller inte. För att få till en
+* fade-transition så gömmer vi inaktiva sidor genom att göra de så små som möjligt, fysiskt osynliga
+* och förflyttade till `absolute`-lagret på sidan.
+*
+* (När vi bara satte `display: none` fungerade inte transition.)
+*/
+
+input[name='app']:not(:checked)+div.page {
+
+   width: 0;
+   height: 0;
+   margin: 0;
+   padding: 0;
+   opacity: 0;
+
+   position: absolute;
+   overflow: hidden;
+}
+
+input[name='app']:checked+div.page {
+   opacity: 1;
+   transition: opacity 250ms ease-out;
 }

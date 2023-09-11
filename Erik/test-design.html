@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <meta
+         name="viewport"
+         content="width=device-width, initial-scale=1" />
+      <title>Idag bygger vi design!</title>
+
+      <link
+         rel="stylesheet"
+         href="lib/router/router.css" />
+      <link
+         rel="stylesheet"
+         href="styles/style.css" />
+
+      <script src="lib/router/keyup.js"></script>
+      <!-- <script
+         src="https://unpkg.com/petite-vue"
+         defer
+         init></script> -->
+   </head>
+
+   <body>
+      <header>
+         <div class="logo">LOGO</div>
+         <nav>
+            <ul class="ul-header">
+               <li>
+                  <label
+                     class="link"
+                     for="page_start"
+                     tabindex="0"
+                     >Startsidan</label
+                  >
+               </li>
+               <li>
+                  <label
+                     class="link"
+                     for="page_services"
+                     tabindex="0"
+                     >Tjänster</label
+                  >
+               </li>
+               <li>
+                  <label
+                     class="link"
+                     for="page_employees"
+                     tabindex="0"
+                     >Anställda</label
+                  >
+               </li>
+               <li>
+                  <label
+                     class="link"
+                     for="page_contact"
+                     tabindex="0"
+                     >Kontakt</label
+                  >
+               </li>
+            </ul>
+         </nav>
+      </header>
+      <main>
+         <!-- Startsidan -->
+         <input
+            type="radio"
+            name="app"
+            id="page_start"
+            checked />
+         <div
+            id="content_start"
+            class="page">
+            Yolo swaggins!
+         </div>
+
+         <!-- Tjänster -->
+         <input
+            type="radio"
+            name="app"
+            id="page_services" />
+         <div
+            id="content_services"
+            class="page">
+            <p>Tjänster</p>
+         </div>
+
+         <!-- Anställda -->
+         <input
+            type="radio"
+            name="app"
+            id="page_employees" />
+         <div
+            id="content_employees"
+            class="page">
+            Anställda
+         </div>
+
+         <!-- Kontakt -->
+         <input
+            type="radio"
+            name="app"
+            id="page_contact" />
+         <div
+            id="content_contact"
+            class="page">
+            <section v-if="!completed">
+               <h2>Kontakta oss</h2>
+               <p>
+                  Fyll i formuläret nedan för att komma i kontakt med vår
+                  kundtjänst.
+               </p>
+               <form
+                  id="form_contact"
+                  @submit.prevent>
+                  <div class='error-box' v-if='error != null'>
+                     {{error}}
+                  </div>
+                  <div>Namn:</div>
+                  <div>
+                     <input
+                        type="text"
+                        name="name"
+                        @input="validate" />
+                  </div>
+                  <div>E-postadress:</div>
+                  <div>
+                     <input
+                        type="text"
+                        name="email"
+                        @input="validate" />
+                  </div>
+                  <div>Telefonnummer:</div>
+                  <div>
+                     <input
+                        type="text"
+                        name="phone"
+                        @input="validate" />
+                  </div>
+                  <div>Företag:</div>
+                  <div>
+                     <input
+                        type="text"
+                        name="company"
+                        @input="validate" />
+                  </div>
+                  <div>Ditt meddelande:</div>
+                  <div>
+                     <textarea
+                        name="message"
+                        @input="validate"></textarea>
+                  </div>
+                  <div>
+                     <input
+                        type="submit"
+                        value="Skicka meddelande" />
+                  </div>
+               </form>
+            </section>
+            <section v-else>
+               <h2>Tack för ditt meddelande!</h2>
+               <p>Vi kommer att återkoppla till er så snart vi kan!</p>
+               <p>
+                  <a @click.prevent="completed = false"
+                     >Återgå till kontaktformuläret</a
+                  >
+               </p>
+            </section>
+         </div>
+         <script
+            type="module"
+            src="lib/js/vue.js"></script>
+      </main>
+      <footer>
+         <div class="copy">Copyright &copy; Our Fictional Company 2023</div>
+         <ul>
+            <li>
+               <a
+                  href="http://facebook.com/"
+                  title="Facebook"
+                  target="_blank"
+                  ><img
+                     src="images/facebook.png"
+                     width="24"
+                     alt="Facebook icon"
+                     loading="lazy"
+               /></a>
+            </li>
+            <li>
+               <a
+                  href="http://instagram.com/"
+                  title="Instagram"
+                  target="_blank">
+                  <img
+                     src="images/instagram.png"
+                     width="24"
+                     alt="Instagram icon"
+                     loading="lazy" />
+               </a>
+            </li>
+            <li>
+               <a
+                  href="http://tiktok.com/"
+                  title="TikTok"
+                  target="_blank">
+                  <img
+                     src="images/tik-tok.png"
+                     width="24"
+                     alt="TikTok icon"
+                     loading="lazy" />
+               </a>
+            </li>
+            <li>
+               <a
+                  href="http://github.com/"
+                  title="GitHub"
+                  target="_blank">
+                  <img
+                     src="images/github.png"
+                     width="24"
+                     alt="GitHub icon"
+                     loading="lazy" />
+               </a>
+            </li>
+         </ul>
+      </footer>
+   </body>
+</html>
