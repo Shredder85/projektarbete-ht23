@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700&display=swap%27");
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito";
+}
+
+.gridcontainer {
+  display: grid;
+  width: 100%;
+  max-width: 100svw;
+}
+
+.item-1 {
+  padding: 250px;
+  color: white;
+  text-align: center;
+  background-image: url("images/item1bild.webp"); /* Ändra 'path_to_image1.jpg' till sökvägen för din bild */
+  background-size: cover;
+  background-position: center center;
+  font-size: 3em;
+  padding-left: 85px;
+}
+
+.item-2 {
+  background-color: #666;
+  padding: 250px;
+}
+.item-3 {
+  background-color: #e6e6e6;
+  padding: 250px;
+}
+
+header {
+  background-color: #ffffff;
+  padding: 20px 40px;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: right;
+}
+
+.ul-header li {
+  display: inline;
+  margin-right: 1.5em;
+}
+
+.ul-header a {
+  text-decoration: none;
+  color: grey;
+}
+
+.ul-header a:hover {
+  background-color: rgba(174, 187, 185, 0.7);
+  color: black;
+  border: 1px white;
+  padding: 10px;
+}

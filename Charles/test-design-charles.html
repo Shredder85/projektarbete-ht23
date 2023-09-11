@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Idag bygger vi design!</title>
+    <link rel="stylesheet" href="styles-charles.css" />
+    <link rel="stylesheet" href="../lib/router/router.css" />
+    <script src="../lib/router/keyup.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">Ska vi ha en logotyp här ELLLER?</div>
+      <nav>
+         <label id="menu-button" for="menu-toggle">&#9776;</label>
+         <input id="menu-toggle" type="checkbox" />
+        
+        <div class="menu">
+         <ul>
+            <li>
+              <label class="link" for="page_start" tabindex="0">Startsidan</label>
+            </li>
+            <li>
+              <label class="link" for="page_services" tabindex="0">Tjänster</label>
+            </li>
+            <li>
+              <label class="link" for="page_employees" tabindex="0">Anställda</label
+              >
+            </li>
+            <li>
+              <label class="link" for="page_contact" tabindex="0">Kontakt</label>
+            </li>
+          </ul>
+
+        </div>
+        
+      </nav>
+    </header>
+
+    <main>
+      <!-- Här börjar startsidan -->
+      <input type="radio" name="app" id="page_start" checked />
+      <div class="page" id="content-start">
+        <div id="start_item1">
+          <h1>ACEE</h1>
+          <p>Vi erbjuder anpassade IT-lösningar för ditt företag!</p>
+        </div>
+        <div id="start_item2">
+          <div id="applikation">
+            <img src="/images/elearning.png" alt="elearning" />
+            <p>Elearning</p>
+          </div>
+          <img src="/images/it-systems (1).png" alt="it-systems" />
+          <p>IT-sysmtem</p>
+          <img src="/images/software.png" alt="software" /><br />
+          <p>Mjukvaror</p>
+        </div>
+        <div id="start_item3"></div>
+      </div>
+      <!-- Här börjar tjänster -->
+      <input type="radio" name="app" id="page_services" />
+      <div class="page" id="content-services">Tjänster</div>
+      <!-- Här börjar anställda -->
+      <input type="radio" name="app" id="page_employees" />
+      <div class="page" id="employees">Anställda</div>
+      <!-- Här börjar kontakt -->
+      <input type="radio" name="app" id="page_contact" />
+      <div class="page" id="contact">Kontakt</div>
+    </main>
+
+    <footer>...</footer>
+  </body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Idag bygger vi design!</title>
+
+    <link rel="stylesheet" href="../lib/router/router.css" />
+    <link rel="stylesheet" href="styleaxel.css" />
+    <script src="../lib/router/keyup.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">LOGO</div>
+      <nav>
+        <ul class="ul-header">
+          <li>
+            <label class="link" for="page_services" tabindex="0"
+              >Tjänster</label
+            >
+          </li>
+          <li>
+            <label class="link" for="page_employees" tabindex="0"
+              >Anställda</label
+            >
+          </li>
+          <li>
+            <label class="link" for="page_kontakt" tabindex="0">Kontakt</label>
+          </li>
+
+          <li>
+            <label class="link" for="page_start" tabindex="0">Startsidan</label>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!--Startsidan-->
+      <input type="radio" name="app" id="page_start" checked />
+      <div id="content-start" class="page">
+        <div class="start-item1">
+          <img class="menybild" src="images/item1bild.webp" />
+        </div>
+        <div class="start-item2"></div>
+
+        <div class="pictures">
+          <div class="row"> 
+            
+            <div class="bild-1">
+              <img class="picture-1" src="images/it-systems (1).png" />
+              <h1>Itsystem</h1>
+              <p>Vi är bäst på Itsystem!</p>
+            </div>
+
+            <div class="bild-2">
+              <img class="picture-2" src="images/devops.png" />
+              <h1>Devops</h1>
+              <p>Vi är bäst på Devops!</p>
+
+            
+            </div>
+
+            <div class="bild-3">
+              <img class="picture-3" src="images/elearning.png" />
+              <h1>Elearning</h1>
+              <p>Vi är bäst på Elearning!</p>
+            </div>
+
+            <div class="bild-4">
+              <img class="picture-4" src="images/software.png" />
+              <h1>Software</h1>
+              <p>Vi är bäst på Software!</p>
+          </div>
+          
+         </div>
+            </div>
+            </div>
+          
+         
+        
+
+        <div class="start-item3"></div>
+      </div>
+
+      <!--Tjänster-->
+      <input type="radio" name="app" id="page_services" />
+      <div id="content-service" class="page">
+        <p>Tjänster</p>
+      </div>
+      <!--Anställda-->
+      <input type="radio" name="app" id="page_employees" />
+      <div id="content-employees" class="page">
+        <p>Anställda</p>
+      </div>
+      <!--Kontakt-->
+      <input type="radio" name="app" id="page_kontakt" />
+      <div id="content-kontakt" class="page">
+        <p>Kontakt</p>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="sv">
+   <head>
+      <meta charset="utf-8" />
+      <meta
+         name="viewport"
+         content="width=device-width, initial-scale=1" />
+         <link rel="stylesheet" href="/Emma/styles.css" />
+         <script src="/Emma/emmistestis.js"></script>
+      <title>Idag bygger vi design!</title>
+
+      <link
+         rel="stylesheet"
+         href="../lib/router/router.css" />
+      <script src="../lib/router/keyup.js"></script>
+   </head>
+   <body>
+      <header>
+         <div class = "logo">Logga</div>
+         <nav>
+           <ul class="ul-header">
+            <li><label class = "link" for ="page_start" tabindex = "0">Startsida</label></li>
+             <li><label class = "link" for ="page_services" tabindex = "0">Tjänster</label></li>
+             <li><label class = "link" for ="page_employees" tabindex = "0">Anställda</label></li>
+             <li><label class = "link" for ="page_contact" tabindex = "0">Kontakt</label></li>
+           </ul>
+         </nav>
+       </header>
+       <main>
+         <!--Här börjar startsidan-->
+         <input type = "radio" name = "app" id = "page_start" checked>
+         <div id = "content_start" class="page">
+            <div id = "start_item1">
+            <h1>ACEE</h1>
+            <p>Vi skapar din drömsida va!</p>
+            </div>
+            <div id = "start_item2">
+               <div class = "start_image">
+               <img src = "/images/devops.png" width = 70px alt = "devops" class = "thumb">
+               <h4>Devops</h4>
+               </div>   
+               <div class = "start_image">
+                  <img src = "/images/elearning.png" width = 70px alt = "elearning" class = "thumb">
+                  <h4>Elearning</h4>
+                  </div> 
+                  <div class = "start_image">
+                     <img src = "/images/software.png" width = 70px alt = "software" class = "thumb">
+                     <h4>Software</h4>
+                     </div> 
+                     <div class = "start_image">
+                        <img src = "/images/it-systems (1).png" width = 70px alt = "itsystems" class = "thumb">
+                        <h4>Itsystems</h4>
+                        </div>
+                        <p id = "infotext">För att läsa mer om våra tjänster, 
+                           <label class = "link" for ="page_services" tabindex = "0">klicka här.</label></p>
+               </div>
+            <div id = "start_item3">
+               ACEE är ett ledande IT-konsultföretag som levererar innovativa och skräddarsydda IT-lösningar till företag över hela världen. Med en djup förståelse för teknik och en passion för att skapa värde för våra kunder, hjälper vi företag att uppnå sin fulla potential genom digital transformation.
+            </div>
+            <div id = "start_item4">
+            </div>
+          </div>
+
+          <!--Här börjar tjänster/produkter-->
+          <input type = "radio" name = "app" id = "page_services">
+          <div id = "content_services" class="page">
+            Här är innehåll för produkter/tjänster.
+          </div>
+
+           <!--Här börjar anställda-->
+           <input type = "radio" name = "app" id = "page_employees">
+           <div id = "content_employees" class="page">
+            <div id = "employees_item1">
+               <h1>VI SOM JOBBAR HÄR</h1>
+               </div>
+               <div id = "employees_item2">
+                  <div class = "popup">
+                  <div class = "employees">
+                  <img class = "employees_image" src = "/images/Charles.png" width = 200px alt = "devops">
+                  <p>CHARLES ÅKERSTEDT</p>
+                  <p class = "employee_text">charles.akerstedt@acee.se<br />Huligan</p>
+               <p class = "citat">"Vi omvandlar tekniska utmaningar till framgångssagor varje dag på ACEE"</p>
+                  </div>   
+               </div>
+                  <div class = "employees">
+                     <div class = "popup">
+                     <img class = "employees_image" src = "/images/Erik.png" width = 200px alt = "elearning">
+                     <p>ERIK RIKLUND</p>
+                     <p class = "employee_text">erik.riklund@acee.se<br />Lärare</p>
+                     
+                  <p class = "citat">"På ACEE skapar vi mjukvara som gör skillnad i världen"</p>
+                     </div> 
+                  </div>
+                     <div class = "employees">
+                        <div class = "popup">
+                        <img class = "employees_image" src = "/images/Emma.png" width = 200px alt = "software">
+                        <p>EMMA ANDERSSON</p>
+                        <p class = "employee_text">emma.andersson@acee.se<br />NPC-livare
+                        </p>
+                     <p class = "citat">"Säkerheten är vår passion på ACEE, och vi skyddar din digitala värld"</p>
+                        </div> 
+                     </div>
+                    
+                        <div class = "employees">
+                           <div class = "popup">
+                           <img class = "employees_image" src = "/images/Axel.png" width = 200px alt = "itsystems">
+                           <p>AXEL ÖSTERLUND</p>
+                           <p class = "employee_text">axel.osterlund@acee.se<br />Göteborgare</p>
+                           <p class = "citat">"Data är vår råvara, och insikterna vi genererar på ACEE förändrar spelplanen"</p>
+                           </div>
+                        </div>
+                         </div>
+           </div>
+
+            <!--Här börjar kontakt-->
+          <input type = "radio" name = "app" id = "page_contact">
+          <div id = "content_contact" class="page">
+            Här är innehåll för kontakt.
+          </div>
+       </main>
+       <footer>
+         ...
+       </footer>
+   </body>
+</html>

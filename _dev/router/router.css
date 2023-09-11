@@ -1,0 +1,19 @@
+/*
+* The radio inputs should not be visible.
+*/
+
+input[name='app'] { display: none; }
+
+/*
+* This is the actual router controls. If the radio next to a `div.page` is not checked (as in - the page is not active),
+* we make it "invisible" (by reducing the size and opacity) and send it to the `absolute` layer to not take up physical space.
+*/
+
+input[name=app]:not(:checked) + div.page {
+   position: absolute; overflow: hidden; 
+   width: 0; height: 0; margin: 0; padding: 0; opacity: 0;
+}
+
+input[name='app']:checked + div.page {
+   opacity: 1; transition: opacity 250ms ease-out;
+}
