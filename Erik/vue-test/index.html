@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta
+         name="viewport"
+         content="width=device-width, initial-scale=1.0" />
+      <script src="https://unpkg.com/petite-vue"></script>
+      <title>Vue-test</title>
+   </head>
+   <body>
+      <div id="app">
+         <p>Nuvarande sida: {{page}}</p>
+         <button :disabled="page < 2 ? true : false" @click='decrement'>Bakåt</button>
+         <button :disabled="page < pages.length ? false : true" @click='increment'>Framåt</button>
+      </div>
+      <script src="test.js"></script>
+   </body>
+</html>
