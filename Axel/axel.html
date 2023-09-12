@@ -13,29 +13,35 @@
 
   <body>
     <header>
-      <div class="logo">LOGO</div>
+      <div class="logo">
+         <my-code>&lt;/&gt; EACE</my-code>
+      </div>
       <nav>
-        <ul class="ul-header">
-          <li>
-            <label class="link" for="page_services" tabindex="0"
-              >Tjänster</label
-            >
-          </li>
-          <li>
-            <label class="link" for="page_employees" tabindex="0"
-              >Anställda</label
-            >
-          </li>
-          <li>
-            <label class="link" for="page_kontakt" tabindex="0">Kontakt</label>
-          </li>
+         <label id="menu-button" for="menu-toggle">&#9776;</label>
+         <input id="menu-toggle" type="checkbox" />
+        
+        <div class="menu">
+         <ul>
+            <li>
+              <label class="link" for="page_start" tabindex="0">Startsidan</label>
+            </li>
+            <li>
+              <label class="link" for="page_services" tabindex="0">Tjänster</label>
+            </li>
+            <li>
+              <label class="link" for="page_employees" tabindex="0">Anställda</label
+              >
+            </li>
+            <li>
+              <label class="link" for="page_contact" tabindex="0">Kontakt</label>
+            </li>
+          </ul>
 
-          <li>
-            <label class="link" for="page_start" tabindex="0">Startsidan</label>
-          </li>
-        </ul>
+        </div>
+        
       </nav>
     </header>
+    
     <main>
       <!--Startsidan-->
       <input type="radio" name="app" id="page_start" checked />

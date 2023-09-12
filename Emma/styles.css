@@ -224,6 +224,7 @@ footer {
       display: flex;
     }
     #menu-button {display: none;}
+}
 
     /*Anställdasidan, är nu grid-items istället för flex*/
     #employees_item1 {
