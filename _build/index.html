@@ -12,53 +12,72 @@
          href="lib/router/router.css" />
       <link
          rel="stylesheet"
-         href="style/styles.css" />
+         href="style/_import.css" />
 
-      <script src="lib/router/keyup.js"></script>
+      <script
+         defer
+         src="lib/router/keyup.js"></script>
+      <script
+         defer
+         src="lib/scroll-effect/script.js"></script>
    </head>
 
    <body>
       <header>
-         <div class="logo">LOGO</div>
+         <div class="logo">
+            <p>&lt;/&gt; EACE</p>
+         </div>
          <nav>
-            <ul class="ul-header">
-               <li>
-                  <label
-                     class="link"
-                     for="page_start"
-                     tabindex="0"
-                     >Startsidan</label
-                  >
-               </li>
-               <li>
-                  <label
-                     class="link"
-                     for="page_services"
-                     tabindex="0"
-                     >Tjänster</label
-                  >
-               </li>
-               <li>
-                  <label
-                     class="link"
-                     for="page_employees"
-                     tabindex="0"
-                     >Anställda</label
-                  >
-               </li>
-               <li>
-                  <label
-                     class="link"
-                     for="page_contact"
-                     tabindex="0"
-                     >Kontakt</label
-                  >
-               </li>
-            </ul>
+            <label
+               id="menu-button"
+               for="menu-toggle"
+               >&#9776;</label
+            >
+            <input
+               id="menu-toggle"
+               type="checkbox" />
+
+            <div class="menu">
+               <ul>
+                  <li>
+                     <label
+                        class="link"
+                        for="page_start"
+                        tabindex="0"
+                        >Startsidan</label
+                     >
+                  </li>
+                  <li>
+                     <label
+                        class="link"
+                        for="page_services"
+                        tabindex="0"
+                        >Tjänster</label
+                     >
+                  </li>
+                  <li>
+                     <label
+                        class="link"
+                        for="page_employees"
+                        tabindex="0"
+                        >Anställda</label
+                     >
+                  </li>
+                  <li>
+                     <label
+                        class="link"
+                        for="page_contact"
+                        tabindex="0"
+                        >Kontakt</label
+                     >
+                  </li>
+               </ul>
+            </div>
          </nav>
       </header>
+
       <main>
-         <!-- Startsidan -->
+         <!-- START: Startsidan -->
          <input
             type="radio"
             name="app"
@@ -67,10 +86,31 @@
          <div
             id="content_start"
             class="page">
-            Yolo swaggins!
+            <section class="header">
+               <h1>EACE</h1>
+               <p>Vi skapar din drömsida va!</p>
+            </section>
+            <section class="pictures">
+               <div
+                  v-for="{src, headline, content} of images"
+                  class="info-card js-faded-outside-view">
+                  <img
+                     :src="src"
+                     :alt="headline" />
+                  <h1 v-text="headline"></h1>
+                  <div
+                     class="icon-text"
+                     v-text="content"></div>
+               </div>
+            </section>
          </div>
+         <script
+            defer
+            type="module"
+            src="lib/js/pages/start.js"></script>
+         <!-- END: Startsidan -->
 
-         <!-- Tjänster -->
+         <!-- START: Tjänster -->
          <input
             type="radio"
             name="app"
@@ -82,10 +122,11 @@
          </div>
 
          <script
-            type="module"
-            src="lib/js/vue/services.js"></script>
+            defer
+            src="lib/js/pages/services.js"></script>
+         <!-- END: Tjänster -->
 
-         <!-- Anställda -->
+         <!-- START: Anställda -->
          <input
             type="radio"
             name="app"
@@ -95,8 +136,9 @@
             class="page">
             Anställda
          </div>
+         <!-- END: Anställda -->
 
-         <!-- Kontakt -->
+         <!-- START: Kontakt -->
          <input
             type="radio"
             name="app"
@@ -108,49 +150,34 @@
                <h2>Kontakta oss</h2>
                <p>
                   Fyll i formuläret nedan för att komma i kontakt med vår
-                  kundtjänst.
+                  kundtjänst!
                </p>
                <form
                   id="form_contact"
                   @submit.prevent>
+                  <div v-for="{element, type, name, label} of fields">
+                     <div>{{label}}:</div>
+                     <div v-if="element == 'input'">
+                        <input
+                           :type="type"
+                           :name="name"
+                           @input="validate"
+                           @focusout="validate" />
+                     </div>
+                     <div v-else-if="element == 'textarea'">
+                        <textarea
+                           :name="name"
+                           @input="validate"
+                           @focusout="validate"></textarea>
+                     </div>
+                  </div>
                   <div
                      class="error-box"
-                     v-if="error != null">
-                     {{error}}
-                  </div>
-                  <div>Namn:</div>
-                  <div>
-                     <input
-                        type="text"
-                        name="name"
-                        @input="validate" />
-                  </div>
-                  <div>E-postadress:</div>
-                  <div>
-                     <input
-                        type="text"
-                        name="email"
-                        @input="validate" />
-                  </div>
-                  <div>Telefonnummer:</div>
-                  <div>
-                     <input
-                        type="text"
-                        name="phone"
-                        @input="validate" />
-                  </div>
-                  <div>Företag:</div>
-                  <div>
-                     <input
-                        type="text"
-                        name="company"
-                        @input="validate" />
-                  </div>
-                  <div>Ditt meddelande:</div>
-                  <div>
-                     <textarea
-                        name="message"
-                        @input="validate"></textarea>
+                     v-if="errors.length > 0">
+                     <h3>Följande behöver åtgärdas:</h3>
+                     <ul>
+                        <li v-for="error of errors">{{error}}</li>
+                     </ul>
                   </div>
                   <div>
                      <input
@@ -163,19 +190,19 @@
                <h2>Tack för ditt meddelande!</h2>
                <p>Vi kommer att återkoppla till er så snart vi kan!</p>
                <p>
-                  <a @click.prevent="completed = false"
-                     >Återgå till kontaktformuläret</a
-                  >
+                  <a @click.prevent="reset">Återgå till kontaktformuläret</a>
                </p>
             </section>
          </div>
-         
+
          <script
-            type="module"
-            src="lib/js/vue/contact.js"></script>
+            defer
+            src="lib/js/pages/contact.js"></script>
+
+         <!-- END: Kontakt -->
       </main>
       <footer>
-         <div class="copy">Copyright &copy; Our Fictional Company 2023</div>
+         <div class="copy">&copy; EACE 2023</div>
          <ul>
             <li>
                <a

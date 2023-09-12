@@ -1,0 +1,89 @@
+header {
+   top: 0;
+   position: fixed;
+   height: 8rem;
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   font-family: 'Nunito', sans-serif;
+   background: linear-gradient(-90deg, #f74f18 0%, #fedf16 100%);
+   background-size: 200% 200%;
+   animation: ani_gradient 12s ease infinite;
+   z-index: 100;
+   border-bottom: 7px solid white;
+   box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.2);
+   color: white;
+}
+
+header div.logo {
+   padding-left: 1em;
+   padding-top: 1.2em;
+   font-family: 'Lexend Zetta', sans-serif;
+   font-size: 2em;
+   font-weight: bold;
+}
+
+header ul {
+   list-style: none;
+}
+
+@keyframes ani_gradient {
+   0% {
+      background-position: 0% 0%;
+   }
+   50% {
+      background-position: 100% 100%;
+   }
+   100% {
+      background-position: 0% 0%;
+   }
+}
+
+nav {
+   /* background-color: rgb(160, 160, 169); */
+}
+
+#menu-toggle:not(:checked) + .menu {
+   display: none;
+}
+
+#menu-toggle:checked + .menu {
+   display: block;
+}
+
+#menu-toggle {
+   display: none;
+}
+
+.menu {
+   margin-right: 0.4em;
+   margin-top: 0.4em;
+}
+
+#menu-button {
+   margin-right: 10px;
+}
+
+.menu .link {
+   margin-right: 0.5em;
+   padding: 3px;
+}
+
+.menu .link:hover {
+   color: rgb(0, 0, 0);
+}
+
+@media only screen and (min-width: 640px) {
+   .menu {
+      display: block;
+   }
+   .menu li {
+      display: inline;
+   }
+   #menu-toggle:not(:checked) + .menu {
+      display: flex;
+   }
+   #menu-button {
+      display: none;
+   }
+}
