@@ -150,6 +150,20 @@ header div.logo {
     opacity: 1; 
    } 
 
+/**Tjänstesidan**/
+#services_item1 {
+    background-image: url(./images/services.jpg);
+    background-size: 420px;
+    background-position: center;
+    color: white;
+    font-family: "roboto", sans-serif;
+    padding: 4em;
+    opacity: 1;
+    font-size: 0.9em;
+    text-align: center;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.9);
+}
+
 /**Charles saker**/
 @keyframes ani_gradient {
     0% {
@@ -224,7 +238,6 @@ footer {
       display: flex;
     }
     #menu-button {display: none;}
-}
 
     /*Anställdasidan, är nu grid-items istället för flex*/
     #employees_item1 {
