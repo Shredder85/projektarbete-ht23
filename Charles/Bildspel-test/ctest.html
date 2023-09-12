@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta
+         name="viewport"
+         content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="cstyle.css">   
+      <script src="https://unpkg.com/petite-vue"></script>
+      <title>Vue-test</title>
+   </head>
+   <body>
+      <div id="app">
+         <div class="flexcontainer"> <h2>Ett bildgalleri</h2>
+            <img :src="images[currentImageIndex].image">
+            <button @click="currentImageIndex--" :disabled="currentImageIndex === 0">Föregående</button>
+            <button @click="currentImageIndex++" :disabled="currentImageIndex === images.length - 1">Nästa</button></div>
+         </div>
+      <script src="ctest.js"></script>
+   </body>
+</html>
