@@ -292,7 +292,7 @@ footer {
     }
     
     #menu-button {display: none;}
-
+}
 
     /*Anställdasidan, är nu grid-items istället för flex*/
     #employees_item1 {
@@ -308,4 +308,3 @@ footer {
     margin-left: 110px;
     margin-right: 70px;
     }
-}
