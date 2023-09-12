@@ -11,8 +11,8 @@
    <body>
       <div id="app">
          <p>Nuvarande sida: {{page}}</p>
-         <button :disabled="page < 2 ? true : false" @click='decrement'>Bakåt</button>
-         <button :disabled="page < pages.length ? false : true" @click='increment'>Framåt</button>
+         <button @click='decrement' :disabled='page == 1'>Bakåt</button>
+         <button @click='increment' :disabled='page == pages.length'>Framåt</button>
       </div>
       <script src="test.js"></script>
    </body>

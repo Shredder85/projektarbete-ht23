@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta
+         name="viewport"
+         content="width=device-width, initial-scale=1.0" />
+
+      <style>
+         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+         #merch,
+         #cart {
+            border: 2px solid #515151;
+            box-shadow: 3px 3px 10px gray;
+            padding: 1rem 2rem;
+         }
+      </style>
+
+      <script
+         defer
+         type="module"
+         src="script.js"></script>
+
+      <title>Vue.js - Testing</title>
+   </head>
+
+   <body
+      style="padding: 3rem 4.5rem; font-family: Roboto, system-ui, sans-serif">
+      <h1>Howdy universe!</h1>
+      <div
+         id="shopping"
+         style="
+            display: grid;
+            grid-auto-flow: column;
+            grid-column: auto;
+            gap: 2rem;
+         ">
+         <section id="merch">
+            <h2>Merchandise</h2>
+            <div style="margin-top: 2.5rem">
+               <!-- Här ska vi generera produkterna -->
+               <ul>
+                  <li v-for="{id, name,type} of products">
+                     <h3>{{name}}</h3>
+                     <p>Typ: {{type}}</p>
+                     <div>
+                        <button @click='addToCart(id)'>Köp</button>
+                     </div>
+                  </li>
+               </ul>
+            </div>
+         </section>
+         <section id="cart">
+            <h2>Shopping cart</h2>
+            <div style="margin-top: 2.5rem">
+               <!-- Här ska vi generera kundkorgen -->
+               <div v-if='cart.length > 0'>
+                  <ul>
+                     <li v-for='{id, name, type} of cart'>
+                        ({{id}}) {{name}}
+                     </li>
+                  </ul>
+               </div>
+               <p v-else>No products.</p>
+            </div>
+         </section>
+      </div>
+   </body>
+</html>
