@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700&display=swap%27");
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Lexend+Zetta:wght@100&family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap%27');
 
 html * {
   margin: 0;
@@ -317,3 +318,127 @@ header div.logo {
   font-size: 2em;
   font-weight: bold;
 } 
+
+
+/*Tjänstesidan*/
+#services_item1 {
+    background-image: url(images/tjanster.png);
+    background-size: 420px;
+    background-position: center;
+    color: white;
+    font-family: "roboto", sans-serif;
+    padding: 4em;
+    opacity: 1;
+    font-size: 0.9em;
+    text-align: center;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.9);
+}
+
+.cart{
+ display: flex;
+ justify-content: flex-end;
+ border-bottom: 2px solid orange;
+ 
+}
+
+#img-cart{
+  width: 50px;
+  margin: 15px;
+  margin-top: 15px;
+}
+
+.cart h1{
+  width: 78%;
+text-align: center;
+}
+
+.grid-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin-top: 30px;
+  row-gap: 7px;
+  column-gap: 7px;
+
+  
+}
+
+.grid-item{
+  padding: 5px;
+  background-color: #f8cd92;
+  display:grid;
+  grid-template-rows: auto 1fr auto;
+
+}
+
+.button-buy{
+    
+    padding: 10px 20px;
+    text-align: center;
+    text-transform: uppercase;
+    background-size: 200% auto;
+    color: white;
+    border-radius: 10px;
+    display: block;
+    border: 0px;
+    font-weight: 700;
+    background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
+    cursor: pointer;
+
+    
+    }
+
+    .grid-item h1{
+      font-family: 'Lexend Zetta';
+      font-size: 20px;
+      color:white;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    }
+
+    .grid-item p{
+      font-family: 'Quicksand';
+      font-size: 15px;
+      color:black;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    .price-button{
+      display: flex;
+      align-items: flex-end;
+      margin-top: 10px;
+      justify-content: center;
+      padding-bottom: 5px;
+      
+    }
+
+    .price-button p{
+      font-weight: bold;
+      font-size: 18px;
+      padding-right: 10px;
+
+    }
+
+    .grid-item img{
+      height: 40px;
+      filter: invert(1) 
+    }
+
+    .header-img{
+      display:flex;
+      align-content: center;
+      justify-content: center;
+      padding-bottom: 10px;
+      
+    }
+
+    .header-img h1{
+      margin-right: 10px;
+    }
+
+  
+
+
+
+
+

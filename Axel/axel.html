@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="../lib/router/router.css" />
     <link rel="stylesheet" href="styleaxel.css" />
     <script src="../lib/router/keyup.js"></script>
-    <script src="axel.js"></script>
+    <script 
+    defer
+    type="module"
+    src="axel.js"></script>
   </head>
 
   <body>
@@ -98,8 +101,34 @@
 
       <!--Tjänster-->
       <input type="radio" name="app" id="page_services" />
-      <div id="content-service" class="page">
-        <p>Tjänster</p>
+      <div id="content_services" class="page">
+        <div id = "services_item1">
+          <div class = "services_headertext"><h1>VÅRA TJÄNSTER</h1></div>
+       </div>
+
+        <div class="cart">
+          <h1></h1>
+          <img id="img-cart" src="images/shopping-cart.png" alt="Bild pa en shoppingvagn">
+
+        </div>
+
+        <div class= grid-container>
+          <div class="grid-item" v-for="{name, icon, description, price} of products"> 
+            <div class="header-img">
+              <h1>{{name}}</h1>
+            <img :src="icon" />
+          </div>
+            
+            <p>{{description}}</p>
+            
+            <div class="price-button">
+              <p>{{price}}</p>
+            <button class="button-buy">Köp</button>
+          </div>
+        </div>
+
+        </div>
+
       </div>
       <!--Anställda-->
       <input type="radio" name="app" id="page_employees" />
