@@ -1,0 +1,6 @@
+@import "base.css";
+@import "header.css";
+@import "footer.css";
+
+@import "pages/start.css";
+@import "pages/contact.css";
