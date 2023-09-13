@@ -1,6 +1,6 @@
 #content_contact .layout {
-   display: flex;
-   flex-direction: column;
+   display: grid;
+   grid-template-rows: auto 1fr;
    row-gap: 1.5rem;
 }
 
@@ -18,6 +18,10 @@
 }
 
 #content_contact .form h2 {
+   text-align: center;
+}
+
+#content_contact .done p {
    text-align: center;
 }
 
@@ -59,13 +63,17 @@
 
 @media (min-width: 520px) {
    #content_contact .layout {
-      flex-direction: row;
+      grid-template-columns: 1fr 1fr;
       column-gap: 2rem;
    }
 
    #content_contact .form {
       padding: 1.5rem 0;
       padding-right: 1rem;
+   }
+
+   #content_contact .done p {
+      text-align: left;
    }
 
    #content_contact .form h2 {

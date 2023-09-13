@@ -26,7 +26,7 @@ const contactApp = createApp({
          required: true,
          label: 'E-postadress',
          error: 'Kontrollera att e-postadressen är giltig!',
-         rule: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/
+         rule: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
       },
       phone: {
          id: 'phone',
@@ -35,7 +35,7 @@ const contactApp = createApp({
          required: true,
          label: 'Telefonnummer',
          error: 'Vi behöver ha ditt telefonnummer för att komma i kontakt med dig!',
-         rule: /^[0-9]{2,4}-?[0-9]{6,8}$/
+         rule: /^[0-9]{2,4}-?[0-9]{6,8}$/,
       },
       message: {
          id: 'message',
@@ -43,7 +43,7 @@ const contactApp = createApp({
          required: true,
          label: 'Ditt meddelande',
          error: 'Vänligen ange din frågeställning ovan (minst 25 tecken)',
-         rule: /^.{25,}$/
+         rule: /^.{25,}$/,
       },
    },
 
@@ -55,7 +55,7 @@ const contactApp = createApp({
 
    lastInput: {},
    trackInput({target}) {
-      if(!this.fields[target.name].required) return;
+      if (!this.fields[target.name].required) return;
 
       this.lastInput[target.name] = Date.now();
 
@@ -68,9 +68,32 @@ const contactApp = createApp({
    },
 
    validate({name, value}) {
-      this.errors[name] = !this.fields[name].rule.test(value)
-         ? this.fields[name].error
-         : null;
+      if (this.fields[name].required) {
+         this.errors[name] = !this.fields[name].rule.test(value)
+            ? this.fields[name].error
+            : null;
+      }
+   },
+
+   validateForm(form) {
+      let input = new FormData(form);
+      for (let name of input.keys()) {
+         this.validate({name, value: input.get(name)});
+      }
+
+      for (let [_, error] of Object.entries(this.errors)) {
+         if (error != null) return false;
+      }
+
+      window.scrollTo(0, 0);
+      return true;
+   },
+
+   submit({target}) {
+      this.completed = this.validateForm(target);
+      if (this.completed == true) {
+         setTimeout(() => (this.completed = false), 5000);
+      }
    },
 });
 

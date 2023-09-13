@@ -24,12 +24,11 @@
    border-bottom: 5px solid grey;
    background-color: #c2b52559;
    height: 300px;
-   width: 250px;
+   width: 75svw;
    padding: 1rem 1.5rem;
    border-radius: 8px;
    margin: 1rem auto;
    box-shadow: 3px 3px 6px hsla(0, 0%, 16%, 0.34);
-   /* transition: scale 200ms ease-out; */
 }
 
 #content_start > section.pictures .info-card:hover {
@@ -59,6 +58,11 @@
       width: fit-content;
       padding: 2.5rem 0;
       margin: 0 auto;
-      gap: 3.5rem;
+      column-gap: 2rem;
+      row-gap: 2rem;
+   }
+
+   #content_start > section.pictures .info-card {
+      width: 270px;
    }
 }
