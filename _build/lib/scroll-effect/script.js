@@ -6,19 +6,26 @@ document.addEventListener('DOMContentLoaded', () => {
          element.classList.add('js-fade-into-view');
       }
 
-      window.addEventListener('scroll', () => updateVisibility(element));
       window.addEventListener('resize', () => updateVisibility(element));
+      window.addEventListener('scroll', () => updateVisibility(element));
    }
 });
 
 const updateVisibility = (element) => {
-   if (isInViewport(element)) element.classList.add('js-fade-into-view');
-   else element.classList.remove('js-fade-into-view');
+   const isVisible = isInViewport(element);
+
+   if (
+      (isVisible && !element.classList.contains('js-fade-into-view')) ||
+      (!isVisible && element.classList.contains('js-fade-into-view'))
+   ) {
+      element.classList.toggle('js-fade-into-view');
+   }
 };
 
 const isInViewport = (element) => {
+   const position = element.getBoundingClientRect();
    return (
-      element.getBoundingClientRect().top - 50 <
+      position.top - 75 <
       (window.innerHeight ?? document.documentElement.clientHeight)
    );
 };
