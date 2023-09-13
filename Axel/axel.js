@@ -10,10 +10,34 @@ products:[
 , price:'1337$'},
 {name: 'Software', icon:'images/software.png', description: 'Utveckling och underhåll av skräddarsydda programvarulösningar för specifika företagsbehov.' 
 , price:'1337$'},
-]
+],
+
+
+cart: [],
+
+
+
+addToCart(name){
+for (let service of this.products){
+if (service.name == name){
+    this.cart.push(service);
+
+    
+}
+}
+
+
+
+
+
+console.log(this.cart);
+},
 
 });
 app.mount('#content_services');
+
+
+
 
 
 
