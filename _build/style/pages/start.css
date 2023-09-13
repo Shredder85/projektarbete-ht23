@@ -1,3 +1,8 @@
+#content_start > section.pictures {
+   display: flex;
+   flex-direction: column;
+}
+
 #content_start > section.header {
    background-image: url(../../images/item1bild.webp);
    height: 250px;
@@ -19,12 +24,11 @@
    border-bottom: 5px solid grey;
    background-color: #c2b52559;
    height: 300px;
-   width: 250px;
+   width: 75svw;
    padding: 1rem 1.5rem;
    border-radius: 8px;
    margin: 1rem auto;
    box-shadow: 3px 3px 6px hsla(0, 0%, 16%, 0.34);
-   transition: scale 200ms ease-out;
 }
 
 #content_start > section.pictures .info-card:hover {
@@ -42,18 +46,23 @@
 
 #content_start > section.pictures .info-card img {
    opacity: 0.8;
-   filter: invert(1) drop-shadow(1px 2px 10px rgba(141, 137, 116, .95));
+   filter: invert(1) drop-shadow(1px 2px 10px rgba(141, 137, 116, 0.95));
 }
 
 /* inställningar för större skärmar */
 @media only screen and (min-width: 520px) {
    #content_start > section.pictures {
-      display: flex;
       flex-wrap: wrap;
+      flex-direction: row;
       justify-content: space-around;
       width: fit-content;
       padding: 2.5rem 0;
       margin: 0 auto;
-      gap: 3.5rem;
+      column-gap: 2rem;
+      row-gap: 2rem;
+   }
+
+   #content_start > section.pictures .info-card {
+      width: 270px;
    }
 }

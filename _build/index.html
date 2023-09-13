@@ -5,34 +5,60 @@
       <meta
          name="viewport"
          content="width=device-width, initial-scale=1" />
-      <title>Idag bygger vi design!</title>
-
+      <link
+         rel="preconnect"
+         href="https://fonts.googleapis.com" />
+      <link
+         rel="preconnect"
+         href="https://fonts.gstatic.com"
+         crossorigin="anonymous" />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@700&family=Nunito+Sans:wght@400;500;600;700&display=swap"
+         rel="stylesheet" />
       <link
          rel="stylesheet"
          href="lib/router/router.css" />
       <link
          rel="stylesheet"
-         href="style/_import.css" />
+         href="style/base.css" />
+      <link
+         rel="stylesheet"
+         href="style/header.css" />
+      <link
+         rel="stylesheet"
+         href="style/footer.css" />
+      <link
+         rel="stylesheet"
+         href="style/pages/start.css" />
+      <link
+         rel="stylesheet"
+         href="style/pages/contact.css" />
 
       <script
          defer
-         src="lib/router/keyup.js"></script>
+         src="lib/router/navigation.js"></script>
       <script
          defer
          src="lib/scroll-effect/script.js"></script>
+
+      <title>Idag bygger vi design!</title>
    </head>
 
    <body>
       <header>
-         <div class="logo">
-            <p>&lt;/&gt; EACE</p>
-         </div>
+         <div class="logo">&lt;/&gt; EACE</div>
          <nav>
             <label
                id="menu-button"
-               for="menu-toggle"
-               >&#9776;</label
-            >
+               for="menu-toggle">
+               <div class="hamburger">
+                  <div class="stripes">
+                     <div></div>
+                     <div></div>
+                     <div></div>
+                  </div>
+               </div>
+            </label>
             <input
                id="menu-toggle"
                type="checkbox" />
@@ -87,7 +113,6 @@
             id="content_start"
             class="page">
             <section class="header">
-               <h1>EACE</h1>
                <p>Vi skapar din drömsida va!</p>
             </section>
             <section class="pictures">
@@ -123,6 +148,7 @@
 
          <script
             defer
+            type="module"
             src="lib/js/pages/services.js"></script>
          <!-- END: Tjänster -->
 
@@ -146,57 +172,66 @@
          <div
             id="content_contact"
             class="page">
-            <section v-if="!completed">
-               <h2>Kontakta oss</h2>
-               <p>
-                  Fyll i formuläret nedan för att komma i kontakt med vår
-                  kundtjänst!
-               </p>
-               <form
-                  id="form_contact"
-                  @submit.prevent>
-                  <div v-for="{element, type, name, label} of fields">
-                     <div>{{label}}:</div>
-                     <div v-if="element == 'input'">
-                        <input
-                           :type="type"
-                           :name="name"
-                           @input="validate"
-                           @focusout="validate" />
+            <div class="layout">
+               <div>
+                  <picture>
+                     <source
+                        srcset="images/contact_page.png"
+                        media="(min-width: 520px)" />
+                     <img
+                        src="images/contact_page-mobile.png"
+                        alt="Kvinna som arbetar med support" />
+                  </picture>
+               </div>
+               <div
+                  class="form"
+                  v-if="!completed">
+                  <h2>Kontakta oss</h2>
+                  <p>
+                     Har du frågor angående våra tjänster? Fyll i formuläret
+                     nedan för att komma i kontakt med vår kundtjänst så hjälper
+                     vi dig!
+                  </p>
+                  <form @submit.prevent="submit">
+                     <div
+                        class="fieldset"
+                        v-for="{id, element, type, required, label, error} of getFields()">
+                        <div class="field">
+                           <p v-text="label + ':'"></p>
+                           <input
+                              v-if="element == 'input'"
+                              :type="type"
+                              :name="id"
+                              @input="trackInput" />
+                           <textarea
+                              v-if="element == 'textarea'"
+                              :name="id"
+                              @input="trackInput"></textarea>
+                        </div>
+                        <div
+                           class="error"
+                           v-if="errors[id] != null"
+                           v-text="error"></div>
                      </div>
-                     <div v-else-if="element == 'textarea'">
-                        <textarea
-                           :name="name"
-                           @input="validate"
-                           @focusout="validate"></textarea>
-                     </div>
-                  </div>
-                  <div
-                     class="error-box"
-                     v-if="errors.length > 0">
-                     <h3>Följande behöver åtgärdas:</h3>
-                     <ul>
-                        <li v-for="error of errors">{{error}}</li>
-                     </ul>
-                  </div>
-                  <div>
                      <input
                         type="submit"
-                        value="Skicka meddelande" />
-                  </div>
-               </form>
-            </section>
-            <section v-else>
-               <h2>Tack för ditt meddelande!</h2>
-               <p>Vi kommer att återkoppla till er så snart vi kan!</p>
-               <p>
-                  <a @click.prevent="reset">Återgå till kontaktformuläret</a>
-               </p>
-            </section>
+                        value="Skicka meddelandet" />
+                  </form>
+               </div>
+               <div
+                  class="form done"
+                  v-else>
+                  <h2>Tack för ditt meddelande!</h2>
+                  <p>
+                     Vi kommer att kontakta dig snarast möjligt.
+                  </p>
+               </div>
+            </div>
          </div>
 
          <script
             defer
+            type="module"
             src="lib/js/pages/contact.js"></script>
 
          <!-- END: Kontakt -->

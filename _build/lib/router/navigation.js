@@ -1,6 +1,8 @@
 /**
  * En kompletteringsfunktion för menyn som aktiverar möjlighet
  * att styra menyn med tangentbordet om JavaScript är aktiverat.
+ *
+ * Den scrollar även upp sidan till toppen vid ett sidbyte.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -10,7 +12,11 @@ document.addEventListener('DOMContentLoaded', () => {
             document
                .getElementById(label.getAttribute('for'))
                ?.setAttribute('checked', true);
+
+            window.scrollTo(0, 0);
          }
       });
+
+      label.addEventListener('click', () => window.scrollTo(0, 0));
    }
 });

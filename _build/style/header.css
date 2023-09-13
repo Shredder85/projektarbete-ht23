@@ -5,7 +5,7 @@ header {
    width: 100%;
    display: flex;
    justify-content: space-between;
-   font-family: 'Nunito', sans-serif;
+   font-family: 'Nunito Sans', sans-serif;
    background: linear-gradient(-90deg, #f74f18 0%, #fedf16 100%);
    background-size: 200% 200%;
    animation: ani_gradient 12s ease infinite;
@@ -16,8 +16,9 @@ header {
 }
 
 header div.logo {
-   padding-left: 1em;
-   padding-top: 1.2em;
+   display: grid;
+   align-items: center;
+   padding-left: 5svw;
    font-family: 'Lexend Zetta', sans-serif;
    font-size: 2em;
    font-weight: bold;
@@ -39,51 +40,110 @@ header ul {
    }
 }
 
-nav {
-   /* background-color: rgb(160, 160, 169); */
-}
-
-#menu-toggle:not(:checked) + .menu {
-   display: none;
-}
-
-#menu-toggle:checked + .menu {
-   display: block;
-}
-
 #menu-toggle {
    display: none;
 }
 
-.menu {
-   margin-right: 0.4em;
-   margin-top: 0.4em;
+nav .menu .link {
+   color: white;
 }
 
-#menu-button {
-   margin-right: 10px;
+nav .menu .link:hover,
+nav .menu .link:active {
+   color: black;
 }
 
-.menu .link {
-   margin-right: 0.5em;
-   padding: 3px;
-}
+@media (max-width: 639px) {
+   nav .hamburger {
+      position: fixed;
+      z-index: 101;
+      top: 0.5rem;
+      right: 1rem;
+      height: 2rem;
+      width: 2rem;
+   }
 
-.menu .link:hover {
-   color: rgb(0, 0, 0);
+   .menu {
+      width: calc(100% - 4.5rem);
+      height: fit-content;
+      position: fixed;
+      top: 0.5rem;
+      left: 1rem;
+      color: black;
+   }
+
+   #menu-toggle:not(:checked) + .menu {
+      opacity: 0;
+      position: fixed;
+      z-index: -1;
+   }
+
+   #menu-toggle:not(:checked) + .menu li {
+      opacity: 0;
+   }
+
+   #menu-toggle:checked + .menu ul {
+      display: flex;
+      justify-content: space-around;
+   }
+
+   #menu-toggle:checked + .menu li {
+      opacity: 1;
+      font-size: 4svw;
+      font-weight: 600;
+      line-height: 2rem;
+
+      transition: opacity 200ms ease-out;
+   }
+
+   .hamburger {
+      cursor: pointer;
+   }
+
+   .hamburger .stripes {
+      display: grid;
+      row-gap: 3px;
+      place-content: center;
+      width: inherit;
+      height: 100%;
+   }
+
+   .hamburger .stripes > div {
+      height: 0;
+      width: inherit;
+      border: 2px solid black;
+      border-radius: 0.25rem;
+      box-shadow: 1px 1px 1px lightgray;
+   }
+
+   .hamburger:active .stripes > div {
+      border-color: gray;
+   }
 }
 
 @media only screen and (min-width: 640px) {
-   .menu {
-      display: block;
+   nav .menu,
+   nav .menu li {
+      opacity: 1;
    }
-   .menu li {
-      display: inline;
+
+   nav .menu {
+      top: 1rem;
+      right: 2rem;
+      position: fixed;
+      z-index: 110;
    }
-   #menu-toggle:not(:checked) + .menu {
+
+   nav .menu ul {
       display: flex;
+      gap: 2rem;
    }
-   #menu-button {
-      display: none;
+
+   #menu-toggle:not(:checked) + .menu,
+   #menu-toggle:not(:checked) + .menu li {
+      opacity: 1;
+      position: relative;
    }
+
+   
 }
