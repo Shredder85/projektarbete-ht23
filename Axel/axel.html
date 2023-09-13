@@ -109,11 +109,15 @@
         <div class="cart">
           <h1></h1>
           <img id="img-cart" src="images/shopping-cart.png" alt="Bild pa en shoppingvagn">
+          <div id="cart-icon"> 
+           {{cart.length}}
+          </div>
 
         </div>
 
         <div class= grid-container>
           <div class="grid-item" v-for="{name, icon, description, price} of products"> 
+
             <div class="header-img">
               <h1>{{name}}</h1>
             <img :src="icon" />
@@ -123,7 +127,7 @@
             
             <div class="price-button">
               <p>{{price}}</p>
-            <button class="button-buy">Köp</button>
+            <button class="button-buy" @click="addToCart(name)">Köp</button>
           </div>
         </div>
 
