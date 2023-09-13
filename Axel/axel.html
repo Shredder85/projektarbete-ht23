@@ -108,8 +108,15 @@
 
         <div class="cart">
           <h1></h1>
+          <div>
+            <button @click="emptyCart()" class="trash">
+              <img class="trash-pic" src="images/trash-can1.png" >
+            </button>
+           
+          </div>
           <img id="img-cart" src="images/shopping-cart.png" alt="Bild pa en shoppingvagn">
-          <div id="cart-icon"> 
+          
+          <div id="cart-icon" v-if="cart.length > 0"> 
            {{cart.length}}
           </div>
 
@@ -120,14 +127,15 @@
 
             <div class="header-img">
               <h1>{{name}}</h1>
-            <img :src="icon" />
+            <img id="icon" :src="icon" />
           </div>
             
             <p>{{description}}</p>
             
             <div class="price-button">
               <p>{{price}}</p>
-            <button class="button-buy" @click="addToCart(name)">Köp</button>
+            <button class="button-buy" @click="addToCart(name)">Lägg till</button>
+              
           </div>
         </div>
 

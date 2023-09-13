@@ -21,20 +21,20 @@ addToCart(name){
 for (let service of this.products){
 if (service.name == name){
     this.cart.push(service);
-
-    
 }
 }
-
-
-
-
 
 console.log(this.cart);
 },
 
+emptyCart() {
+    this.cart = [];
+    //this.cart.splice(0, this.cart.length);
+}
 });
 app.mount('#content_services');
+
+
 
 
 
