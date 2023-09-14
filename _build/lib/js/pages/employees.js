@@ -24,9 +24,9 @@ const employeeApp = createApp({
          pageId: 'page_employee_3'
       },
       {
-         name: 'Axel Söderlund',
+         name: 'Axel Österlund',
          role: 'Cyber Security Architect',
-         email: 'axel.soderlund@eace.se',
+         email: 'axel.osterlund@eace.se',
          image: 'images/Axel.png',
          pageId: 'page_employee_4'
       }

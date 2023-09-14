@@ -30,6 +30,6 @@ const isInViewport = (element) => {
       window.innerHeight ?? document.documentElement.clientHeight;
 
    return (
-      position.top - 50 < clientHeight + 75 && !(position.top > clientHeight - 75)
+      position.top - 50 < clientHeight + 75 && !(position.top > clientHeight - 100)
    );
 };
