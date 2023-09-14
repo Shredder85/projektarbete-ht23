@@ -5,22 +5,22 @@ const startpageApp = createApp({
       {
          src: 'images/it-systems (1).png',
          headline: 'SYSTEM',
-         content: 'Vi är bäst på IT-system!',
+         content: 'Vi skapar informationssystem som gör skillnad på alla nivåer',
       },
       {
          src: 'images/devops.png',
          headline: 'DEVOPS',
-         content: 'Vi är bäst på devops!',
+         content: 'Vi omvandlar tekniska utmaningar till framgångssagor varje dag',
       },
       {
          src: 'images/elearning.png',
          headline: 'SECURITY',
-         content: 'Vi är bäst på cyber security!',
+         content: 'Säkerhet är vår passion, och vi skyddar din digitala värld',
       },
       {
          src: 'images/software.png',
-         headline: 'SOFTWARE',
-         content: 'Vi är bäst på software!',
+         headline: 'DATA MINING',
+         content: 'Data är vår råvara, och insikterna vi genererar förändrar spelplanen',
       },
    ],
 });

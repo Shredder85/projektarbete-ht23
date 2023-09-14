@@ -6,8 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
          element.classList.add('js-fade-into-view');
       }
 
+      window.addEventListener('click', () => updateVisibility(element));
       window.addEventListener('resize', () => updateVisibility(element));
       window.addEventListener('scroll', () => updateVisibility(element));
+      window.addEventListener('keyup', () => updateVisibility(element));
    }
 });
 
@@ -24,8 +26,10 @@ const updateVisibility = (element) => {
 
 const isInViewport = (element) => {
    const position = element.getBoundingClientRect();
+   const clientHeight =
+      window.innerHeight ?? document.documentElement.clientHeight;
+
    return (
-      position.top - 75 <
-      (window.innerHeight ?? document.documentElement.clientHeight)
+      position.top - 50 < clientHeight + 75 && !(position.top > clientHeight - 75)
    );
 };
