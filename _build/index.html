@@ -211,7 +211,7 @@
                <ul>
                   <li
                      class="js-faded-outside-view"
-                     v-for="{name, role, email, image} of employees"
+                     v-for="{name, role, email, image, pageId} of employees"
                   >
                      <div class="profile-pic">
                         <label
@@ -225,11 +225,11 @@
                            />
                         </label>
                      </div>
-                     <div class='employee-info'>
+                     <div class="employee-info">
                         <h3 v-text="name"></h3>
                         <ul>
-                           <li v-text='role'></li>
-                           <li v-text='email'></li>
+                           <li v-text="role"></li>
+                           <li v-text="email"></li>
                         </ul>
                      </div>
                   </li>
@@ -346,6 +346,62 @@
          ></script>
 
          <!-- END: Kontakt -->
+
+         <!-- START: Eriks personliga sida -->
+         <input
+            type="radio"
+            name="app"
+            id="page_employee_1"
+         />
+         <div
+            id="content_employee_1"
+            class="page"
+         >
+            Eriks personliga sida
+         </div>
+         <!-- SLUT: Eriks personliga sida -->
+
+         <!-- START: Charles personliga sida -->
+         <input
+            type="radio"
+            name="app"
+            id="page_employee_2"
+         />
+         <div
+            id="content_employee_2"
+            class="page"
+         >
+            Charles personliga sida
+         </div>
+         <!-- SLUT: Charles personliga sida -->
+
+         <!-- START: Emmas personliga sida -->
+         <input
+            type="radio"
+            name="app"
+            id="page_employee_3"
+         />
+         <div
+            id="content_employee_3"
+            class="page"
+         >
+            Emmas personliga sida
+         </div>
+         <!-- SLUT: Emmas personliga sida -->
+
+         <!-- START: Axels personliga sida -->
+         <input
+            type="radio"
+            name="app"
+            id="page_employee_4"
+         />
+         <div
+            id="content_employee_4"
+            class="page"
+         >
+            Axels personliga sida
+         </div>
+         <!-- SLUT: Axels personliga sida -->
       </main>
       <footer>
          <div class="copy">&copy; EACE 2023</div>
