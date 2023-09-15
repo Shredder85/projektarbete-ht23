@@ -32,7 +32,7 @@
 } */
 
 #content_start > .services h3 {
-   color: rgb(164, 145, 39);
+   color: rgb(255, 255, 255);
    font-size: 1.75rem;
    text-shadow: 1px 1px 2px gray;
 }
@@ -41,7 +41,7 @@
    text-align: center;
    font-weight: bold;
    border-bottom: 5px solid grey;
-   background-color: #c2b52559;
+   background-color: rgb(229, 229, 229);
    height: 350px;
    width: 280px;
    padding: 1rem 1.5rem;
@@ -58,7 +58,7 @@
 #content_start > .services .info-card .icon-text {
    font-size: 95%;
    padding-top: 1rem;
-   border-top: 3px solid rgb(164, 145, 39);
+   border-top: 3px solid rgb(247, 79, 24);
 }
 
 #content_start > .services .info-card img {

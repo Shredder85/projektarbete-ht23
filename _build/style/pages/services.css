@@ -51,7 +51,7 @@
 #content_services .product {
    width: 90svw;
    padding: 5px;
-   background-color: #f8cd92;
+   background-color: rgb(229, 229, 229);
    display: grid;
    grid-template-rows: auto 1fr auto;
 }
