@@ -115,9 +115,9 @@ nav .menu .link:active {
    .hamburger .stripes > div {
       height: 0;
       width: inherit;
-      border: 2px solid black;
+      border: 2px solid rgb(255, 255, 255);
       border-radius: 0.25rem;
-      box-shadow: 1px 1px 1px lightgray;
+      box-shadow: 1px 1px 1px black;
    }
 
    .hamburger:active .stripes > div {
