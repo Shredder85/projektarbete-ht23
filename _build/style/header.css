@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Lexend+Zetta:wght@100;200&display=swap');
+
+
 header {
    top: 0;
    position: fixed;
@@ -22,7 +25,7 @@ header div.logo {
    padding-bottom: 1.5rem;
    font-family: 'Lexend Zetta', sans-serif;
    font-size: 2em;
-   font-weight: bold;
+   /* font-weight: bold; */
 }
 
 header ul {
