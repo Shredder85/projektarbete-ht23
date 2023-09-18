@@ -92,6 +92,19 @@
   font-style: italic;
 }
 
+#more-info {
+  text-align: center;
+  padding: 0px 10px 10px 10px;
+}
+
+#more-info label {
+  font-weight: bold;
+}
+
+#more-info label:hover {
+  text-decoration: underline;
+}
+
 @media only screen and (min-width: 768px) {
   #content_start {
     grid-template-columns: 50% 50%;
@@ -147,5 +160,10 @@
     width: 270px;
   }
   .gallery-button {
+  }
+
+  #more-info {
+    display: grid;
+    grid-column: 1 / span 2;
   }
 }
