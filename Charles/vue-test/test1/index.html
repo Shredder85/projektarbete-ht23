@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Charles Testar Vue</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script defer src="script.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
+  </head>
+  <body>
+    <!-- Detta skulle kunna användas för att läsa in olika projekt i personlig sida, läsa in 5st JSON -->
+    <div id="app">
+     <button v-on:click="getDataFromJSON">Hämta data</button>
+    
+      <div v-for="product in products">
+      <div class="product">
+        <div class="productImage">
+          <img :src="product.image" alt="en bild" />
+        </div>
+
+        <div class="productDetails">
+          <h1 v-text="product.title.substr(0,8)"></h1>
+          <p v-html="product.description"></p>
+          <p v-text="product.price"></p>
+
+          <button v-on:click="addToGallery(product)" :disabled='product.addedToGallery'>Lägg till galleri</button>
+          <p>Bilder i galleriet: {{ itemsInGallery }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>
