@@ -161,7 +161,9 @@
   #content_start > .services .info-card {
     width: 270px;
   }
- 
+  .gallery-button {
+  }
+
   #more-info {
     display: grid;
     grid-column: 1 / span 2;
