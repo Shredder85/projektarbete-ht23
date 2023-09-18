@@ -90,6 +90,12 @@
   padding: 5px;
 }
 
+.gallery img:hover {
+
+    opacity: 0.7; 
+  }
+
+
 .info dl dt {
   font-style: italic;
 }
