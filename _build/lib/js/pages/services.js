@@ -40,8 +40,6 @@ const servicesApp = createApp({
             this.cart.push(service);
          }
       }
-
-      console.log(this.cart);
    },
 
    emptyCart() {
