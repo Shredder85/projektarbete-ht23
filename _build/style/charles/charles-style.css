@@ -57,8 +57,9 @@
  }
 
  #charles-face {
-    webkit-shape-outside: circle(125px);
-    shape-outside: circle(125px);
+    /* webkit-shape-outside: circle(125px);
+    shape-outside: circle(125px); */
+    shape-outside: circle(50%);
     float: left; 
     margin-right: 15px;
     
