@@ -1,0 +1,352 @@
+/* GLOBAL */
+
+#content_employee_1 ul {
+   list-style-type: none;
+}
+
+#content_employee_1 h4 {
+   font-weight: 500;
+   padding-bottom: 1rem;
+}
+
+#content_employee_1 .employees {
+   font-size: 90%;
+   font-weight: 600;
+   padding-top: 2.5rem;
+   text-align: center;
+}
+
+#content_employee_1 img {
+   border-radius: 1rem;
+   box-shadow: 2px 2px 5px lightgray;
+}
+
+#content_employee_1 .profile img {
+   /* width: rem; */
+   max-width: 100%;
+}
+
+/* SMALL */
+
+@media (max-width: 767px) {
+   #content_employee_1 {
+      display: grid;
+      grid-auto-flow: row;
+      padding: 1rem 0;
+   }
+
+   #content_employee_1 > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem 2rem;
+   }
+
+   #content_employee_1 .about,
+   #content_employee_1 .projects {
+      background-color: #eee;
+   }
+
+   #content_employee_1 .skills {
+      padding-bottom: 2rem;
+   }
+
+   #content_employee_1 .projects {
+      padding-left: 0;
+      padding-right: 0;
+   }
+
+   #content_employee_1 .projects ul {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem 0;
+      gap: 1rem;
+   }
+
+   #content_employee_1 .projects li {
+      width: 96%;
+      margin: 0 auto;
+      background-color: white;
+      border-radius: 0.5rem;
+      padding: 1rem;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+
+   #content_employee_1 .projects .image {
+      margin: 1.5rem auto;
+   }
+
+   #content_employee_1 .projects img {
+      width: 75%;
+      display: block;
+      margin: 0 auto;
+   }
+
+   #content_employee_1 .projects h4 {
+      padding: 0;
+      font-weight: 600;
+      text-align: center;
+   }
+
+   #content_employee_1 .projects h5 {
+      margin: 0.5rem 0;
+   }
+
+   #content_employee_1 .profile img {
+      border-radius: 1rem;
+      box-shadow: 1px 1px 5px rgb(85, 85, 85);
+      margin: 1rem 0;
+   }
+
+   #content_employee_1 ul {
+      width: 100%;
+      list-style-type: none;
+   }
+
+   #content_employee_1 .skills li {
+      padding: 0.5rem 0;
+   }
+
+   #content_employee_1 .skills li p {
+      font-size: 90%;
+      text-align: center;
+   }
+
+   #content_employee_1 .employees {
+      font-size: 90%;
+      font-weight: 600;
+      padding-top: 2.5rem;
+   }
+
+   #content_employee_1 .projects ul {
+      padding: 1rem 0;
+   }
+
+   #content_employee_1 .projects li {
+      background-color: white;
+      border-radius: 0.5rem;
+      padding: 1rem;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+
+   #content_employee_1 .projects .image {
+      margin: 1.5rem auto;
+   }
+
+   #content_employee_1 .projects img {
+      border-radius: 1rem;
+      box-shadow: 2px 2px 5px lightgray;
+   }
+
+   #content_employee_1 .projects h4 {
+      padding: 0;
+      font-weight: 600;
+      text-align: center;
+   }
+
+   #content_employee_1 .projects h5 {
+      margin: 0.5rem 0;
+   }
+}
+
+@media (min-width: 481px) and (max-width: 767px)
+{
+   #content_employee_1 {
+      padding: 1rem 10%;
+   }
+
+   #content_employee_1 .profile img {
+      max-width: 24rem;
+   }
+}
+
+/* MEDIUM */
+
+@media (min-width: 768px) {
+   #content_employee_1 {
+      display: grid;
+      grid-template-columns: 1fr 60%;
+   }
+
+   #content_employee_1 > div {
+      padding: 2rem 3rem;
+   }
+
+   #content_employee_1 .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+
+   #content_employee_1 .about,
+   #content_employee_1 .skills {
+      background-color: #eee;
+   }
+
+   #content_employee_1 .skills {
+      text-align: center;
+   }
+
+   #content_employee_1 .skills li {
+      padding: 0.5rem 0;
+   }
+
+   #content_employee_1 .projects h3,
+   #content_employee_1 .projects h4,
+   #content_employee_1 .projects h5 {
+      text-align: center;
+   }
+
+   #content_employee_1 .projects ul {
+      padding: 2rem 0;
+      display: flex;
+      flex-direction: column;
+      row-gap: 2rem;
+   }
+
+   #content_employee_1 .projects li {
+      padding: 1rem 0;
+      border-bottom: 2px dotted #515151;
+   }
+
+   #content_employee_1 .projects li:last-of-type {
+      border-bottom: none;
+   }
+
+   #content_employee_1 .projects img {
+      display: block;
+      margin: 1.5rem auto;
+
+      border-radius: 1rem;
+      box-shadow: 1px 2px 10px lightslategray;
+   }
+
+   #content_employee_1 .employees {
+      grid-column: 1 / span 2;
+      background-color: #eee;
+   }
+}
+
+/* LARGE */
+
+@media (min-width: 1280px) {
+   #content_employee_1 {
+      display: grid;
+      grid-template-columns: 25% 40% 35%;
+   }
+
+   #content_employee_1 .skills {
+      background-color: transparent;
+   }
+
+   #content_employee_1 .projects {
+      background-color: #eee;
+   }
+
+   #content_employee_1 .projects {
+      grid-column: 1 / span 3;
+   }
+
+   #content_employee_1 .projects ul {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      row-gap: 2.5rem;
+   }
+
+   #content_employee_1 .projects li {
+      width: 30%;
+      border-bottom: none;
+   }
+
+   #content_employee_1 .employees {
+      grid-column: 1 / span 3;
+   }
+}
+
+/* SKILLBARS */
+
+#content_employee_1 .skillbar {
+   width: 100%;
+   height: 1.5rem;
+   overflow: hidden;
+
+   border: 2px solid #515151;
+   background-color: white;
+   border-radius: 1rem;
+   box-shadow: 1px 2px 10px lightslategray;
+}
+
+#content_employee_1 .skillbar-filler {
+   width: 0%;
+   height: 100%;
+   position: relative;
+   z-index: 11;
+
+   animation: load-bar 2.5s ease-out forwards;
+   background-image: linear-gradient(to right, orange, #ffd4aa);
+   border-right: 2px solid #515151;
+}
+
+#content_employee_1 .skillbar span {
+   opacity: 0;
+   font-size: 80%;
+   font-weight: 500;
+
+   top: -1.4rem;
+   position: relative;
+   z-index: 12;
+
+   animation: load-bar-text 300ms ease-out 2.5s forwards;
+}
+
+@media (max-width: 481px) {
+   #content_employee_1 .skillbar span {
+      left: 46%;
+   }
+}
+
+@keyframes load-bar {
+   0% {
+      width: 0%;
+   }
+
+   100% {
+      width: var(--final-width);
+   }
+}
+
+@keyframes load-bar-text {
+   0% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 1;
+   }
+}
+
+/* animerad loading spinner */
+
+#content_employee_1 .spinner {
+   padding: 1rem 0;
+}
+
+#content_employee_1 .spinner img {
+   animation: spinner 3.5s linear infinite;
+}
+
+@keyframes spinner {
+   0% {
+      transform: rotate(0);
+   }
+   100% {
+      transform: rotate(360deg);
+   }
+}

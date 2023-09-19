@@ -1,0 +1,32 @@
+[
+   {
+      "name": "Ett program som kan känna igen katter på bilder",
+      "company": "Puss & Kram AB",
+      "description": "Programmet använder en avancerad algoritm för att analysera bilder och hitta kattliknande mönster. Det kan identifiera katter som är gömda bakom föremål, eller som sitter i konstiga positioner, som att hänga upp och ner från ett tak. Programmet kan också användas för att identifiera kattraser och kön.",
+      "image": "hiding-cat.png"
+   },
+   {
+      "name": "En app som kan översätta människospråk till hundskall",
+      "company": "Hundap AB",
+      "description": "Appen använder en avancerad algoritm för att analysera människospråk och konvertera det till hundskall. Den kan översätta enkla fraser, som \"hej\" och \"mat\", till mer komplexa meddelanden, som \"jag vill gå ut\" och \"jag är ledsen\". Appen kan också användas för att översätta hundskall till människospråk.",
+      "image": "small-dog.png"
+   },
+   {
+      "name": "Ett system som kan skicka e-post till alla i världen samtidigt",
+      "company": "E-postkungen AB",
+      "description": "Systemet använder en avancerad teknik för att komma runt spamfilter. Det kan skicka e-post till alla e-postadresser i världen, oavsett om de är privata eller företagsadresser. Systemet kan också användas för att skicka massutskick av e-post.",
+      "image": "email.png"
+   },
+   {
+      "name": "En dator som kan spela Minecraft på nivån av ett barn",
+      "company": "Minecraft-mästarna AB",
+      "description": "Datorn använder en avancerad algoritm för att styra spelaren i Minecraft. Den kan undvika att fastna i byggnader och dö av fallskador, och den kan också bygga komplexa strukturer. Datorn kan användas för att spela Minecraft på en svårare nivå, eller för att hjälpa barn att lära sig hur man spelar spelet.",
+      "image": "minecraft.png"
+   },
+   {
+      "name": "En mjukvara som kan översätta tankar till text",
+      "company": "Tankeläsare AB",
+      "description": "Mjukvaran använder en avancerad algoritm för att läsa tankar. Den kan översätta tankar om enkla saker, som \"jag är hungrig\" och \"jag är trött\", till mer komplexa tankar, som \"jag älskar dig\" och \"jag vill resa till Mars\". Mjukvaran kan användas för att hjälpa människor som är döva eller talar ett annat språk, eller för att förbättra kommunikationen mellan människor.",
+      "image": "mind-reader.png"
+   }
+]
