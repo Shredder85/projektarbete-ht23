@@ -1,0 +1,35 @@
+{
+    "projekt": [
+      {
+        "titel": "Optimering av kunddataanalys",
+        "kund": "ABC Corporation",
+        "beskrivning": "Arbetade med att analysera och optimera kunddata för att förbättra marknadsföringsstrategier och kundrelationer. Implementerade avancerade dataminingtekniker för att hitta mönster och segmentera kunderna för riktade kampanjer.",
+        "mer_information": "Projektet resulterade i en ökad försäljning med 15% och förbättrade kundnöjdheten."
+      },
+      {
+        "titel": "Maskininlärning för felprognos",
+        "kund": "XYZ Industries",
+        "beskrivning": "Utvecklade en maskininlärningsmodell för att förutsäga maskinella fel i realtid. Samlade och analyserade data från sensorer för att förbättra underhållsprognoser och minska driftstopp.",
+        "mer_information": "Projektet ledde till en minskning av driftstopp med 20% och betydande besparingar i underhållskostnader."
+      },
+      {
+        "titel": "Kundsegmentering för personaliserad marknadsföring",
+        "kund": "Tech Solutions Inc.",
+        "beskrivning": "Använde kunddata och avancerade segmenteringsalgoritmer för att skapa skräddarsydda marknadsföringskampanjer. Målade specifika kundgrupper med relevanta produkter och erbjudanden.",
+        "mer_information": "Projektet resulterade i en ökning av konverteringsgraden med 25% och ökad intäkt per kund."
+      },
+      {
+        "titel": "Dataanalys för kostnadsreduktion",
+        "kund": "Global Logistics Ltd.",
+        "beskrivning": "Utförde omfattande dataanalys för att identifiera ineffektiviteter inom logistikprocessen. Rekommenderade åtgärder för att minska kostnader och förbättra leveransprestanda.",
+        "mer_information": "Projektet genererade årliga besparingar på över 2 miljoner dollar och förbättrade leveransprecisionen med 15%."
+      },
+      {
+        "titel": "Anomalidetektering i finansdata",
+        "kund": "FinanceTech Corp.",
+        "beskrivning": "Implementerade avancerade algoritmer för att upptäcka avvikande mönster och bedrägerier inom finanstransaktioner. Utvecklade realtidsvarningssystem för att minska ekonomiskt förlust.",
+        "mer_information": "Projektet minskade bedrägerifall med 30% och sparade företaget betydande summor."
+      }
+    ]
+  }
+  

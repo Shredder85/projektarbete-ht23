@@ -1,6 +1,7 @@
+
 /* START STYLES FÖR INFO-CONTAINER */
 .info-charles {
-    display: flex;
+  display: flex;
   flex-direction: column;
   padding-left: 20px;
   padding-right: 20px;
@@ -48,11 +49,87 @@
 /* START STYLES FÖR SKILL-BAR */
 
 .skill-bar {
-  background-color: #e5e5e5;
-  padding-left: 20px;
-  display: flex;
-  flex-direction: column;
+
+    background-color: #e3e3e3;
 }
+
+.skill-bar h3 {
+
+
+    padding-left:20px;
+
+}
+
+.skill-bar-wrapper {
+
+    
+    padding: 0 40px 40px 100px;
+    width: 85%;
+     
+
+}
+
+.details{
+    width: 100%;
+    display: flex;  
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.bar{
+    position: relative;
+ 
+    border: 2px solid rgb(0, 0, 0);
+ 
+    border-radius: 20px;
+  
+}
+.bar div{
+    position: relative;
+    width: 0;
+    height: 9px;
+    border-radius: 10px;
+    background: linear-gradient(to right, rgb(245, 226, 8) 0%, rgb(247, 79, 24) 100%);
+    
+}
+
+.skills:not(:last-child){
+    margin-bottom: 20px;
+}
+
+#data-bar{
+    animation: data-fill 4s forwards;
+}
+@keyframes data-fill{
+    100%{
+        width: 90%;
+    }
+}
+
+#projekt-bar{
+    animation: projekt-fill 4s forwards;
+}
+@keyframes projekt-fill{
+    100%{
+        width: 85%;
+    }
+}
+#web-bar{
+    animation: web-fill 4s forwards;
+}
+@keyframes web-fill {
+    100%{
+        width: 79%;
+    }
+}
+#ai-bar{
+    animation: ai-fill 4s forwards;
+}
+@keyframes ai-fill{
+    100%{
+        width: 75%;
+    }
+} 
 
 /* SLUT STYLES FÖR SKILL-BAR */
 
@@ -60,12 +137,44 @@
 
 .charles-projects {
   background-color: #a5a5a5;
-  margin: 0;
-  padding: 0;
-  padding-left: 20px;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  
+ 
+  
+    
 }
+
+#projects-title { 
+
+    background-color: rgb(216, 216, 216);
+    /* text-align: center; */
+
+}
+
+
+
+.charles-projects h3 {
+
+    padding-left: 20px;
+    grid-column: 1 / span 5;
+}
+
+#project-1, #project-2, #project-3, #project-4, #project-5 {
+
+    padding: 10px 10px 10px 20px;
+    height: 100%;
+
+}
+
+#project-2, #project-4 {
+
+    background-color: #c4c4c4;
+    
+
+   
+}
+
+
 /* SLUT STYLES FÖR PROJECTS */
 
 /* START MEDIA QUERY FÖR STORA SKÄRMAR */
@@ -78,13 +187,35 @@
   }
 
   .skill-bar {
-    align-items: center;
+    align-items: left;
   }
 
   .charles-projects {
+    grid-template-columns: repeat(5, 20%);
     grid-column: 1 / span 2;
     align-items: center;
+    margin: 0;
+    padding: 0;
   }
+
+  #projects-title {
+
+    grid-column: 1 / span 5;
+    justify-content: center;
+    background-color: rgb(216, 216, 216);
+    text-align: center;
+    padding: 10px 0 10px 0;
+
+  }
+  
+  #project-1, #project-2, #project-3, #project-4, #project-5 {
+
+    background-color: rgb(216, 216, 216);
+    
+ 
+}
+
+
 }
 
 /* SLUT MEDIA QUERY FÖR STORA SKÄRMAR */
