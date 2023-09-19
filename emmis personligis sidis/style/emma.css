@@ -120,6 +120,10 @@
     width: 17px;
     margin-top: 10px;
 }
+.projects h6 {
+    margin-top: 3px;
+    font-family: "Nunito", sans-serif;;
+}
 /*PROJEKT-DELEN SLUTAR*/
 
 /*DESIGN-ANPASSNING FÖR STÖRRE SKÄRMAR BÖRJAR HÄR*/
