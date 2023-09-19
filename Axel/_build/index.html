@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <meta
+         name="viewport"
+         content="width=device-width, initial-scale=1" />
+      <link
+         rel="preconnect"
+         href="https://fonts.googleapis.com" />
+      <link
+         rel="preconnect"
+         href="https://fonts.gstatic.com"
+         crossorigin="anonymous" />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@700&family=Nunito+Sans:wght@400;500;600;700&display=swap"
+         rel="stylesheet" />
+      <link
+         rel="stylesheet"
+         href="lib/router/router.css" />
+      <link
+         rel="stylesheet"
+         href="style/base.css" />
+      <link
+         rel="stylesheet"
+         href="style/header.css" />
+      <link
+         rel="stylesheet"
+         href="style/footer.css" />
+      <link
+         rel="stylesheet"
+         href="style/pages/start.css" />
+      <link
+         rel="stylesheet"
+         href="style/pages/contact.css" />
+
+      <script
+         defer
+         src="lib/router/navigation.js"></script>
+      <script
+         defer
+         src="lib/scroll-effect/script.js"></script>
+
+      <title>Idag bygger vi design!</title>
+   </head>
+
+   <body>
+      <header>
+         <div class="logo">&lt;/&gt; EACE</div>
+         <nav>
+            <label
+               id="menu-button"
+               for="menu-toggle">
+               <div class="hamburger">
+                  <div class="stripes">
+                     <div></div>
+                     <div></div>
+                     <div></div>
+                  </div>
+               </div>
+            </label>
+            <input
+               id="menu-toggle"
+               type="checkbox" />
+
+            <div class="menu">
+               <ul>
+                  <li>
+                     <label
+                        class="link"
+                        for="page_start"
+                        tabindex="0"
+                        >Startsidan</label
+                     >
+                  </li>
+                  <li>
+                     <label
+                        class="link"
+                        for="page_services"
+                        tabindex="0"
+                        >Tjänster</label
+                     >
+                  </li>
+                  <li>
+                     <label
+                        class="link"
+                        for="page_employees"
+                        tabindex="0"
+                        >Anställda</label
+                     >
+                  </li>
+                  <li>
+                     <label
+                        class="link"
+                        for="page_contact"
+                        tabindex="0"
+                        >Kontakt</label
+                     >
+                  </li>
+               </ul>
+            </div>
+         </nav>
+      </header>
+
+      <main>
+         <!-- START: Startsidan -->
+         <input
+            type="radio"
+            name="app"
+            id="page_start"
+            checked />
+         <div
+            id="content_start"
+            class="page">
+            <section class="header">
+               <p>Vi skapar din drömsida va!</p>
+            </section>
+            <section class="pictures">
+               <div
+                  v-for="{src, headline, content} of images"
+                  class="info-card js-faded-outside-view">
+                  <img
+                     :src="src"
+                     :alt="headline" />
+                  <h1 v-text="headline"></h1>
+                  <div
+                     class="icon-text"
+                     v-text="content"></div>
+               </div>
+            </section>
+         </div>
+         <script
+            defer
+            type="module"
+            src="lib/js/pages/start.js"></script>
+         <!-- END: Startsidan -->
+
+         <!-- START: Tjänster -->
+         <input
+            type="radio"
+            name="app"
+            id="page_services" />
+         <div
+            id="content_services"
+            class="page">
+            <p>Tjänster</p>
+         </div>
+
+         <script
+            defer
+            type="module"
+            src="lib/js/pages/services.js"></script>
+         <!-- END: Tjänster -->
+
+         <!-- START: Anställda -->
+         <input
+            type="radio"
+            name="app"
+            id="page_employees" />
+         <div
+            id="content_employees"
+            class="page">
+            Anställda
+         </div>
+         <!-- END: Anställda -->
+
+         <!-- START: Kontakt -->
+         <input
+            type="radio"
+            name="app"
+            id="page_contact" />
+         <div
+            id="content_contact"
+            class="page">
+            <div class="layout">
+               <div>
+                  <picture>
+                     <source
+                        srcset="images/contact_page.png"
+                        media="(min-width: 520px)" />
+                     <img
+                        src="images/contact_page-mobile.png"
+                        alt="Kvinna som arbetar med support" />
+                  </picture>
+               </div>
+               <div
+                  class="form"
+                  v-if="!completed">
+                  <h2>Kontakta oss</h2>
+                  <p>
+                     Har du frågor angående våra tjänster? Fyll i formuläret
+                     nedan för att komma i kontakt med vår kundtjänst så hjälper
+                     vi dig!
+                  </p>
+                  <form @submit.prevent="submit">
+                     <div
+                        class="fieldset"
+                        v-for="{id, element, type, required, label, error} of getFields()">
+                        <div class="field">
+                           <p v-text="label + ':'"></p>
+                           <input
+                              v-if="element == 'input'"
+                              :type="type"
+                              :name="id"
+                              @input="trackInput" />
+                           <textarea
+                              v-if="element == 'textarea'"
+                              :name="id"
+                              @input="trackInput"></textarea>
+                        </div>
+                        <div
+                           class="error"
+                           v-if="errors[id] != null"
+                           v-text="error"></div>
+                     </div>
+                     <input
+                        type="submit"
+                        value="Skicka meddelandet" />
+                  </form>
+               </div>
+               <div
+                  class="form done"
+                  v-else>
+                  <h2>Tack för ditt meddelande!</h2>
+                  <p>
+                     Vi kommer att kontakta dig snarast möjligt.
+                  </p>
+               </div>
+            </div>
+         </div>
+
+         <script
+            defer
+            type="module"
+            src="lib/js/pages/contact.js"></script>
+
+         <!-- END: Kontakt -->
+      </main>
+      <footer>
+         <div class="copy">&copy; EACE 2023</div>
+         <ul>
+            <li>
+               <a
+                  href="http://facebook.com/"
+                  title="Facebook"
+                  target="_blank"
+                  ><img
+                     src="images/facebook.png"
+                     width="24"
+                     alt="Facebook icon"
+                     loading="lazy"
+               /></a>
+            </li>
+            <li>
+               <a
+                  href="http://instagram.com/"
+                  title="Instagram"
+                  target="_blank">
+                  <img
+                     src="images/instagram.png"
+                     width="24"
+                     alt="Instagram icon"
+                     loading="lazy" />
+               </a>
+            </li>
+            <li>
+               <a
+                  href="http://tiktok.com/"
+                  title="TikTok"
+                  target="_blank">
+                  <img
+                     src="images/tik-tok.png"
+                     width="24"
+                     alt="TikTok icon"
+                     loading="lazy" />
+               </a>
+            </li>
+            <li>
+               <a
+                  href="http://github.com/"
+                  title="GitHub"
+                  target="_blank">
+                  <img
+                     src="images/github.png"
+                     width="24"
+                     alt="GitHub icon"
+                     loading="lazy" />
+               </a>
+            </li>
+         </ul>
+      </footer>
+   </body>
+</html>

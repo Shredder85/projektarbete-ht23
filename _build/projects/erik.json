@@ -1,32 +1,32 @@
 [
    {
-      "name": "Appen som gör din katt till en hacker",
-      "company": "Kattens hemliga klubb",
-      "summary": "En app som låter katter hacka in i sina ägares datorer och telefoner för att ta reda på deras hemligheter.",
-      "description": "Appen använder sig av en avancerad AI-teknik för att lära sig hur den ska hacka in i olika enheter. Katter kan använda appen för att ta reda på sina ägares lösenord, bankkontonummer och andra känsliga uppgifter."
+      "name": "Ett program som kan känna igen katter på bilder",
+      "company": "Puss & Kram AB",
+      "description": "Programmet använder en avancerad algoritm för att analysera bilder och hitta kattliknande mönster. Det kan identifiera katter som är gömda bakom föremål, eller som sitter i konstiga positioner, som att hänga upp och ner från ett tak. Programmet kan också användas för att identifiera kattraser och kön.",
+      "image": "hiding-cat.png"
    },
    {
-      "name": "Den självgående roboten som bara gör fel",
-      "company": "Företaget som aldrig lär sig",
-      "summary": "En robot som är tänkt att automatisera olika arbetsuppgifter, men som istället bara gör allting fel.",
-      "description": "Roboten är full av fel och buggar. Den kan till exempel sätta in saker på fel ställe, tappa saker i golvet eller till och med skada sig själv. Företaget som har beställt roboten har försökt att fixa problemen, men de har inte lyckats."
+      "name": "En app som kan översätta människospråk till hundskall",
+      "company": "Hundap AB",
+      "description": "Appen använder en avancerad algoritm för att analysera människospråk och konvertera det till hundskall. Den kan översätta enkla fraser, som \"hej\" och \"mat\", till mer komplexa meddelanden, som \"jag vill gå ut\" och \"jag är ledsen\". Appen kan också användas för att översätta hundskall till människospråk.",
+      "image": "small-dog.png"
    },
    {
-      "name": "Webbplatsen som spårar alla dina rörelser",
-      "company": "Den stora brorsan",
-      "summary": "En webbplats som spårar alla dina rörelser på internet, oavsett vad du gör.",
-      "description": "Webbplatsen använder sig av cookies och andra spårningstekniker för att samla in information om allt du gör på internet. Informationen används för att skapa en profil över dig och dina intressen."
+      "name": "Ett system som kan skicka e-post till alla i världen samtidigt",
+      "company": "E-postkungen AB",
+      "description": "Systemet använder en avancerad teknik för att komma runt spamfilter. Det kan skicka e-post till alla e-postadresser i världen, oavsett om de är privata eller företagsadresser. Systemet kan också användas för att skicka massutskick av e-post.",
+      "image": "email.png"
    },
    {
-      "name": "Det sociala mediet som gör dig lycklig",
-      "company": "Företaget som vill tjäna pengar på din lycka",
-      "summary": "Ett socialt medie som är designat för att få dig att må bra, men som i själva verket bara är ett sätt för företaget att tjäna pengar på din lycka.",
-      "description": "Sociala medier är designade för att hålla dig engagerad och ständigt uppdaterad. Detta gör att företaget kan visa dig mer och mer reklam."
+      "name": "En dator som kan spela Minecraft på nivån av ett barn",
+      "company": "Minecraft-mästarna AB",
+      "description": "Datorn använder en avancerad algoritm för att styra spelaren i Minecraft. Den kan undvika att fastna i byggnader och dö av fallskador, och den kan också bygga komplexa strukturer. Datorn kan användas för att spela Minecraft på en svårare nivå, eller för att hjälpa barn att lära sig hur man spelar spelet.",
+      "image": "minecraft.png"
    },
    {
-      "name": "Spelkonsolen som gör dig till ett geni",
-      "company": "Företaget som vill tjäna pengar på din intelligens",
-      "summary": "En spelkonsol som är designad för att göra dig till ett geni, men som i själva verket bara är ett sätt för företaget att tjäna pengar på din intelligens.",
-      "description": "Spelkonsolen använder sig av en avancerad AI-teknik för att lära sig hur du tänker. Detta gör att företaget kan anpassa spelen efter dina personliga preferenser. Spelen är utformade för att vara så beroendeframkallande som möjligt."
+      "name": "En mjukvara som kan översätta tankar till text",
+      "company": "Tankeläsare AB",
+      "description": "Mjukvaran använder en avancerad algoritm för att läsa tankar. Den kan översätta tankar om enkla saker, som \"jag är hungrig\" och \"jag är trött\", till mer komplexa tankar, som \"jag älskar dig\" och \"jag vill resa till Mars\". Mjukvaran kan användas för att hjälpa människor som är döva eller talar ett annat språk, eller för att förbättra kommunikationen mellan människor.",
+      "image": "mind-reader.png"
    }
 ]

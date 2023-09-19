@@ -542,16 +542,24 @@
             </div>
             <div class="projects js-faded-outside-view">
                <h3>Portfölj</h3>
-               <div v-if="projects == null" class="spinner">
+               <div v-if="projects.data.length == 0" class="spinner">
                   <img src="images/spinner.png" alt="Loading" width="52" />
                </div>
-               <ul>
-                  <li v-for="project of loadProjects()">
-                     ...
+               <ul v-if="projects.data.length > 0">
+                  <li
+                     v-for="{name, company, description, image} of projects.data">
+                     <h5 v-text="company"></h5>
+                     <h4 v-text="name"></h4>
+                     <div class="image">
+                        <img
+                           :src="`images/projects/erik/${image}`"
+                           :alt="name" />
+                     </div>
+                     <p v-text="description"></p>
                   </li>
                </ul>
             </div>
-            <div class="employees js-faded-outside-view">
+            <div class="employees">
                <label class="link" for="page_employees"
                   >&lt; Tillbaka till anställda</label
                >
