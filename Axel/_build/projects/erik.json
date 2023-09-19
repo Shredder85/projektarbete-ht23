@@ -1,0 +1,32 @@
+[
+   {
+      "name": "Appen som gör din katt till en hacker",
+      "company": "Kattens hemliga klubb",
+      "summary": "En app som låter katter hacka in i sina ägares datorer och telefoner för att ta reda på deras hemligheter.",
+      "description": "Appen använder sig av en avancerad AI-teknik för att lära sig hur den ska hacka in i olika enheter. Katter kan använda appen för att ta reda på sina ägares lösenord, bankkontonummer och andra känsliga uppgifter."
+   },
+   {
+      "name": "Den självgående roboten som bara gör fel",
+      "company": "Företaget som aldrig lär sig",
+      "summary": "En robot som är tänkt att automatisera olika arbetsuppgifter, men som istället bara gör allting fel.",
+      "description": "Roboten är full av fel och buggar. Den kan till exempel sätta in saker på fel ställe, tappa saker i golvet eller till och med skada sig själv. Företaget som har beställt roboten har försökt att fixa problemen, men de har inte lyckats."
+   },
+   {
+      "name": "Webbplatsen som spårar alla dina rörelser",
+      "company": "Den stora brorsan",
+      "summary": "En webbplats som spårar alla dina rörelser på internet, oavsett vad du gör.",
+      "description": "Webbplatsen använder sig av cookies och andra spårningstekniker för att samla in information om allt du gör på internet. Informationen används för att skapa en profil över dig och dina intressen."
+   },
+   {
+      "name": "Det sociala mediet som gör dig lycklig",
+      "company": "Företaget som vill tjäna pengar på din lycka",
+      "summary": "Ett socialt medie som är designat för att få dig att må bra, men som i själva verket bara är ett sätt för företaget att tjäna pengar på din lycka.",
+      "description": "Sociala medier är designade för att hålla dig engagerad och ständigt uppdaterad. Detta gör att företaget kan visa dig mer och mer reklam."
+   },
+   {
+      "name": "Spelkonsolen som gör dig till ett geni",
+      "company": "Företaget som vill tjäna pengar på din intelligens",
+      "summary": "En spelkonsol som är designad för att göra dig till ett geni, men som i själva verket bara är ett sätt för företaget att tjäna pengar på din intelligens.",
+      "description": "Spelkonsolen använder sig av en avancerad AI-teknik för att lära sig hur du tänker. Detta gör att företaget kan anpassa spelen efter dina personliga preferenser. Spelen är utformade för att vara så beroendeframkallande som möjligt."
+   }
+]

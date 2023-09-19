@@ -79,78 +79,91 @@
          <div id="content_start" class="page">
             <div class="header"></div>
             <section class="info">
-               <h2>Vad är EACE?</h2>
-               <br />
-               EACE är ett ledande IT-konsultföretag som levererar innovativa
-               och skräddarsydda IT-lösningar till företag över hela världen.
-               Med en djup förståelse för teknik och en passion för att skapa
-               värde för våra kunder, hjälper vi företag att uppnå sin fulla
-               potential genom digital transformation.
-
-               <br /><br />
-               <h3>Varför EACE?</h3>
-
-               <dl>
-                  <dt>Erfarenhet och expertis:</dt>
-                  <dd>
-                     Vårt team av erfarna konsulter har en gedigen bakgrund inom
-                     IT och branschspecifika kunskaper.
-                  </dd>
-                  <br />
-                  <dt>Kreativa Lösningar:</dt>
-                  <dd>
-                     Vi tänker utanför boxen för att hitta innovativa lösningar
-                     som ger våra kunder konkurrensfördelar.
-                  </dd>
-                  <br />
-                  <dt>Klientfokuserad:</dt>
-                  <dd>
-                     Dina behov är vårt fokus, och vi strävar alltid efter att
-                     överträffa dina förväntningar.
-                  </dd>
-                  <br />
-                  <dt>Resultatinriktade:</dt>
-                  <dd>
-                     Vi mäter vår framgång genom de resultat vi levererar till
-                     våra kunder.
-                  </dd>
-               </dl>
+               <section>
+                  <h2>Vad är EACE?</h2>
+                  <p>
+                     EACE är ett ledande IT-konsultföretag som levererar
+                     innovativa och skräddarsydda IT-lösningar till företag över
+                     hela världen. Med en djup förståelse för teknik och en
+                     passion för att skapa värde för våra kunder, hjälper vi
+                     företag att uppnå sin fulla potential genom digital
+                     transformation.
+                  </p>
+               </section>
+               <section>
+                  <h3>Varför EACE?</h3>
+                  <dl>
+                     <dt>Erfarenhet och expertis</dt>
+                     <dd>
+                        Vårt team av erfarna konsulter har en gedigen bakgrund
+                        inom IT och branschspecifika kunskaper.
+                     </dd>
+                     <br />
+                     <dt>Kreativa Lösningar</dt>
+                     <dd>
+                        Vi tänker utanför boxen för att hitta innovativa
+                        lösningar som ger våra kunder konkurrensfördelar.
+                     </dd>
+                     <br />
+                     <dt>Klientfokuserad</dt>
+                     <dd>
+                        Dina behov är vårt fokus, och vi strävar alltid efter
+                        att överträffa dina förväntningar.
+                     </dd>
+                     <br />
+                     <dt>Resultatinriktade</dt>
+                     <dd>
+                        Vi mäter vår framgång genom de resultat vi levererar
+                        till våra kunder.
+                     </dd>
+                  </dl>
+               </section>
             </section>
-
-            <section class="gallery">
+            <section class="gallery js-faded-outside-view">
                <h2>Bilder från företaget</h2>
-
                <img :src="imagez[currentImageIndex].image" />
-               <div class="gallery-button">
+               <div class='count' v-text="`( ${currentImageIndex + 1} / ${imagez.length} )`"></div>
+               <div class="buttons">
                   <button
                      @click="currentImageIndex--"
                      :disabled="currentImageIndex === 0">
-                     Föregående
+                     <img
+                        src="images/arrow.png"
+                        width="32"
+                        class="reversed"
+                        alt="Bläddra bakåt" />
                   </button>
                   <button
                      @click="currentImageIndex++"
                      :disabled="currentImageIndex === imagez.length - 1">
-                     Nästa
+                     <img
+                        src="images/arrow.png"
+                        width="32"
+                        alt="Bläddra framåt" />
                   </button>
                </div>
             </section>
-            <section class="services">
+            <section class="services js-faded-outside-view">
                <h2>Våra tjänster</h2>
-               <div
+               <ul>
+                  <li v-for='{src, headline, content} of images'>
+                     <h3 v-text='headline'></h3>
+                     <img :src='src' width='96' :alt='headline'>
+                     <p v-text='content'></p>
+                  </li>
+               </ul>
+               <!-- <div
                   v-for="{src, headline, content} of images"
                   class="info-card js-faded-outside-view">
                   <img :src="src" :alt="headline" />
                   <h3 v-text="headline"></h3>
                   <div class="icon-text" v-text="content"></div>
-               </div>
+               </div> -->
             </section>
-            <div id="more-info">
-               <p>
-                  Vill du veta mer om någon av våra tjänster? <br />
-                  <label class="link" for="page_services" tabindex="0"
-                     >Klicka här!</label
-                  >
-               </p>
+            <div class="more-info">
+               <label class="link" for="page_services" tabindex="0"
+                  >Läs mer om våra tjänster &gt;</label
+               >
             </div>
          </div>
          <script defer type="module" src="lib/js/pages/start.js"></script>
@@ -571,106 +584,18 @@
          <!-- SLUT: Eriks personliga sida -->
 
          <!-- START: Charles personliga sida -->
-
          <input type="radio" name="app" id="page_employee_2" />
-         <div id="content_employee_2" class="page">
-            <div class="info-charles">
-               <h2>Charles Åkerstedt</h2>
-               <p id="charles-title">Data Mining Engineer</p>
-
-               <div id="info-text-charles">
-                  <br />
-                  <p>
-                     <img
-                        id="charles-face"
-                        src="images/ai-charles-face.png"
-                        alt="employee2" />
-
-                     <br />Hej! <br />Mitt namn är Charles Åkerstedt, och jag är
-                     stolt över att vara en del av EACE som Data Mining
-                     Engineer.<br />
-                     Mitt arbete innebär att gräva djupt in i data och använda
-                     avancerade analysmetoder för att hitta värdefull
-                     information och insikter som hjälper vårt företag att ta
-                     datadrivna beslut.<br /><br />
-
-                     Jag är passionerad när det gäller att utforska komplexa
-                     datamängder och att hitta mönster som kan omsättas i
-                     praktiska lösningar. Med mina färdigheter i datautvinning
-                     och analys hjälper jag vårt team att dra nytta av
-                     dataresurserna på bästa sätt.<br /><br />
-
-                     Om du har några frågor eller om du vill diskutera
-                     möjligheter att använda data för att förbättra våra
-                     processer och beslut, är du alltid välkommen att kontakta
-                     mig på
-                     <a href="mailto:charles.akerstedt@eace.se"
-                        >charles.akerstedt@eace.se</a
-                     >. Jag ser fram emot att samarbeta med dig och driva
-                     innovation genom data på EACE!
-                  </p>
-               </div>
-            </div>
-         </div>
-
-         <!-- <input type="radio" name="app" id="page_employee_2" />
-         <div id="content_employee_2" class="page">
-            <div class="info-charles">
-               <h2>Charles Åkerstedt</h2>
-
-               <img
-                  src="images/Charles.png"
-                  width="240"
-                  alt="employee2"
-                  loading="lazy"
-               />
-               <p>Här börjar min personliga sida</p>
-               <p>Kontakta mig! infoga @epostadress</p>
-            </div>
-            <div class="skill-bar">
-               <h3>Mina skills</h3>
-               <p>Här infogas skill-bar</p>
-               <br />
-               <p>Här infogas skill-bar</p>
-               <br />
-               <p>Här infogas skill-bar</p>
-               <br />
-               <p>Här infogas skill-bar</p>
-               <br />
-               <p>Här infogas skill-bar</p>
-               <br />
-               <p>Här infogas skill-bar</p>
-               <br />
-               <p>Här infogas skill-bar</p>
-               <br />
-            </div>
-
-            <div class="charles-projects">
-               <h3>Mina projekt</h3>
-               <p>Här infogas 5st projekt</p>
-               <br />
-               <p>Här infogas 5st projekt</p>
-               <br />
-               <p>Här infogas 5st projekt</p>
-               <br />
-               <p>Här infogas 5st projekt</p>
-               <br />
-               <p>Här infogas 5st projekt</p>
-               <br />
-               <p>Här infogas 5st projekt</p>
-               <br />
-            </div>
-         </div> -->
+         <div id="content_employee_2" class="page"><h1>Charles</h1></div>
          <!-- SLUT: Charles personliga sida -->
 
          <!-- START: Emmas personliga sida -->
          <input type="radio" name="app" id="page_employee_3" />
-         <div id="content_employee_3" class="page">Emmas personliga sida</div>
+         <div id="content_employee_3" class="page"><h1>Emma</h1></div>
          <!-- SLUT: Emmas personliga sida -->
 
          <!-- START: Axels personliga sida -->
          <input type="radio" name="app" id="page_employee_4" />
-         <div id="content_employee_4" class="page">Axels personliga sida</div>
+         <div id="content_employee_4" class="page"><h1>Axel</h1></div>
          <!-- SLUT: Axels personliga sida -->
       </main>
       <footer>

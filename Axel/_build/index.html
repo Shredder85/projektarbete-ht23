@@ -23,6 +23,8 @@
 
       <link rel="stylesheet" href="style/profiles/erik.css" />
       <link rel="stylesheet" href="style/charles/charles-style.css" />
+      <link rel="stylesheet" href="style/axel/axel.css" />
+      
 
       <script defer src="lib/router/navigation.js"></script>
       <script defer src="lib/scroll-effect/script.js"></script>
@@ -542,24 +544,16 @@
             </div>
             <div class="projects js-faded-outside-view">
                <h3>Portfölj</h3>
-               <div v-if="projects.data.length == 0" class="spinner">
+               <div v-if="projects == null" class="spinner">
                   <img src="images/spinner.png" alt="Loading" width="52" />
                </div>
-               <ul v-if="projects.data.length > 0">
-                  <li
-                     v-for="{name, company, description, image} of projects.data">
-                     <h5 v-text="company"></h5>
-                     <h4 v-text="name"></h4>
-                     <div class="image">
-                        <img
-                           :src="`images/projects/erik/${image}`"
-                           :alt="name" />
-                     </div>
-                     <p v-text="description"></p>
+               <ul>
+                  <li v-for="project of loadProjects()">
+                     ...
                   </li>
                </ul>
             </div>
-            <div class="employees">
+            <div class="employees js-faded-outside-view">
                <label class="link" for="page_employees"
                   >&lt; Tillbaka till anställda</label
                >
@@ -670,7 +664,131 @@
 
          <!-- START: Axels personliga sida -->
          <input type="radio" name="app" id="page_employee_4" />
-         <div id="content_employee_4" class="page">Axels personliga sida</div>
+         <div id="content_employee_4" class="page">
+
+            <div class="grid-axel">
+
+               
+
+            <div class="info-axel">
+               <div class="info-text">
+               <img src="images/Axel-kopia1.png">
+               <h2 class="h-axel">Axel Österlund</h2>
+               <p class="p-chief">Chief of security</p>
+               
+               <p>
+
+                  Hej! Jag heter Axel och jag är stolt över att vara Chief of Security här på EACE. Med över 20 år inom it-branschen, har jag samlat på mig en gedigen erfarenhet av att säkra information, nätverk och digitala tillgångar. Jag brinner för att skapa säkra, robusta och framför allt pålitliga IT-miljöer.
+                  
+                  Under årens lopp har jag varit med om att tackla några av de mest komplexa säkerhetsutmaningarna som branschen stått inför. <br><br> Varje dag lär jag mig något nytt, och det är denna ständiga förändring och utmaning som håller min passion vid liv.
+                  
+                  Här på EACE är mitt huvudansvar att säkerställa att våra system och data är skyddade mot alla typer av hot. Jag leder ett team av dedikerade säkerhetsexperter som arbetar dagligen för att upptäcka, förebygga och hantera potentiella säkerhetsrisker.
+                  
+                  När jag inte granskar säkerhetsloggar eller planerar vår nästa stora uppgradering, gillar jag att resa eller tillbringa tid med min familj.
+                  
+                  Är du intresserad av att lära dig mer om vårt arbete eller bara vill diskutera de senaste trenderna inom IT-säkerhet? Tveka inte att kontakta mig!
+                  
+                  Du kan anpassa texten efter dina specifika behov, lägga till mer detaljer eller ändra något som passar ditt företag eller din personliga berättelse bättre.</p>
+               </div>
+            </div>
+            <div class="back-color">
+               
+            <div class="skills-axel">
+               
+               
+               <h3>It-security</h3>
+
+               <div class="bar">
+                  
+               <div class="fill" style="--width:95%"></div>
+               <div class="it-security">
+                 <span class="skills-text">95%</span>
+               </div> 
+               </div>
+               
+               <h3>Frontend</h3>
+               <div class="bar">
+                  <div class="fill" style="--width:95%"></div>
+                  <div class="Frontend">
+                     <soan class="skills-text">95%</span>
+                  </div> 
+                  
+                  </div>
+                  <h3>Backend</h3>
+                  <div class="bar">
+                     <div class="fill" style="--width:60%"></div>
+                     <div class="Backend">
+                        <span class="skills-text">60%</span>
+                     </div> 
+                     
+                     </div>
+                     <h3>Scrum</h3>
+                     <div class="bar">
+                        <div class="fill" style="--width:75%"></div>
+                        <div class="Scrum">
+                           <span class="skills-text">75%</span>
+                        </div> 
+                        
+                        </div>
+
+                        <h3>SQL</h3>
+                        <div class="bar">
+                           <div class="fill" style="--width:65%"></div>
+                           <div class="SQL">
+                              <span class="skills-text">65%</span>
+                           </div> 
+                           
+                           </div>
+                           </div>
+             </div>
+            
+            
+            </div>
+<div class="grid-container">
+        <div class ="grid item1">
+         <h2>"Fort Knox" Nätverksskydd</h2>
+            <p>Projektperiod: 2021-2022</p>
+            <p>Mitt team implementerade en avancerad nätverkssäkerhetslösning för att skydda företagets interna och externa kommunikation. Projektet inkluderade utrullningen av next-gen brandväggar, intrångsupptäcktssystem och avancerad nätverksanalys för att säkerställa datatrafikens integritet.</p>
+            <img src="/Axel/_build/images/1345.jpg">
+
+
+        </div> 
+         <div class ="grid item2" >
+            <h2>Dataskyddsinitiativ 2.0</h2> 
+            <p>Projektperiod: 2020 - 2021</p>
+            <p>För att möta de ständigt föränderliga hotbilderna lanserade Axel en helomfattande dataskyddslösning. Denna lösning säkrade all företagets data, både i molnet och på plats, med hjälp av kryptering, åtkomstkontroller och regelbunden säkerhetsgranskning.</p>
+            <img src="/Axel/_build/images/1345.jpg">
+         </div>   
+            <div class ="grid item3" >
+               <h2>"Fiskefri Zon" Medvetenhetsprogram</h2> 
+            <p>Projektperiod: 2019 - 2020</p>
+            <p>I detta projekt riktade Axel in sig på den mänskliga faktorn inom IT-säkerhet. Genom omfattande utbildning och simuleringar tränade han företagets personal att identifiera och undvika phishing-försök, vilket ledde till en märkbar minskning av framgångsrika cyberattacker.</p>
+            <img src="/Axel/_build/images/1345.jpg">
+            </div> 
+               <div class ="grid item4" >
+
+                  <h2>Noll-dagars Responsplan</h2> 
+            <p>Projektperiod: 2018 - 2019</p>
+            <p>Axel förstod betydelsen av att vara redo för okända hot. Därför skapade han en plan för att snabbt reagera på noll-dagars sårbarheter och hot. Planen fokuserade på snabb identifiering, isolering och åtgärdande av hot innan de kunde utnyttjas.</p>
+            <img src="/Axel/_build/images/1345.jpg">
+               </div> 
+                  <div class ="grid item5"  >
+
+                     <h2>Molnsäkerhetsövergång</h2> 
+            <p>Projektperiod: 2017 - 2018</p>
+            <p>Som en del av företagets övergång till molntjänster, ledde Axel implementeringen av robusta säkerhetsåtgärder för molninfrastrukturen. Detta inkluderade multi-faktor autentisering, databasens kryptering och regelbunden övervakning av molnaktiviteter.</p>
+            <img src="/Axel/_build/images/1345.jpg">
+                  </div>
+                     <div class ="grid item6">
+
+                        <h2>Endpunktsförstärkning och Modernisering</h2> 
+            <p>Projektperiod: 2016-2017</p>
+            <p>Med en växande mobil arbetsstyrka och en ökning av enheter anslutna till företagets nätverk, insåg Axel behovet av att stärka säkerheten på varje enskild enhet. I detta projekt införde han en holistisk strategi för att förbättra skyddet på alla företagets slutpunkter. Detta är ytterligare ett allmänt exempel, men kan anpassas efter dina specifika behov eller detaljer för att bättre passa den faktiska situationen.</p>
+               <img src="/Axel/_build/images/1345.jpg">
+                     </div>         
+</div>
+
+         </div>
          <!-- SLUT: Axels personliga sida -->
       </main>
       <footer>

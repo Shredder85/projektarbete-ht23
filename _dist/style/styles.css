@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700&display=swap%27");
+
+html * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html,
+body {
+   width: 100%;
+   height: 100%;
+   font-family: Nunito, sans-serif;
+}
+
+body {
+   display: grid;
+   grid-template-rows: 1fr auto;
+}
+
+h1,
+h2,
+h3,
+p {
+   padding: 0.5rem 0;
+}
+
+/* HEADER STYLES START */
+
+header {
+   top: 0;
+   position: fixed;
+   height: 8rem;
+   width: 100%;
+
+   display: flex;
+   justify-content: space-between;
+   background-color: rgb(160, 160, 169);
+}
+
+header div.logo {
+   background-color: yellow;
+}
+
+nav {
+   background-color: green;
+}
+
+main {
+   padding-top: 8rem;
+}
+
+footer {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   row-gap: 1rem;
+   padding: 1rem 1rem;
+
+   color: lightgray;
+   background-color: #515151;
+}
+
+footer .copy {
+   text-shadow: 1px 2px 3px black;
+}
+
+footer ul {
+   display: flex;
+   gap: 1.5rem;
+   list-style-type: none;
+}
+
+footer img {
+   filter: drop-shadow(1px 1px 10px black);
+}
+
+/* Startsidan */
+
+#content_start p {
+   color: red;
+}
+
+/* Kontakta oss */
+
+#content_contact {
+   padding: 1rem 1.25rem;
+}
+
+#form_contact div {
+   margin: 0.75rem 0;
+}
+
+#form_contact input[type='text'],
+#form_contact input[type='email'] {
+   width: 100%;
+   padding: 0.5rem;
+   border: 1px solid;
+}
+
+#form_contact textarea {
+   width: 100%;
+   padding: 0.5rem;
+   border: 1px solid;
+   min-height: 8rem;
+}
+
+#form_contact input:focus,
+#form_contact textarea:focus {
+   outline: none;
+}
+
+#form_contact input[type='submit'] {
+   width: 100%;
+   padding: 0.5rem 0;
+}
+
+#form_contact .error-box {
+   border: 2px solid darkred;
+   background-color: salmon;
+   padding: 0.75rem 1rem;
+}
