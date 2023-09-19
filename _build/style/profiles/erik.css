@@ -1,0 +1,178 @@
+
+/* globala stilar som delas mellan olika skärmstorlekar */
+
+#content_employee_1 h4
+{
+   font-weight: 500;
+}
+
+/* stilar för mobil */
+
+@media (max-width: 480px) or ((orientation: landscape) and (max-height: 480px))
+{
+   #content_employee_1
+   {
+      display: grid;
+      grid-auto-flow: row;
+
+      padding: 1rem 0;
+   }
+
+   #content_employee_1 > div
+   {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+      padding: 1rem 2rem;
+   }
+
+   #content_employee_1 .about,
+   #content_employee_1 .projects
+   {
+      background-color: #eee;
+   }
+
+   #content_employee_1 .skills
+   {
+      padding-bottom: 2rem;
+   }
+
+   #content_employee_1 h4
+   {
+      padding-bottom: 1rem;
+   }
+
+   #content_employee_1 .profile img
+   {
+      border-radius: 1rem;
+      box-shadow: 1px 1px 5px rgb(85, 85, 85);
+      margin: 1rem 0;
+   }
+
+   #content_employee_1 .employees
+   {
+      font-size: 90%;
+      font-weight: 600;
+      padding-top: 2.5rem;
+   }
+
+   #content_employee_1 ul
+   {
+      width: 100%;
+      list-style-type: none;
+   }
+
+   #content_employee_1 li 
+   {
+      padding: 0.5rem 0;
+   }
+
+   #content_employee_1 li p
+   {
+      font-size: 90%;
+      text-align: center;
+   }
+}
+
+@media (orientation: landscape) and (max-height: 480px)
+{
+   #content_employee_1 .profile img
+   {
+      width: 50svw;
+   }
+}
+
+/* för mellanstora skärmar */
+
+@media (min-width: 481px) and (min-height: 481px) and (max-width: 1023px)
+{
+   #content_employee_1
+   {
+      background-color: yellowgreen;
+   }
+}
+
+/* för stora skärmar */
+
+@media (orientation: landscape) and (min-width: 1024px)
+{
+   #content_employee_1
+   {
+      background-color: aquamarine;
+   }
+}
+
+/* för animerade skillbars */
+
+#content_employee_1 .skillbar
+{
+   width: 100%;
+   height: 1.5rem;
+   overflow: hidden;
+
+   border: 2px solid #515151;
+   background-color: white;
+   border-radius: 1rem;
+}
+
+#content_employee_1 .skillbar-filler
+{
+   width: 0%;
+   height: 100%;
+   animation: load-bar 2.5s ease-out forwards;
+   position: relative;
+   z-index: 11;
+   
+   background-color: #FFD4AA;
+}
+
+#content_employee_1 .skillbar span
+{
+   opacity: 0;
+   font-size: 80%;
+   font-weight: 500;
+
+   top: -1.4rem;
+   left: 46%;
+   position: relative;
+   z-index: 12;
+
+   animation: load-bar-text 300ms ease-out 2.5s forwards;
+}
+
+@keyframes load-bar
+{
+   0% { width: 0% }
+   
+   100%
+   {
+      width: var(--final-width);
+      border-right: 1px solid #999;
+   }
+}
+
+@keyframes load-bar-text
+{
+   0% { opacity: 0 }
+   100% { opacity: 1 }
+}
+
+/* animerad loading spinner */
+
+#content_employee_1 .spinner
+{ padding: 1rem 0 }
+
+#content_employee_1 .spinner img
+{
+   animation: spinner 3.5s linear infinite;
+}
+
+@keyframes spinner
+{
+   0% { transform: rotate(0) }
+   /* 25% { transform: rotate(90deg) }
+   50% { transform: rotate(180deg) }
+   75% { transform: rotate(270deg) } */
+   100% { transform: rotate(360deg) }
+}
