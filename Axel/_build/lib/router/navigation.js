@@ -5,6 +5,8 @@
  * Den scrollar även upp sidan till toppen vid ett sidbyte.
  */
 
+const scrollToTop = () => document.documentElement.scrollTo({top: 0});
+
 document.addEventListener('DOMContentLoaded', () => {
    for (let label of document.getElementsByTagName('label')) {
       label.addEventListener('keyup', (event) => {
@@ -13,10 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
                .getElementById(label.getAttribute('for'))
                ?.setAttribute('checked', true);
 
-            window.scrollTo(0, 0);
+            scrollToTop();
          }
       });
 
-      label.addEventListener('click', () => window.scrollTo(0, 0));
+      label.addEventListener('click', () => scrollToTop());
    }
 });

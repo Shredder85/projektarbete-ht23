@@ -31,7 +31,8 @@ textarea {
    font-family: monospace;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
    outline: none;
 }
 
@@ -53,21 +54,37 @@ a:visited {
    cursor: pointer;
 }
 
+img.header-image-left {
+   box-shadow: 3px 3px 15px gray;
+}
+
+img.header-image-right {
+   box-shadow: -3px 3px 15px gray;
+}
+
 img {
    max-width: 100%;
 }
 
-/** STYR FADE-IN VID SCROLL */
+@media (min-width: 481px) {
+   img.header-image-left {
+      border-bottom-right-radius: 1rem;
+   }
 
-.js-faded-outside-view
-{
-   transform: translateY(100px);
-   transition: all 1000ms ease-out;
-   opacity: 0;
+   img.header-image-right {
+      border-bottom-left-radius: 1rem;
+   }
 }
 
-.js-fade-into-view
-{
-   transform: translateY(0);
+/** STYR FADE-IN VID SCROLL */
+
+.js-faded-outside-view {
+   opacity: 0;
+   transform: translateY(50px);
+   transition: all 750ms ease-out;
+}
+
+.js-fade-into-view {
    opacity: 1;
+   transform: translateY(0);
 }

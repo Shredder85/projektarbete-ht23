@@ -1,0 +1,104 @@
+@media (max-width: 480px) or ((orientation: landscape) and (max-height: 480px)) {
+   #content_employees {
+      display: grid;
+      grid-template-rows: auto 1fr;
+   }
+
+   #content_employees .content h2 {
+      padding-top: 2rem;
+      padding-bottom: 0.5rem;
+      text-align: center;
+   }
+
+   #content_employees .content p {
+      width: 90svw;
+      margin: 0 auto;
+      padding-bottom: 1rem;
+   }
+
+   #content_employees .content > ul {
+      flex-direction: column;
+   }   
+
+   #content_employees .content > ul > li {
+      width: 90svw;
+   }
+}
+
+#content_employees .content > ul {
+   display: flex;
+   flex-wrap: wrap;
+   list-style-type: none;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: 3rem;
+   row-gap: 2rem;
+}
+
+#content_employees .content > ul > li {
+   display: grid;
+   grid-template-rows: auto 1fr;
+}
+
+#content_employees .employee-info {
+   text-align: center;
+}
+
+#content_employees .employee-info > ul {
+   display: grid;
+   grid-auto-flow: row;
+   row-gap: 0.5rem;
+   list-style-type: none;
+}
+
+#content_employees .employee-info > ul > li {
+   font-size: 90%;
+}
+
+#content_employees .employee-info > ul > li:first-of-type {
+   font-weight: 500;
+}
+
+#content_employees .employee-info > ul > li:nth-of-type(2) {
+   font-style: italic;
+}
+
+#content_employees .profile-pic {
+   padding: 1rem 2rem;
+}
+
+#content_employees .profile-pic img {
+   border-radius: 1rem;
+   box-shadow: 1px 1px 5px rgb(85, 85, 85);
+}
+
+@media (min-width: 481px) {
+   #content_employees {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+   }
+
+   #content_employees > .page-header {
+      grid-row: 1;
+      grid-column: 2;
+   }
+
+   #content_employees > .content {
+      grid-row: 1;
+      grid-column: 1;
+
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      padding: 3rem 0;
+   }
+
+   #content_employees > .content > ul {
+      margin-top: 3rem;
+   }
+
+   #content_employees > .content > ul > li {
+      width: 40%;
+   }
+}
