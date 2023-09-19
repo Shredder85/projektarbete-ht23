@@ -136,22 +136,25 @@
 /* START STYLES FÖR PROJECTS */
 
 .charles-projects {
-  background-color: #a5a5a5;
+  background-color: rgb(216, 216, 216);
   display: grid;
   
- 
-  
-    
+      
 }
 
 #projects-title { 
 
     background-color: rgb(216, 216, 216);
-    /* text-align: center; */
+   
 
 }
 
+.project-details {
 
+    color: rgb(94, 94, 94);
+    
+
+}
 
 .charles-projects h3 {
 
@@ -166,14 +169,28 @@
 
 }
 
-#project-2, #project-4 {
+#project-1, #project-3, #project-5 {
 
-    background-color: #c4c4c4;
+    background-color: #a5a5a5;
     
 
    
 }
 
+.quality-review {
+
+    margin-top: 15px;
+    width: 15%;
+    opacity: 60%;
+}
+
+.text-review {
+
+    font-size: .8em;
+    text-transform: uppercase;
+   
+
+}
 
 /* SLUT STYLES FÖR PROJECTS */
 
@@ -194,8 +211,7 @@
     grid-template-columns: repeat(5, 20%);
     grid-column: 1 / span 2;
     align-items: center;
-    margin: 0;
-    padding: 0;
+    padding: 0 25px 0 25px;
   }
 
   #projects-title {
@@ -212,8 +228,7 @@
 
     background-color: rgb(216, 216, 216);
     
- 
-}
+ }
 
 
 }
