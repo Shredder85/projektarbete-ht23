@@ -75,20 +75,20 @@
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     border-radius: 9px;
     overflow: hidden;
+    text-align: center;
 }
 .emma-skills .filler {
     height: 100%;
     width: 0%;
     background: linear-gradient(-90deg, #f74f18 0%, #fedf16 100%);
     animation: bar-fill 5s forwards;
+    position: relative; 
 }
 .emma-skills .skills-text {
     position: relative;
-    text-align: center;
     letter-spacing: 1px;
     color: white;
-    top: -20px;
-    left: 130px;
+    top: -22px;
 }
 /*Kod som styr animationen för min skillsbar. Här hämtar den en hårdkodad variabel från HTML
 som talar om vad 100% för respektive bar ska motsvara*/
@@ -139,7 +139,7 @@ som talar om vad 100% för respektive bar ska motsvara*/
 }
 /*PROJEKT-DELEN SLUTAR*/
 
-/*DESIGN-ANPASSNING FÖR STÖRRE SKÄRMAR BÖRJAR HÄR*/
+/*DESIGN-ANPASSNING FÖR STOR SKÄRM BÖRJAR HÄR*/
 @media (min-width: 1280px) {
     .grid-emma {
         display: grid;
@@ -153,10 +153,6 @@ som talar om vad 100% för respektive bar ska motsvara*/
     .emma-info {
         padding-bottom: 10px;
     }    
-    .emma-skills .skills-text {
-    top: -20px;
-    left: 675px;
-    }
     .emma-project {
     display: flex;
     justify-content: space-around;
