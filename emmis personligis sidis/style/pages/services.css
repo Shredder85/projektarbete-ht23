@@ -145,19 +145,22 @@
    opacity: 0.5;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1280px) {
    #content_services {
       width: 75svw;
       margin: 0 auto;
    }
 
    #content_services .products {
-      grid-auto-flow: column;
-      grid-auto-columns: auto;
-   }
+      display: grid;
+      grid-template-rows: 1fr 1fr; 
+      grid-template-columns: 1fr 1fr; 
+      gap: 15px;
+      
+   } 
 
    #content_services .product {
-      /* ändra bredd o skit */
-      width: fit-content;
+      width: 560px;
+      margin-bottom: 0px;
    }
 }
