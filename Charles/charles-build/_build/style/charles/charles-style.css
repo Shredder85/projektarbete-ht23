@@ -1,124 +1,244 @@
 
 /* START STYLES FÖR INFO-CONTAINER */
-.info-charles
-
-{
-    
-    display: flex;
-    flex-direction: column;
-    padding-left: 20px;
-    padding-right: 20px;
-    text-align: justify;
-    flex-grow: 1;
-    
-
+.info-charles {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: justify;
+  flex-grow: 1;
 }
 
 .info-charles a {
-
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .info-charles a:hover {
-   
-    color: rgb(247, 79, 24)
-
+  color: rgb(247, 79, 24);
 }
 
 #info-text-charles {
-
-    shape-outside: circle(100 100 100);
-
+  shape-outside: circle(100 100 100);
 }
 
-#charles-title
-
-    {
-
-        font-style: italic;
-        /* margin-top: -20px; */
-        font-size: .9em;
-
-    }
-
-
- #charles-face {
-    
-    max-width: 25%;
-    height: auto;
-    border-radius: 100%;
-    float: left;
-    shape-outside: circle(50%);
-    margin-right: 15px;
-    
+#charles-title {
+  font-style: italic;
+  /* margin-top: -20px; */
+  font-size: 0.9em;
 }
 
- /* SLUT PÅ STYLES INFO-CONTAINER */
+#charles-face {
+  max-width: 25%;
+  height: auto;
+  border-radius: 100%;
+  float: left;
+  shape-outside: circle(50%);
+  margin-right: 15px;
+  
+}
 
+#charles-face:hover {
+  opacity: 0.7;
+  scale: 1.03;
+}
+
+/* SLUT PÅ STYLES INFO-CONTAINER */
 
 /* START STYLES FÖR SKILL-BAR */
 
 .skill-bar {
-    background-color: #e5e5e5;
-    padding-left: 20px;
-    display: flex;
-    flex-direction: column;
+
+    background-color: #e3e3e3;
+}
+
+.skill-bar h3 {
+
+
+    padding-left:20px;
 
 }
+
+.skill-bar-wrapper {
+
+    
+    padding: 0 40px 40px 100px;
+    width: 85%;
+     
+
+}
+
+.details{
+    width: 100%;
+    display: flex;  
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.bar{
+    position: relative;
+ 
+    border: 2px solid rgb(0, 0, 0);
+ 
+    border-radius: 20px;
+  
+}
+.bar div{
+    position: relative;
+    width: 0;
+    height: 9px;
+    border-radius: 10px;
+    background: linear-gradient(to right, rgb(245, 226, 8) 0%, rgb(247, 79, 24) 100%);
+    
+}
+
+.skills:not(:last-child){
+    margin-bottom: 20px;
+}
+
+#data-bar{
+    animation: data-fill 4s forwards;
+}
+@keyframes data-fill{
+    100%{
+        width: 90%;
+    }
+}
+
+#projekt-bar{
+    animation: projekt-fill 4s forwards;
+}
+@keyframes projekt-fill{
+    100%{
+        width: 85%;
+    }
+}
+#web-bar{
+    animation: web-fill 4s forwards;
+}
+@keyframes web-fill {
+    100%{
+        width: 79%;
+    }
+}
+#ai-bar{
+    animation: ai-fill 4s forwards;
+}
+@keyframes ai-fill{
+    100%{
+        width: 75%;
+    }
+} 
 
 /* SLUT STYLES FÖR SKILL-BAR */
 
 /* START STYLES FÖR PROJECTS */
 
 .charles-projects {
+  background-color: rgb(216, 216, 216);
+  display: grid;
+  
+      
+}
+
+.charles-projects h4 {
+
+    font-size: 0.9em;
+    
+
+
+}
+
+#projects-title { 
+
+    background-color: rgb(216, 216, 216);
+   
+
+}
+
+.project-details {
+
+    color: rgb(94, 94, 94);
+    
+
+}
+
+.charles-projects h3 {
+
+    padding-left: 20px;
+    grid-column: 1 / span 5;
+}
+
+#project-1, #project-2, #project-3, #project-4, #project-5 {
+
+    padding: 10px 10px 10px 20px;
+    height: 100%;
+
+}
+
+#project-1, #project-3, #project-5 {
 
     background-color: #a5a5a5;
-    margin: 0;
-    padding: 0;
-    padding-left: 20px;
-    display: flex;
-    flex-direction: column;
     
-}
-/* SLUT STYLES FÖR PROJECTS */
 
+   
+}
+
+.quality-review {
+
+    margin-top: 15px;
+    width: 15%;
+    opacity: 60%;
+}
+
+.text-review {
+
+    font-size: .8em;
+    text-transform: uppercase;
+   
+
+}
+
+/* SLUT STYLES FÖR PROJECTS */
 
 /* START MEDIA QUERY FÖR STORA SKÄRMAR */
 
 @media only screen and (min-width: 768px) {
+  #content_employee_2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  .skill-bar {
+    align-items: left;
+  }
+
+  .charles-projects {
+    grid-template-columns: repeat(5, 20%);
+    grid-column: 1 / span 2;
+    align-items: center;
+    padding: 0 25px 0 25px;
+  }
+
+  #projects-title {
+
+    grid-column: 1 / span 5;
+    justify-content: center;
+    background-color: rgb(216, 216, 216);
+    text-align: center;
+    padding: 10px 0 10px 0;
+
+  }
+  
+  #project-1, #project-2, #project-3, #project-4, #project-5 {
+
+    background-color: rgb(216, 216, 216);
     
-
-    #content_employee_2 {
-
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-       
-        
-    
-    }
-
-    .skill-bar {
-
-        align-items: center;
-     }
-
-     .charles-projects {
-
-         grid-column: 1 / span 2;
-         align-items: center;
-
-
-         
-}
+ }
 
 
 }
 
 /* SLUT MEDIA QUERY FÖR STORA SKÄRMAR */
-
-
-

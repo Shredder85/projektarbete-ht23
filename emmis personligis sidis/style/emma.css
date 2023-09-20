@@ -34,6 +34,16 @@
     font-style: italic;
     opacity: .6;
 }
+#mailto {
+    text-align: center;
+    margin-top: 10px;
+}
+/*Hover-effekten för mailadressen stylas under project-avsnittet*/
+#maillink {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
 /*INFO-DELEN SLUTAR*/
 
 /*SKILLS-DELEN BÖRJAR*/
@@ -65,21 +75,23 @@
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     border-radius: 9px;
     overflow: hidden;
+    text-align: center;
 }
 .emma-skills .filler {
     height: 100%;
     width: 0%;
     background: linear-gradient(-90deg, #f74f18 0%, #fedf16 100%);
     animation: bar-fill 5s forwards;
+    position: relative; 
 }
 .emma-skills .skills-text {
     position: relative;
-    text-align: center;
     letter-spacing: 1px;
     color: white;
-    top: -20px;
-    left: 130px;
+    top: -22px;
 }
+/*Kod som styr animationen för min skillsbar. Här hämtar den en hårdkodad variabel från HTML
+som talar om vad 100% för respektive bar ska motsvara*/
 @keyframes bar-fill{
     100%{
         width: var(--width);
@@ -92,7 +104,8 @@
     margin-bottom: 10px;
 }
 .emma-project .projects {
-    background-color: white;
+    /*background-color: white;*/
+    background-image: url(../images/project-background.webp);
     margin: 15px 15px 15px 15px;
     padding: 10px 10px 10px 10px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
@@ -113,7 +126,7 @@
     margin-bottom: 20px;
     font-family: "Nunito", sans-serif;
 }
-#backtoemployees h5:hover {
+#backtoemployees h5:hover, #maillink:hover {
     color: rgba(0, 0, 0, 0.5);
 }
 .projects img {
@@ -126,8 +139,8 @@
 }
 /*PROJEKT-DELEN SLUTAR*/
 
-/*DESIGN-ANPASSNING FÖR STÖRRE SKÄRMAR BÖRJAR HÄR*/
-@media (min-width: 768px) {
+/*DESIGN-ANPASSNING FÖR STOR SKÄRM BÖRJAR HÄR*/
+@media (min-width: 1280px) {
     .grid-emma {
         display: grid;
     }
@@ -140,31 +153,27 @@
     .emma-info {
         padding-bottom: 10px;
     }    
-.emma-skills .skills-text {
-    top: -20px;
-    left: 675px;
-}
-.emma-project {
+    .emma-project {
     display: flex;
     justify-content: space-around;
     text-align: center;
     margin-bottom: 30px;
-}
-.emma-project .projects {
+    }
+    .emma-project .projects {
     background-color: #FaFaFa;
-    margin-top: 30px;
-}
-.emma-skills {  
+    margin-top: 30px;   
+    }
+    .emma-skills {  
     background-color: #F5F5F5;
     border-radius: 0px;
     box-shadow: none;
-} 
-.projects h6 {
+    } 
+    .projects h6 {
    font-size: .8em;
-}
-.projects h5 {
+    }
+    .projects h5 {
     font-size: .8em;
     margin-top: 10px;
-}
-}
+    }
+    }
 /*DESIGN-ANPASSNING FÖR STÖRRE SKÄRMAR SLUTAR HÄR*/

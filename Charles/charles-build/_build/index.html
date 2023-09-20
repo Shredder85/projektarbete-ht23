@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="style/pages/contact.css" />
     <link rel="stylesheet" href="style/pages/employees.css" />
     <link rel="stylesheet" href="style/pages/services.css" />
-    <link rel="stylesheet" href="style/charles/charles-style.css">
+    <link rel="stylesheet" href="style/charles/charles-style.css" />
 
     <script defer src="lib/router/navigation.js"></script>
     <script defer src="lib/scroll-effect/script.js"></script>
@@ -76,35 +76,44 @@
 
       <input type="radio" name="app" id="page_start" checked />
       <div id="content_start" class="page">
-        <div class="header">
-
-        </div>
+        <div class="header"></div>
         <section class="info">
           <h2>Vad är EACE?</h2>
-          <br>
-            EACE är ett ledande IT-konsultföretag som levererar innovativa och
-            skräddarsydda IT-lösningar till företag över hela världen. Med en
-            djup förståelse för teknik och en passion för att skapa värde för
-            våra kunder, hjälper vi företag att uppnå sin fulla potential genom
-            digital transformation. 
-            
-            <br><br><h3>Varför EACE?</h3> 
-            
-            <dl>
-               <dt>Erfarenhet och expertis:</dt>
-               <dd>Vårt team av erfarna konsulter har en gedigen bakgrund inom IT och branschspecifika kunskaper.</dd>
-               <br>
-               <dt>Kreativa Lösningar:</dt>
-               <dd>Vi tänker utanför boxen för att hitta innovativa lösningar som ger våra kunder konkurrensfördelar.</dd>
-               <br>
-               <dt>Klientfokuserad:</dt>
-               <dd>Dina behov är vårt fokus, och vi strävar alltid efter att överträffa dina förväntningar.</dd>
-               <br>
-               <dt>Resultatinriktade:</dt>
-               <dd>Vi mäter vår framgång genom de resultat vi levererar till våra kunder.</dd>
-             </dl>
+          <br />
+          EACE är ett ledande IT-konsultföretag som levererar innovativa och
+          skräddarsydda IT-lösningar till företag över hela världen. Med en djup
+          förståelse för teknik och en passion för att skapa värde för våra
+          kunder, hjälper vi företag att uppnå sin fulla potential genom digital
+          transformation.
 
-          </p>
+          <br /><br />
+          <h3>Varför EACE?</h3>
+
+          <dl>
+            <dt>Erfarenhet och expertis:</dt>
+            <dd>
+              Vårt team av erfarna konsulter har en gedigen bakgrund inom IT och
+              branschspecifika kunskaper.
+            </dd>
+            <br />
+            <dt>Kreativa Lösningar:</dt>
+            <dd>
+              Vi tänker utanför boxen för att hitta innovativa lösningar som ger
+              våra kunder konkurrensfördelar.
+            </dd>
+            <br />
+            <dt>Klientfokuserad:</dt>
+            <dd>
+              Dina behov är vårt fokus, och vi strävar alltid efter att
+              överträffa dina förväntningar.
+            </dd>
+            <br />
+            <dt>Resultatinriktade:</dt>
+            <dd>
+              Vi mäter vår framgång genom de resultat vi levererar till våra
+              kunder.
+            </dd>
+          </dl>
         </section>
 
         <section class="gallery">
@@ -136,12 +145,15 @@
             <h3 v-text="headline"></h3>
             <div class="icon-text" v-text="content"></div>
           </div>
-          </section>
-          <div id="more-info">
-        <p>Vill du veta mer om någon av våra tjänster? <br>  <label class="link" for="page_services" tabindex="0"
-         >Klicka här!</label
-       ></p>
-      </div>
+        </section>
+        <div id="more-info">
+          <p>
+            Vill du veta mer om någon av våra tjänster? <br />
+            <label class="link" for="page_services" tabindex="0"
+              >Klicka här!</label
+            >
+          </p>
+        </div>
       </div>
       <script defer type="module" src="lib/js/pages/start.js"></script>
 
@@ -317,54 +329,173 @@
       <!-- START: Charles personliga sida -->
       <input type="radio" name="app" id="page_employee_2" />
       <div id="content_employee_2" class="page">
-         
-         <div class="info-charles">
-            
-            
-      
-            
-               <div id="info-text-charles">
-                  <p>
-                     <img id="charles-face"
-                     src="images/ai-charles-face.png"
-                     alt="employee2">
-                 <br>&nbsp;&nbsp;Hej!<br><br>Mitt namn är Charles Åkerstedt,  och jag är stolt över att vara en del av EACE som Data Mining Engineer.<br><br> Mitt arbete innebär att gräva djupt in i data och använda avancerade analysmetoder för att hitta värdefull information och insikter som hjälper vårt företag att ta datadrivna beslut.<br><br>
-                 
-                 Jag är passionerad när det gäller att utforska komplexa datamängder och att hitta mönster som kan omsättas i praktiska lösningar. Med mina färdigheter i datautvinning och analys hjälper jag vårt team att dra nytta av dataresurserna på bästa sätt.<br><br>
-                 
-                 Om du har några frågor eller om du vill diskutera möjligheter att använda data för att förbättra våra processer och beslut, är du alltid välkommen att kontakta mig på <a href="mailto:charles.akerstedt@eace.se">charles.akerstedt@eace.se</a>.
-                 
-                 Jag ser fram emot att samarbeta med dig och driva innovation genom data på EACE!
+        <div class="info-charles">
+          <h3>Om mig</h3>
+          <div id="info-text-charles">
+            <p>
+              <img
+                class="js-faded-outside-view"
+                id="charles-face"
+                src="images/ai-charles-face.png"
+                alt="Charles Åkerstedt"
+              />
+              <br />&nbsp;&nbsp;Hej!<br /><br />Mitt namn är Charles Åkerstedt,
+              och jag är stolt över att vara en del av EACE som <em>Data Mining
+                Engineer</em>.<br /><br />
 
-               </p>
+              Jag är passionerad när det gäller att utforska komplexa
+              datamängder och att hitta mönster som kan omsättas i praktiska
+              lösningar. Med mina färdigheter i datautvinning och analys hjälper
+              jag ditt företag att dra nytta av dataresurserna på bästa sätt.<br /><br />
+
+              Om du har några frågor eller om du vill diskutera möjligheter att
+              använda data för att förbättra era processer och beslut, är du
+              alltid välkommen att kontakta mig på
+              <a href="mailto:charles.akerstedt@eace.se"
+                >charles.akerstedt@eace.se</a
+              >. Jag ser fram emot att samarbeta med dig och din verksamhet!
+            </p>
+          </div>
+        </div>
+
+        <div class="skill-bar">
+          <h3>Färdigheter</h3>
+          <br />
+          <br />
+          <div class="skill-bar-wrapper">
+            <div class="details">
+              <span>Dataanalys</span>
+              <span>90%</span>
             </div>
+            <div class="bar">
+              <div id="data-bar"></div>
+            </div>
+            <br />
+            <div class="details">
+              <span>Projektledning</span>
+              <span>85%</span>
+            </div>
+            <div class="bar">
+              <div id="projekt-bar"></div>
+            </div>
+            <br />
+            <div class="details">
+              <span>Webbutveckling</span>
+              <span>79%</span>
+            </div>
+            <div class="bar">
+              <div id="web-bar"></div>
+            </div>
+            <br />
+            <div class="details">
+              <span>Artificiell Intelligens</span>
+              <span>75%</span>
+            </div>
+            <div class="bar">
+              <div id="ai-bar"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="charles-projects">
+          <div id="projects-title">
+            <h3>Tidigare genomförda projekt</h3>
+            <hr />
+          </div>
+          <div class="js-faded-outside-view" id="project-1">
+            <h4>Projekt ID#001</h4>
+            <p>
+              <span class="project-details">Projektbenämning:</span><br />Optimering av kunddataanalys.<br />
+              <span class="project-details">Kund:</span><br />
+              ABC Corporation.<br />
+              <span class="project-details">Beskrivning:</span><br />
+              Arbetade med att analysera och optimera kunddata för att förbättra
+              marknadsföringsstrategier och kundrelationer.<br />
+              <span class="project-details">Resultat:</span><br />Projektet resulterade i en ökad försäljning med 15%
+              och förbättrade kundnöjdheten.
+            </p>
+            <img class="quality-review" src="/Charles/charles-build/_build/images/quality.png">
+            <p class="text-review">"Fantastiskt arbete! Ökade försäljningen med 15%."</p>
+          </div>
+          <div class="js-faded-outside-view" id="project-2">
+            <h4>Projekt ID#002</h4>
+            <p>
+              <span class="project-details">Projektbenämning:</span><br />
+              Maskininlärning för felprognos.<br />
+              <span class="project-details">Kund:</span><br />
+              XYZ Industries.<br />
+              <span class="project-details">Beskrivning:</span><br />
+              Utvecklade en maskininlärningsmodell för att förutsäga maskinella
+              fel i realtid. Samlade och analyserade data från sensorer för att
+              förbättra underhållsprognoser och minska driftstopp.<br />
+              <span class="project-details">Resultat:</span><br> Projektet ledde till en minskning av driftstopp med 20%
+              och betydande besparingar i underhållskostnader.
+            </p>
+            <img class="quality-review" src="/Charles/charles-build/_build/images/quality.png">
+            <p class="text-review">"Minskade driftstopp med 20%, mycket imponerade."</p>
+          </div>
+          <div class="js-faded-outside-view" id="project-3">
+            <h4>Projekt ID#003</h4>
+            <p>
+              <span class="project-details">Projektbenämning:</span><br />
+              Kundsegmentering för personaliserad marknadsföring.<br />
+              <span class="project-details">Kund:</span><br />
+              Tech Solutions Inc.<br />
+              <span class="project-details">Beskrivning:</span><br />
+              Använde kunddata och avancerade segmenteringsalgoritmer för att
+              skapa skräddarsydda marknadsföringskampanjer.<br>
+              <span class="project-details">Resultat:</span><br />
+              Projektet resulterade i en ökning av konverteringsgraden med 25%
+              och ökad intäkt per kund.
+            </p>
+            <img class="quality-review" src="/Charles/charles-build/_build/images/quality.png">
+            <p class="text-review">"Imponerade av noggranheten hos EACE!"</p>
+          </div>
+          <div class="js-faded-outside-view" id="project-4">
+            <h4>Projekt ID#004</h4>
+            <p>
+              <span class="project-details">Projektbenämning:</span><br />
+              Dataanalys för kostnadsreduktion.<br />
+              <span class="project-details">Kund:</span><br />
+              Global Logistics Ltd.<br />
+              <span class="project-details">Beskrivning:</span><br />
+              Utförde omfattande dataanalys för att identifiera ineffektiviteter
+              inom logistikprocessen. Rekommenderade åtgärder för att minska
+              kostnader och förbättra leveransprestanda.<br />
+              <span class="project-details">Resultat:</span><br />
+              Projektet genererade årliga besparingar på över 2 miljoner dollar
+              och förbättrade leveransprecisionen med 15%.
+            </p>
+            <img class="quality-review" src="/Charles/charles-build/_build/images/quality.png">
+            <p class="text-review">"Det var en ära att arbeta med Charles på EACE!"</p>
+          </div>
+          <div class="js-faded-outside-view" id="project-5">
+            <h4>Projekt ID#005</h4>
+            <p>
+              <span class="project-details">Projektbenämning:</span><br />
+              Anomalidetektering i finansdata.<br />
+              <span class="project-details">Kund:</span><br />
+              FinanceTech Corp.<br />
+              <span class="project-details">Beskrivning:</span><br />
+              Implementerade avancerade algoritmer för att upptäcka avvikande
+              mönster och bedrägerier inom finanstransaktioner. Utvecklade
+              realtidsvarningssystem för att minska ekonomiskt förlust.<br />
+              <span class="project-details">Resultat:</span><br />
+              Projektet minskade bedrägerifall med 30% och sparade företaget
+              betydande summor.
+            </p>
+            <img class="quality-review" src="/Charles/charles-build/_build/images/quality.png">
+            <p class="text-review">"Minskade bedrägerifall med 30%. Tack!"</p>
+          </div>
+          <div class="employees">
+            <label class="link" for="page_employees"
+               >&lt; Tillbaka till anställda</label
+            >
          </div>
-         <div class="skill-bar">
-            <h3>Mina skills</h3>
-            <p>Här infogas skill-bar</p><br>
-            <p>Här infogas skill-bar</p><br>
-            <p>Här infogas skill-bar</p><br>
-            <p>Här infogas skill-bar</p><br>
-            <p>Här infogas skill-bar</p><br>
-            <p>Här infogas skill-bar</p><br>
-            <p>Här infogas skill-bar</p><br>
-            
-
-         </div>
-
-         <div class="charles-projects">
-         <h3>Mina projekt</h3>
-          <p>Här infogas projekt #1<p><br>
-          <p>Här infogas projekt #2<p><br>
-          <p>Här infogas projekt #3<p><br>
-          <p>Här infogas projekt #4<p><br>
-          <p>Här infogas projekt #5<p><br>
-          
-            
-
-         </div>
-
+        </div>
       </div>
+
+      <!-- </div> -->
       <!-- SLUT: Charles personliga sida -->
 
       <!-- START: Emmas personliga sida -->

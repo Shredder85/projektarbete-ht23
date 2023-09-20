@@ -14,21 +14,21 @@ const servicesApp = createApp({
          icon: 'images/devops.png',
          description:
             'Automatisering av mjukvaruutveckling och driftsprocesser för snabbare och kontinuerlig mjukvaruleverans.',
-         price: '1337$',
+         price: '1234$',
       },
       {
          name: 'Security',
          icon: 'images/elearning.png',
          description:
             'Skydd av digitala tillgångar och data mot cyberhot och incidenthantering.',
-         price: '1337$',
+         price: '9876$',
       },
       {
          name: 'Software',
          icon: 'images/software.png',
          description:
             'Utveckling och underhåll av skräddarsydda programvarulösningar för specifika företagsbehov.',
-         price: '1337$',
+         price: '6678$',
       },
    ],
 

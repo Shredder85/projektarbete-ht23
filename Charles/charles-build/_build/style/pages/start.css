@@ -52,10 +52,10 @@
   box-shadow: 3px 3px 6px hsla(0, 0%, 16%, 0.34);
 }
 
-/* #content_start > .services .info-card:hover {
+#content_start > .services .info-card:hover {
    cursor: pointer;
    scale: 1.1;
-} */
+}
 
 #content_start > .services .info-card .icon-text {
   font-size: 95%;
