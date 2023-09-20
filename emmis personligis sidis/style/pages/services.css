@@ -1,6 +1,7 @@
 #content_services .header {
    height: 2.5rem;
    margin-top: 1rem;
+   margin-bottom: 1.5rem;
    padding-left: 1rem;
    padding-right: 2rem;
 
@@ -8,6 +9,8 @@
    grid-template-columns: 1fr auto auto;
    align-items: center;
    gap: 0.75rem;
+
+   border-bottom: 3px solid orange;
 }
 
 #content_services button {
@@ -17,11 +20,25 @@
 }
 
 #content_services .trash-button:disabled > img {
-   opacity: 0;
+   opacity: .5;
 }
+
+#content_services .trash-button > img {
+   margin-top: 14px;
+}
+
+#content_services .trash-button:hover > img {
+   opacity: .5;
+}
+
 
 #content_services .cart-button:disabled > img {
    filter: grayscale(1);
+}
+
+#content_services .cart-button > img {
+   width: 30px;
+   margin-top: 9px;
 }
 
 #content_services .cart-icon {
@@ -30,13 +47,14 @@
 
    position: absolute;
    z-index: 101;
-   margin-top: 10px;
-   margin-right: 6px;
+   margin-top: 0px;
+   margin-left: -10px;
 
    background-color: red;
+   font-family: 'Nunito';
    border-radius: 100px;
    text-align: center;
-   color: white;
+   color: white; 
 }
 
 #content_services .products {
@@ -51,9 +69,12 @@
 #content_services .product {
    width: 90svw;
    padding: 5px;
-   background-color: rgb(229, 229, 229);
+   /*background-color: rgb(229, 229, 229);*/
+   background-color: #f8cd92;
    display: grid;
    grid-template-rows: auto 1fr auto;
+   box-shadow: 2px 2px 4px rgba(72, 72, 72, 0.4);
+   margin-bottom: 10px;
 }
 
 #content_services .product h1 {

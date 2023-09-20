@@ -34,11 +34,11 @@
     font-style: italic;
     opacity: .6;
 }
-
 #mailto {
     text-align: center;
     margin-top: 10px;
 }
+/*Hover-effekten för mailadressen stylas under project-avsnittet*/
 #maillink {
     text-decoration: none;
     color: black;
@@ -90,6 +90,8 @@
     top: -20px;
     left: 130px;
 }
+/*Kod som styr animationen för min skillsbar. Här hämtar den en hårdkodad variabel från HTML
+som talar om vad 100% för respektive bar ska motsvara*/
 @keyframes bar-fill{
     100%{
         width: var(--width);
@@ -138,7 +140,7 @@
 /*PROJEKT-DELEN SLUTAR*/
 
 /*DESIGN-ANPASSNING FÖR STÖRRE SKÄRMAR BÖRJAR HÄR*/
-@media (min-width: 768px) {
+@media (min-width: 1280px) {
     .grid-emma {
         display: grid;
     }
@@ -151,31 +153,31 @@
     .emma-info {
         padding-bottom: 10px;
     }    
-.emma-skills .skills-text {
+    .emma-skills .skills-text {
     top: -20px;
     left: 675px;
-}
-.emma-project {
+    }
+    .emma-project {
     display: flex;
     justify-content: space-around;
     text-align: center;
     margin-bottom: 30px;
-}
-.emma-project .projects {
+    }
+    .emma-project .projects {
     background-color: #FaFaFa;
-    margin-top: 30px;
-}
-.emma-skills {  
+    margin-top: 30px;   
+    }
+    .emma-skills {  
     background-color: #F5F5F5;
     border-radius: 0px;
     box-shadow: none;
-} 
-.projects h6 {
+    } 
+    .projects h6 {
    font-size: .8em;
-}
-.projects h5 {
+    }
+    .projects h5 {
     font-size: .8em;
     margin-top: 10px;
-}
-}
+    }
+    }
 /*DESIGN-ANPASSNING FÖR STÖRRE SKÄRMAR SLUTAR HÄR*/
