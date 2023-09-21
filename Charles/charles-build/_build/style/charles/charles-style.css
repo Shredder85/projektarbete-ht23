@@ -153,7 +153,7 @@
 #projects-title { 
 
     background-color: rgb(216, 216, 216);
-   
+    
 
 }
 
@@ -174,12 +174,14 @@
 
     padding: 10px 10px 10px 20px;
     height: 100%;
+    
 
 }
 
 #project-1, #project-3, #project-5 {
 
     background-color: #a5a5a5;
+    
     
 
    
