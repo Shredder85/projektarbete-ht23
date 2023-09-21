@@ -1,7 +1,7 @@
 import { createApp } from "https://unpkg.com/petite-vue?module";
 
 const startpageApp = createApp({
-  images: [
+  services: [
     {
       src: "images/content-management-system.png",
       headline: "System",
@@ -24,7 +24,7 @@ const startpageApp = createApp({
         "Data är vår råvara, och insikterna vi genererar förändrar spelplanen.",
     },
   ],
-  imagez: [
+  gallery: [
     { image: "images/slide1.png" },
     { image: "images/slide2.png" },
     { image: "images/slide3.png" },

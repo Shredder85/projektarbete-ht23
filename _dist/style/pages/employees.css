@@ -1,49 +1,3 @@
-@media (max-width: 480px) or ((orientation: landscape) and (max-height: 480px)) {
-   #content_employees {
-      display: grid;
-      grid-template-rows: auto 1fr;
-   }
-
-   #content_employees .content h2 {
-      padding-top: 2rem;
-      padding-bottom: 0.5rem;
-      text-align: center;
-   }
-
-   #content_employees .content p {
-      width: 90svw;
-      margin: 0 auto;
-      padding-bottom: 1rem;
-   }
-
-   #content_employees .content > ul {
-      flex-direction: column;
-   }   
-
-   #content_employees .content > ul > li {
-      width: 90svw;
-   }
-}
-
-#content_employees .content > ul {
-   display: flex;
-   flex-wrap: wrap;
-   list-style-type: none;
-   align-items: center;
-   justify-content: center;
-   margin-bottom: 3rem;
-   row-gap: 2rem;
-}
-
-#content_employees .content > ul > li {
-   display: grid;
-   grid-template-rows: auto 1fr;
-}
-
-#content_employees .employee-info {
-   text-align: center;
-}
-
 #content_employees .employee-info > ul {
    display: grid;
    grid-auto-flow: row;
@@ -70,35 +24,117 @@
 #content_employees .profile-pic img {
    border-radius: 1rem;
    box-shadow: 1px 1px 5px rgb(85, 85, 85);
+   transition: scale 300ms ease-in-out;
 }
 
-@media (min-width: 481px) {
+#content_employees .profile-pic img:hover {
+   scale: 1.05;
+}
+
+#content_employees a {
+   text-decoration: none;
+}
+
+#content_employees a:link,
+#content_employees a:visited {
+   color: black;
+}
+
+#content_employees a:hover,
+#content_employees a:active {
+   color: darkgoldenrod;
+}
+
+@media (max-width: 480px) {
    #content_employees {
       display: grid;
-      grid-template-columns: 1.5fr 1fr;
+      grid-auto-flow: row;
+      text-align: center;
    }
 
-   #content_employees > .page-header {
-      grid-row: 1;
+   #content_employees .content {
+      padding: 2rem 0;
+   }
+
+   #content_employees .content > ul {
+      display: flex;
+      flex-direction: column;
+      row-gap: 1.5rem;
+   }
+
+   #content_employees .content p {
+      width: 90svw;
+      margin: 0 auto;
+      padding-bottom: 1rem;
+   }
+
+   #content_employees .profile-pic img {
+      width: 80%;
+   }
+}
+
+@media (min-width: 481px) and (max-width: 1023px) {
+   #content_employees {
+      display: grid;
+      grid-auto-flow: row;
+      text-align: center;
+   }
+
+   #content_employees .header {
+      height: 20rem;
+   }
+
+   #content_employees .header img {
+      border-bottom-right-radius: 1rem;
+   }
+
+   #content_employees .content {
+      padding: 2rem 0;
+   }
+
+   #content_employees .content > ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+   }
+
+   #content_employees .content > ul > li {
+      max-width: 40%;
+   }
+
+   #content_employees .content p {
+      width: 90svw;
+      margin: 0 auto;
+      padding-bottom: 1rem;
+   }
+}
+
+@media (min-width: 1024px) {
+   #content_employees {
+      display: grid;
+      grid-template-columns: 1fr 45%;
+   }
+
+   #content_employees .header {
       grid-column: 2;
    }
 
-   #content_employees > .content {
+   #content_employees .content {
       grid-row: 1;
       grid-column: 1;
+      padding: 2rem 0;
+      text-align: center;
+   }
 
+   #content_employees .content > ul {
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
-      flex-direction: column;
-
-      padding: 3rem 0;
+      gap: 1.5rem;
    }
 
-   #content_employees > .content > ul {
-      margin-top: 3rem;
-   }
-
-   #content_employees > .content > ul > li {
-      width: 40%;
+   #content_employees .content > ul > li {
+      max-width: 45%;
    }
 }

@@ -74,6 +74,11 @@ img {
 }
 
 @media (min-width: 481px) {
+   img.header-image-left,
+   img.header-image-right {
+      max-height: 100%;
+   }
+
    img.header-image-left {
       border-bottom-right-radius: 1rem;
    }
@@ -94,4 +99,16 @@ img {
 .js-fade-into-view {
    opacity: 1;
    transform: translateY(0);
+}
+
+/**  **/
+
+.load-bar-animation {
+   animation: load-bar 2.5s ease-out forwards;
+}
+
+@keyframes load-bar {
+   100% {
+      width: var(--width);
+   }
 }

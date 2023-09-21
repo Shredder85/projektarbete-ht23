@@ -8,16 +8,16 @@
 const scrollToTop = () => document.documentElement.scrollTo({top: 0});
 
 document.addEventListener('DOMContentLoaded', () => {
-   for (let label of document.getElementsByTagName('label')) {
-      label.addEventListener('keyup', (event) => {
-         if (event.key === 'Enter') {
-            document
-               .getElementById(label.getAttribute('for'))
-               ?.setAttribute('checked', true);
+   for (let label of document.getElementsByClass('link')) {
+      // label.addEventListener('keyup', (event) => {
+      //    if (event.key === 'Enter') {
+      //       document
+      //          .getElementById(label.getAttribute('for'))
+      //          .setAttribute('checked', true);
 
-            scrollToTop();
-         }
-      });
+      //       scrollToTop();
+      //    }
+      // });
 
       label.addEventListener('click', () => scrollToTop());
    }

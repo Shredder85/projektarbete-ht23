@@ -7,10 +7,12 @@
       <link
          rel="preconnect"
          href="https://fonts.gstatic.com"
-         crossorigin="anonymous" />
+         crossorigin="anonymous"
+      />
       <link
          rel="stylesheet"
-         href="https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@700&family=Nunito+Sans:wght@400;500;600;700&display=swap" />
+         href="https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@700&family=Nunito+Sans:wght@400;500;600;700&display=swap"
+      />
       <link rel="stylesheet" href="lib/router/router.css" />
 
       <link rel="stylesheet" href="style/base.css" />
@@ -43,8 +45,8 @@
                   </div>
                </div>
             </label>
+            
             <input id="menu-toggle" type="checkbox" />
-
             <div class="menu">
                <ul>
                   <li>
@@ -119,57 +121,51 @@
                   </dl>
                </section>
             </section>
+            <section class="services js-faded-outside-view">
+               <h2>Våra tjänster</h2>
+               <ul>
+                  <li v-for="{src, headline, content} of services">
+                     <h3 v-text="headline"></h3>
+                     <img :src="src" width="96" :alt="headline" />
+                     <p v-text="content"></p>
+                  </li>
+               </ul>
+               <div class="more-info">
+                  <label class="link" for="page_services" tabindex="0"
+                     >Läs mer om våra tjänster &gt;</label
+                  >
+               </div>
+            </section>
             <section class="gallery js-faded-outside-view">
-               <h2>Bilder från företaget</h2>
-               <img :src="imagez[currentImageIndex].image" />
-               <div class='count' v-text="`( ${currentImageIndex + 1} / ${imagez.length} )`"></div>
+               <h2>Galleri</h2>
+               <img :src="gallery[currentImageIndex].image" />
                <div class="buttons">
                   <button
                      @click="currentImageIndex--"
-                     :disabled="currentImageIndex === 0">
+                     :disabled="currentImageIndex === 0"
+                  >
                      <img
                         src="images/arrow.png"
                         width="32"
                         class="reversed"
-                        alt="Bläddra bakåt" />
+                        alt="Bläddra bakåt"
+                     />
                   </button>
                   <button
                      @click="currentImageIndex++"
-                     :disabled="currentImageIndex === imagez.length - 1">
+                     :disabled="currentImageIndex === imagez.length - 1"
+                  >
                      <img
                         src="images/arrow.png"
                         width="32"
-                        alt="Bläddra framåt" />
+                        alt="Bläddra framåt"
+                     />
                   </button>
                </div>
             </section>
-            <section class="services js-faded-outside-view">
-               <h2>Våra tjänster</h2>
-               <ul>
-                  <li v-for='{src, headline, content} of images'>
-                     <h3 v-text='headline'></h3>
-                     <img :src='src' width='96' :alt='headline'>
-                     <p v-text='content'></p>
-                  </li>
-               </ul>
-               <!-- <div
-                  v-for="{src, headline, content} of images"
-                  class="info-card js-faded-outside-view">
-                  <img :src="src" :alt="headline" />
-                  <h3 v-text="headline"></h3>
-                  <div class="icon-text" v-text="content"></div>
-               </div> -->
-            </section>
-            <div class="more-info">
-               <label class="link" for="page_services" tabindex="0"
-                  >Läs mer om våra tjänster &gt;</label
-               >
-            </div>
          </div>
          <script defer type="module" src="lib/js/pages/start.js"></script>
 
-         <!-- END: Startsidan -->
-
          <!-- START: Tjänster -->
 
          <input type="radio" name="app" id="page_services" />
@@ -181,6 +177,7 @@
                   class="trash-button"
                   title="Töm varukorgen"
                   @click="emptyCart"
+                  v-if='cart.length > 0'
                   :disabled="cart.length == 0"
                   tabindex="0">
                   <img width="20" src="images/trash-can1.png" alt="Soptunna" />
@@ -201,7 +198,7 @@
             </div>
             <div class="products">
                <div
-                  class="product"
+                  class="product js-faded-outside-view"
                   v-for="{name, icon, description, price} of products">
                   <div class="header-img">
                      <h1>{{name}}</h1>
@@ -216,189 +213,25 @@
                   </div>
                </div>
             </div>
-            <p>OBS! Denna sida är inte klar på stor skärm...</p>
          </div>
 
          <script defer type="module" src="lib/js/pages/services.js"></script>
-
-         <!-- END: Tjänster -->
 
          <!-- START: Anställda -->
 
          <input type="radio" name="app" id="page_employees" />
          <div id="content_employees" class="page">
-            <div class="page-header">
-               <picture>
-                  <source
-                     srcset="images/office.png"
-                     media="(min-width: 481px)" />
-                  <img
-                     class="header-image-right"
-                     src="images/office-mobile.png"
-                     alt="En bild föreställande ett kontor" />
-               </picture>
-            </div>
-            <div class="content">
-               <h2>Det är vi som är EACE!</h2>
-               <p>
-                  Du kan besöka varje medarbetares personliga sida genom att
-                  klicka på respektive profilbild.
-               </p>
-               <ul>
-                  <li
-                     class="js-faded-outside-view"
-                     v-for="{name, role, email, image, pageId} of employees">
-                     <div class="profile-pic">
-                        <label class="link" :for="pageId" :title="name">
-                           <img :src="image" :alt="name" />
-                        </label>
-                     </div>
-                     <div class="employee-info">
-                        <h3 v-text="name"></h3>
-                        <ul>
-                           <li v-text="role"></li>
-                           <li v-text="email"></li>
-                        </ul>
-                     </div>
-                  </li>
-               </ul>
-            </div>
-         </div>
-
-         <script defer type="module" src="lib/js/pages/employees.js"></script>
-
-         <!-- END: Anställda -->
-
-         <!-- START: Kontakt -->
-
-         <input type="radio" name="app" id="page_contact" />
-         <div id="content_contact" class="page">
-            <div class="layout">
-               <div>
-                  <picture>
-                     <source
-                        srcset="images/contact_page.png"
-                        media="(min-width: 481px)" />
-                     <img
-                        class="header-image-left"
-                        src="images/contact_page-mobile.png"
-                        alt="Kvinna som arbetar med support" />
-                  </picture>
-               </div>
-               <div class="form" v-if="!completed">
-                  <h2>Kontakta oss</h2>
-                  <p>
-                     Har du frågor angående våra tjänster? Fyll i formuläret
-                     nedan för att komma i kontakt med vår kundtjänst så hjälper
-                     vi dig!
-                  </p>
-                  <form @submit.prevent="submit">
-                     <div
-                        class="fieldset"
-                        v-for="{id, element, type, required, label, error} of getFields()">
-                        <div class="field">
-                           <p v-text="label + ':'"></p>
-                           <input
-                              v-if="element == 'input'"
-                              :type="type"
-                              :name="id"
-                              @input="trackInput" />
-                           <textarea
-                              v-if="element == 'textarea'"
-                              :name="id"
-                              @input="trackInput"></textarea>
-                        </div>
-                        <div
-                           class="error"
-                           v-if="errors[id] != null"
-                           v-text="error"></div>
-                     </div>
-                     <input type="submit" value="Skicka meddelandet" />
-                  </form>
-               </div>
-               <div class="form done" v-else>
-                  <h2>Tack för ditt meddelande!</h2>
-                  <p>Vi kommer att kontakta dig snarast möjligt.</p>
-                  <div class="image">
-                     <img
-                        width="128"
-                        src="images/messages.png"
-                        alt="Pratbubblor" />
-                  </div>
-               </div>
-            </div>
-         </div>
-
-         <script defer type="module" src="lib/js/pages/contact.js"></script>
-
-         <!-- END: Kontakt -->
-
-         <!-- START: Tjänster -->
-
-         <input type="radio" name="app" id="page_services" />
-         <div id="content_services" class="page">
             <div class="header">
-               <h3>Våra tjänster</h3>
-
-               <button
-                  class="trash-button"
-                  title="Töm varukorgen"
-                  @click="emptyCart"
-                  :disabled="cart.length == 0"
-                  tabindex="0">
-                  <img width="20" src="images/trash-can1.png" alt="Soptunna" />
-               </button>
-               <button
-                  class="cart-button"
-                  tabindex="0"
-                  :disabled="cart.length == 0">
-                  <img
-                     width="26"
-                     src="images/shopping-cart.png"
-                     alt="Varukorg" />
-                  <span
-                     class="cart-icon"
-                     v-if="cart.length > 0"
-                     v-text="cart.length"></span>
-               </button>
-            </div>
-            <div class="products">
-               <div
-                  class="product"
-                  v-for="{name, icon, description, price} of products">
-                  <div class="header-img">
-                     <h1>{{name}}</h1>
-                     <img id="icon" :src="icon" />
-                  </div>
-                  <p v-text="description"></p>
-                  <div class="price-button">
-                     <p v-text="price"></p>
-                     <button class="button-buy" @click="addToCart(name)">
-                        Lägg till
-                     </button>
-                  </div>
-               </div>
-            </div>
-            <p>OBS! Denna sida är inte klar på stor skärm...</p>
-         </div>
-
-         <script defer type="module" src="lib/js/pages/services.js"></script>
-
-         <!-- END: Tjänster -->
-
-         <!-- START: Anställda -->
-
-         <input type="radio" name="app" id="page_employees" />
-         <div id="content_employees" class="page">
-            <div class="page-header">
                <picture>
                   <source
                      srcset="images/office.png"
-                     media="(min-width: 481px)" />
+                     media="(min-width: 1024px)"
+                  />
                   <img
                      class="header-image-right"
                      src="images/office-mobile.png"
-                     alt="En bild föreställande ett kontor" />
+                     alt="Två människor i kontorsmiljö"
+                  />
                </picture>
             </div>
             <div class="content">
@@ -410,7 +243,8 @@
                <ul>
                   <li
                      class="js-faded-outside-view"
-                     v-for="{name, role, email, image, pageId} of employees">
+                     v-for="{name, role, email, image, pageId} of employees"
+                  >
                      <div class="profile-pic">
                         <label class="link" :for="pageId" :title="name">
                            <img :src="image" :alt="name" />
@@ -420,7 +254,9 @@
                         <h3 v-text="name"></h3>
                         <ul>
                            <li v-text="role"></li>
-                           <li v-text="email"></li>
+                           <li>
+                              <a :href="`mailto:${email}`" v-text="email"></a>
+                           </li>
                         </ul>
                      </div>
                   </li>
@@ -430,71 +266,71 @@
 
          <script defer type="module" src="lib/js/pages/employees.js"></script>
 
-         <!-- END: Anställda -->
-
          <!-- START: Kontakt -->
 
          <input type="radio" name="app" id="page_contact" />
          <div id="content_contact" class="page">
-            <div class="layout">
-               <div>
-                  <picture>
-                     <source
-                        srcset="images/contact_page.png"
-                        media="(min-width: 481px)" />
-                     <img
-                        class="header-image-left"
-                        src="images/contact_page-mobile.png"
-                        alt="Kvinna som arbetar med support" />
-                  </picture>
-               </div>
-               <div class="form" v-if="!completed">
-                  <h2>Kontakta oss</h2>
-                  <p>
-                     Har du frågor angående våra tjänster? Fyll i formuläret
-                     nedan för att komma i kontakt med vår kundtjänst så hjälper
-                     vi dig!
-                  </p>
-                  <form @submit.prevent="submit">
-                     <div
-                        class="fieldset"
-                        v-for="{id, element, type, required, label, error} of getFields()">
-                        <div class="field">
-                           <p v-text="label + ':'"></p>
-                           <input
-                              v-if="element == 'input'"
-                              :type="type"
-                              :name="id"
-                              @input="trackInput" />
-                           <textarea
-                              v-if="element == 'textarea'"
-                              :name="id"
-                              @input="trackInput"></textarea>
-                        </div>
-                        <div
-                           class="error"
-                           v-if="errors[id] != null"
-                           v-text="error"></div>
+            <div class="header">
+               <picture>
+                  <source
+                     srcset="images/contact_page.png"
+                     media="(min-width: 1024px)"
+                  />
+                  <img
+                     class="header-image-right"
+                     src="images/contact_page-mobile.png"
+                     alt="Kvinna som arbetar med support"
+                  />
+               </picture>
+            </div>
+            <div class="form" v-if="!completed">
+               <h2>Kontakta oss</h2>
+               <p>
+                  Har du frågor angående våra tjänster? Fyll i formuläret nedan
+                  för att komma i kontakt med vår kundtjänst så hjälper vi dig!
+               </p>
+               <form @submit.prevent="submit">
+                  <div
+                     class="fieldset"
+                     v-for="{id, element, type, required, label, error} of getFields()"
+                  >
+                     <div class="field">
+                        <p v-text="label + ':'"></p>
+                        <input
+                           v-if="element == 'input'"
+                           :type="type"
+                           :name="id"
+                           @input="trackInput"
+                        />
+                        <textarea
+                           v-if="element == 'textarea'"
+                           :name="id"
+                           @input="trackInput"
+                        ></textarea>
                      </div>
-                     <input type="submit" value="Skicka meddelandet" />
-                  </form>
-               </div>
-               <div class="form done" v-else>
-                  <h2>Tack för ditt meddelande!</h2>
-                  <p>Vi kommer att kontakta dig snarast möjligt.</p>
-                  <div class="image">
-                     <img
-                        width="128"
-                        src="images/messages.png"
-                        alt="Pratbubblor" />
+                     <div
+                        class="error"
+                        v-if="errors[id] != null"
+                        v-text="error"
+                     ></div>
                   </div>
+                  <input type="submit" value="Skicka meddelandet" />
+               </form>
+            </div>
+            <div class="form done" v-else>
+               <h2>Tack för ditt meddelande!</h2>
+               <p>Vi kommer att kontakta dig snarast möjligt.</p>
+               <div class="image">
+                  <img
+                     width="128"
+                     src="images/messages.png"
+                     alt="Pratbubblor"
+                  />
                </div>
             </div>
          </div>
 
          <script defer type="module" src="lib/js/pages/contact.js"></script>
-
-         <!-- END: Kontakt -->
 
          <!-- START: Eriks personliga sida -->
 
@@ -546,8 +382,9 @@
                      <p v-text="name"></p>
                      <div class="skillbar">
                         <div
-                           class="skillbar-filler"
-                           :style="`--final-width: ${percentage}%`"></div>
+                           class="skillbar-filler animated-bar"
+                           :style="`--width: ${percentage}%`"
+                        ></div>
                         <span v-text="`${percentage}%`"></span>
                      </div>
                   </li>
@@ -555,51 +392,52 @@
             </div>
             <div class="projects js-faded-outside-view">
                <h3>Portfölj</h3>
-               <div v-if="projects.data.length == 0" class="spinner">
-                  <img src="images/spinner.png" alt="Loading" width="52" />
-               </div>
                <ul v-if="projects.data.length > 0">
                   <li
-                     v-for="{name, company, description, image} of projects.data">
+                     v-for="{name, company, description, image} of projects.data"
+                  >
                      <h5 v-text="company"></h5>
                      <h4 v-text="name"></h4>
                      <div class="image">
                         <img
                            :src="`images/projects/erik/${image}`"
-                           :alt="name" />
+                           width="320"
+                           :alt="name"
+                        />
                      </div>
                      <p v-text="description"></p>
                   </li>
                </ul>
-            </div>
-            <div class="employees">
-               <label class="link" for="page_employees"
-                  >&lt; Tillbaka till anställda</label
-               >
+               <div class="employees">
+                  <label class="link" for="page_employees"
+                     >&lt; Tillbaka till anställda</label
+                  >
+               </div>
             </div>
          </div>
 
          <script defer type="module" src="lib/js/profiles/erik.js"></script>
 
-         <!-- SLUT: Eriks personliga sida -->
-
          <!-- START: Charles personliga sida -->
          <input type="radio" name="app" id="page_employee_2" />
-         <div id="content_employee_2" class="page"><h1>Charles</h1></div>
-         <!-- SLUT: Charles personliga sida -->
+         <div id="content_employee_2" class="page">
+            <h1>Charles</h1>
+         </div>
 
          <!-- START: Emmas personliga sida -->
          <input type="radio" name="app" id="page_employee_3" />
-         <div id="content_employee_3" class="page"><h1>Emma</h1></div>
-         <!-- SLUT: Emmas personliga sida -->
+         <div id="content_employee_3" class="page">
+            <h1>Emma</h1>
+         </div>
 
          <!-- START: Axels personliga sida -->
          <input type="radio" name="app" id="page_employee_4" />
-         <div id="content_employee_4" class="page"><h1>Axel</h1></div>
-         <!-- SLUT: Axels personliga sida -->
+         <div id="content_employee_4" class="page">
+            <h1>Axel</h1>
+         </div>
       </main>
+
       <footer>
-         <div class="copy">&copy; EACE 2023</div>
          <ul>
             <li>
                <a href="http://facebook.com/" title="Facebook" target="_blank"
@@ -614,21 +452,14 @@
                <a
                   href="http://instagram.com/"
                   title="Instagram"
-                  target="_blank">
+                  target="_blank"
+               >
                   <img
                      src="images/instagram.png"
                      width="24"
                      alt="Instagram icon"
-                     loading="lazy" />
-               </a>
-            </li>
-            <li>
-               <a href="http://tiktok.com/" title="TikTok" target="_blank">
-                  <img
-                     src="images/tik-tok.png"
-                     width="24"
-                     alt="TikTok icon"
-                     loading="lazy" />
+                     loading="lazy"
+                  />
                </a>
             </li>
             <li>
@@ -637,10 +468,12 @@
                      src="images/github.png"
                      width="24"
                      alt="GitHub icon"
-                     loading="lazy" />
+                     loading="lazy"
+                  />
                </a>
             </li>
          </ul>
+         <div class="copy">&copy; EACE 2023</div>
       </footer>
    </body>
 </html>

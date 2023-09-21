@@ -22,7 +22,6 @@
 }
 
 #content_employee_1 .profile img {
-   /* width: rem; */
    max-width: 100%;
 }
 
@@ -32,7 +31,7 @@
    #content_employee_1 {
       display: grid;
       grid-auto-flow: row;
-      padding: 1rem 0;
+      padding-top: 1rem;
    }
 
    #content_employee_1 > div {
@@ -239,6 +238,7 @@
    #content_employee_1 {
       display: grid;
       grid-template-columns: 25% 40% 35%;
+      row-gap: 0.25rem;
    }
 
    #content_employee_1 .skills {
@@ -264,6 +264,11 @@
    #content_employee_1 .projects li {
       width: 30%;
       border-bottom: none;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      background-color: #f5f5f5;
+      box-shadow: 1px 1px 5px lightgrey;
+      border-radius: 1rem;
    }
 
    #content_employee_1 .employees {
@@ -290,7 +295,6 @@
    position: relative;
    z-index: 11;
 
-   animation: load-bar 2.5s ease-out forwards;
    background-image: linear-gradient(to right, orange, #ffd4aa);
    border-right: 2px solid #515151;
 }
@@ -313,40 +317,11 @@
    }
 }
 
-@keyframes load-bar {
-   0% {
-      width: 0%;
-   }
-
-   100% {
-      width: var(--final-width);
-   }
-}
-
 @keyframes load-bar-text {
    0% {
       opacity: 0;
    }
    100% {
       opacity: 1;
-   }
-}
-
-/* animerad loading spinner */
-
-#content_employee_1 .spinner {
-   padding: 1rem 0;
-}
-
-#content_employee_1 .spinner img {
-   animation: spinner 3.5s linear infinite;
-}
-
-@keyframes spinner {
-   0% {
-      transform: rotate(0);
-   }
-   100% {
-      transform: rotate(360deg);
    }
 }

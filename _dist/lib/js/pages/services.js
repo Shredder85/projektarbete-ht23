@@ -7,28 +7,28 @@ const servicesApp = createApp({
          icon: 'images/it-systems (1).png',
          description:
             'Design och hantering av hård- och mjukvarusystem för effektiv datahantering.',
-         price: '1337$',
+         price: 'Från 10 000 SEK',
       },
       {
          name: 'Devops',
          icon: 'images/devops.png',
          description:
             'Automatisering av mjukvaruutveckling och driftsprocesser för snabbare och kontinuerlig mjukvaruleverans.',
-         price: '1337$',
+         price: 'Från 15 000 SEK',
       },
       {
          name: 'Security',
          icon: 'images/elearning.png',
          description:
             'Skydd av digitala tillgångar och data mot cyberhot och incidenthantering.',
-         price: '1337$',
+         price: 'Från 20 000 SEK',
       },
       {
          name: 'Software',
          icon: 'images/software.png',
          description:
             'Utveckling och underhåll av skräddarsydda programvarulösningar för specifika företagsbehov.',
-         price: '1337$',
+         price: 'Från 30 000 SEK',
       },
    ],
 

@@ -4,22 +4,23 @@ let profileEmployee1_data = reactive({
    data: [],
 
    async load() {
-      let rawJSON = await fetch('projects/erik.json');
-      this.data = await rawJSON.json();
+      this.data = await (await fetch('projects/erik.json')).json();
    },
 });
 
 const profileEmployee1 = createApp({
    skills: [
       {name: 'Ledarskap', percentage: 85},
+      {name: 'Programmering', percentage: 90},
       {name: 'Pappa-humor', percentage: 99},
+      {name: 'Design', percentage: 25},
+      
       {name: 'Taktkänsla', percentage: 42},
       {name: 'Ödmjukhet', percentage: 5},
-      {name: 'Programmering', percentage: 90},
    ],
 
-   projects: profileEmployee1_data
+   projects: profileEmployee1_data,
 });
 
 profileEmployee1.mount('#content_employee_1');
-await profileEmployee1_data.load();
+profileEmployee1_data.load();

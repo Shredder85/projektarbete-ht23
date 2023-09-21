@@ -1,27 +1,12 @@
-#content_contact .layout {
-   display: grid;
-   grid-template-rows: auto 1fr;
-   row-gap: 1.5rem;
-}
-
 #content_contact .form {
-   padding: 0 1rem;
-}
-
-#content_contact form {
-   padding-top: 1rem;
-   padding-bottom: 1rem;
+   padding: 0 2rem 3rem 2rem;
 }
 
 #content_contact .form h2 {
    text-align: center;
 }
 
-#content_contact .done p {
-   text-align: center;
-}
-
-#content_contact .form .fieldset {
+#content_contact .fieldset {
    display: grid;
    grid-template-rows: 1fr auto;
 }
@@ -57,39 +42,54 @@
    margin-top: 2.5rem;
 }
 
-@media (max-width: 519px) {
-   #content_contact .done .image {
-      display: grid;
-      justify-content: center;
-      padding: 2rem 0;
-   }
+#content_contact .done .image {
+   display: grid;
+   justify-content: center;
+   padding: 2rem 0;
 }
 
-@media (min-width: 520px) {
-   #content_contact .layout {
-      grid-template-columns: 1fr 1fr;
-      column-gap: 2rem;
+@media (max-width: 1024px) {
+   #content_contact {
+      display: grid;
+      grid-template-rows: auto 1fr;
+      row-gap: 1.5rem;
+   }   
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+   #content_contact .header {
+      height: 20rem;
+      text-align: center;
+   }
+
+   #content_contact .header img {
+      border-bottom-left-radius: 1rem;
    }
 
    #content_contact .form {
-      padding: 1.5rem 0;
-      padding-right: 1rem;
+      max-width: 640px;
+      margin: 0 auto;
+   }
+}
+
+@media (min-width: 1024px) {
+   #content_contact {
+      display: grid;
+      grid-template-columns: 1fr 45%;
    }
 
-   #content_contact .done p {
-      text-align: left;
+   #content_contact .header {
+      grid-column: 2;
    }
 
-   #content_contact .done img {
-      width: 256px;
-      margin-top: 8svh;
+   #content_contact .form {
+      grid-row: 1;
+      grid-column: 1;
    }
 
-   #content_contact .form h2 {
-      text-align: left;
-   }
-
-   #content_contact img.header-image {
-      border-bottom-right-radius: 1rem;
+   #content_contact .form {
+      max-width: 80%;
+      margin: 0 auto;
+      padding-top: 2rem;
    }
 }

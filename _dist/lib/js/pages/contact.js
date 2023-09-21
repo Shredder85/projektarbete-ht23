@@ -49,14 +49,16 @@ const contactApp = createApp({
 
    getFields() {
       let fields = [];
-      for (let [_field, data] of Object.entries(this.fields)) fields.push(data);
+      for (let [_, data] of Object.entries(this.fields)) fields.push(data);
       return fields;
    },
 
    lastInput: {},
-   trackInput({target}) {
+   
+   trackInput({ target })
+   {
       if (!this.fields[target.name].required) return;
-
+      
       this.lastInput[target.name] = Date.now();
 
       setTimeout(() => {
@@ -69,9 +71,7 @@ const contactApp = createApp({
 
    validate({name, value}) {
       if (this.fields[name].required) {
-         this.errors[name] = !this.fields[name].rule.test(value)
-            ? this.fields[name].error
-            : null;
+         this.errors[name] = !this.fields[name].rule.test(value) ? this.fields[name].error : null;
       }
    },
 
