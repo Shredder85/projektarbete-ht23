@@ -88,3 +88,10 @@ img {
    opacity: 1;
    transform: translateY(0);
 }
+
+
+@keyframes load-bar {
+   100% {
+      width: var(--width);
+   }
+}

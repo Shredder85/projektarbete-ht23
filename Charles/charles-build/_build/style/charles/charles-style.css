@@ -6,7 +6,7 @@
   padding-left: 20px;
   padding-right: 20px;
   text-align: justify;
-  flex-grow: 1;
+  
 }
 
 .info-charles a {
@@ -22,6 +22,7 @@
 #info-text-charles {
   shape-outside: circle(100 100 100);
 }
+
 
 #charles-title {
   font-style: italic;
