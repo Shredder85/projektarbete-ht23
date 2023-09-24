@@ -1,26 +1,22 @@
-import {createApp} from 'https://unpkg.com/petite-vue?module';
+//import { createApp reactive} from "https://unpkg.com/petite-vue?module";
 
-const projectcards = createApp({
-projects:[],
+let projectcards = reactive({
+  projects: [],
 
-projects: null,
+  async loadProjects() {
+    let rawJSON = await fetch("projects/axel.json");
+    this.data = await rawJSON.json();
+    console.log(this.data);
+  },
+});
 
-async loadProjects(){
-    try{
-    const response = await fetch('./projects/axel.json')
-    if(response.ok){
-        this.projects = await response.json();
-    } else{
-        console.error("Fail", response.statusText);
-    }
-} catch(error){
-    console.error("Error fetching", error);
-
+function test() {
+  console.log("hej");
+  fetch("projects/axel.json")
+    .then((i) => i.json())
+    .then((r) => console.log(r));
 }
+test();
 
-}
-
-
-})
-
-projectcards.mount('#content_employee_4');
+// projectcards.mount("#content_employee_4");
+// await projectcards.load();
