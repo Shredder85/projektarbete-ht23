@@ -7,6 +7,7 @@
   font-family: "Nunito", sans-serif;
 }
 
+/* Allt med info-axel är style för bild, och text längst uppe på sidan */
 .info-axel {
   background-color: rgb(255, 253, 253);
   border-radius: 10px;
@@ -57,10 +58,10 @@
 .back-color {
   display: grid;
   place-content: center;
-  padding-top: 50px;
   padding-bottom: 50px;
 }
 
+/* Vita bakgrunden bakom skillbarsen i mobilversion */
 .skills-axel {
   background-color: white;
   padding: 5px 20px 25px;
@@ -85,12 +86,15 @@
   }
 }
 
+/* Style när barsen fylls */
 .fill {
   background: linear-gradient(-90deg, #f74f18 0%, #fedf16 100%);
   width: 0%;
   height: 100%;
   /* animation: bar-fill 10s forwards; */
 }
+
+/* style för barsen  */
 .bar {
   background-color: white;
   border-radius: 10px;
@@ -103,6 +107,7 @@
   box-shadow: 4px 4px 2px 1px rgba(200, 200, 207, 0.3);
 }
 
+/* Text och procent i mina skillbars */
 .skills-text {
   text-align: center;
   position: relative;
