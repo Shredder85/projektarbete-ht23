@@ -1,39 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700&display=swap%27");
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: "Nunito", sans-serif;
+}
+
+.info-axel {
+  background-color: rgb(255, 253, 253);
+  border-radius: 10px;
+  box-shadow: 4px 4px 2px 1px rgba(200, 200, 207, 0.3);
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: -25px;
+}
+
+.info-axel img {
+  width: 135px;
+  border-radius: 100%;
+  margin-left: 7px;
+  margin-top: 15px;
+  float: left;
+}
+
+#maillink {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
 }
 
 .grid-axel {
   display: grid;
   margin-left: 10px;
   margin-right: 10px;
-}
-
-/* .info-axel {
-} */
-.info-axel img {
-  width: 135px;
-  border-radius: 100%;
-  margin-left: 7px;
-  margin-top: -15px;
-  float: left;
+  margin-top: 20px;
 }
 
 .p-chief {
   font-style: italic;
   color: gray;
   text-align: center;
+  margin-top: -10px;
 }
 
 .h-axel {
   text-align: center;
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
-.info-text p:last-of-type {
+.info-axel p:last-of-type {
   text-align: center;
-  margin-top: 70px;
+  margin-top: 40px;
 }
 
 .back-color {
@@ -153,26 +171,27 @@ h3 {
   }
 
   .info-axel img {
-    margin-top: 5px;
+    margin-top: 20px;
   }
+
+  /* Ramar in min text och bild längst uppe på sidan */
 
   .info-axel h2 {
     text-align: center;
+    margin-right: 150px;
+    margin-top: 50px;
   }
 
   .info-axel p:first-of-type {
     text-align: center;
+    margin-right: 150px;
   }
 
-  .info-text {
-    background-color: rgb(255, 253, 253);
-    border-radius: 10px;
-    box-shadow: 4px 4px 2px 1px rgba(200, 200, 207, 0.3);
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-top: -25px;
+  .info-axel p:last-of-type {
+    margin-top: 50px;
   }
 
+  /* bakgrund för mina skillbars */
   .skills-axel {
     display: grid;
     padding: 40px 450px 40px 450px;
@@ -182,11 +201,7 @@ h3 {
     background-size: cover;
   }
 
-  /* .grid-axel{
-        background-image: url("/Axel/_build/images/cool-background\ \(5\).png");
-        background-size: cover;
-        
-    } */
+  /* CSS för mina projekt */
 
   .grid {
     background-color: white;
@@ -198,13 +213,24 @@ h3 {
 
   .grid-container {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     gap: 10px;
     margin-bottom: 20px;
-
     margin-left: 10px;
     margin-right: 20px;
     border-radius: 10px;
+  }
+
+  .grid-container .item1:nth-of-type(2) img {
+    margin-top: 29px;
+  }
+
+  .grid-container .item1:nth-of-type(4) img {
+    margin-top: 29px;
+  }
+  .grid-container .item1:nth-of-type(5) img {
+    margin-top: 15px;
   }
 
   .grid-container h2 {
@@ -221,21 +247,5 @@ h3 {
 
   .grid-container img {
     height: 50px;
-  }
-
-  .item2 p:last-of-type {
-    margin-bottom: 6px;
-  }
-  .item3 p:last-of-type {
-    margin-bottom: -11px;
-  }
-  .item4 p:last-of-type {
-    margin-bottom: 16px;
-  }
-  .item5 p:last-of-type {
-    margin-bottom: 25px;
-  }
-  .item6 p:last-of-type {
-    margin-bottom: 10px;
   }
 }
