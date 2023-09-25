@@ -7,7 +7,7 @@
   font-family: "Nunito", sans-serif;
 }
 
-/* Allt med info-axel är style för bild, och text längst uppe på sidan */
+/* Allt med info-axel är style för bild och text längst uppe på sidan */
 .info-axel {
   background-color: rgb(255, 253, 253);
   border-radius: 10px;
@@ -91,7 +91,6 @@
   background: linear-gradient(-90deg, #f74f18 0%, #fedf16 100%);
   width: 0%;
   height: 100%;
-  /* animation: bar-fill 10s forwards; */
 }
 
 /* style för barsen  */
@@ -146,8 +145,6 @@ h3 {
   }
 
   .grid-container h2 {
-    /* border: 3px solid black;
-    border-bottom: none; */
     text-align: center;
   }
 
@@ -155,9 +152,6 @@ h3 {
     font-style: italic;
     color: grey;
     text-align: center;
-    /* border: 3px solid black;
-    border-top: none;
-    border-bottom: none; */
   }
 
   .grid-container p {
